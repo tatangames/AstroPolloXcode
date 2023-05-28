@@ -77,6 +77,11 @@ class RegistroController: UIViewController, UITextFieldDelegate {
         // VERIFICAR LOS INPUT
         
         
+        verificar()
+        
+    }
+    
+    func verificar(){
         
         
     }

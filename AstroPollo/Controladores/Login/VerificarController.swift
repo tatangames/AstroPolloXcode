@@ -1,26 +1,21 @@
 //
-//  LoginController.swift
+//  VerificarController.swift
 //  AstroPollo
 //
-//  Created by Jonathan  Moran on 27/5/23.
+//  Created by Jonathan  Moran on 28/5/23.
 //
 
 import UIKit
-import MBProgressHUD
-import SwiftyJSON
+import Lottie
 
-class LoginController: UIViewController, UITextFieldDelegate {
+class VerificarController: UIViewController, UITextFieldDelegate {
     
     
-    @IBOutlet weak var edtUsuario: CustomTextField!
-    @IBOutlet weak var edtPassword: CustomTextField!
-    
-    @IBOutlet weak var btnRecuperarPassword: UIButton!
-    @IBOutlet weak var btnRegistrarse: UIButton!
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var vistaAnimacion: LottieAnimationView!
+    @IBOutlet weak var edtCodigo: CustomTextField!
+    @IBOutlet weak var btnVerificar: UIButton!
     
-    
-    @IBOutlet weak var btLogin: UIButton!
     
     var styleAzul = ToastStyle()
     
@@ -29,10 +24,12 @@ class LoginController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        vistaAnimacion.contentMode = .scaleAspectFit
+        vistaAnimacion.loopMode = .loop
+        vistaAnimacion.play()
         
-        edtUsuario.setupLeftImageView(image: UIImage(systemName: "person.fill")!)
         
-        edtPassword.setupLeftImageView(image: UIImage(systemName: "lock.fill")!)
+        edtCodigo.setupLeftImageView(image: UIImage(systemName: "lock.rectangle")!)
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapView(gesture:)))
                view.addGestureRecognizer(tapGesture)
@@ -40,31 +37,35 @@ class LoginController: UIViewController, UITextFieldDelegate {
         styleAzul.backgroundColor = UIColor(named: "ColorAzulToast")!
         styleAzul.titleColor = .white
         
-        self.btLogin.layer.cornerRadius = 18
-        self.btLogin.clipsToBounds = true
+        self.btnVerificar.layer.cornerRadius = 18
+        self.btnVerificar.clipsToBounds = true
+                                          
         
-       // self.btnRegistrarse.titleLabel?.font = UIFont(name: "Arial", size: 25)
+        self.edtCodigo.delegate = self
         
-       // self.btnRegistrarse.titleLabel?.font = UIFont.systemFont(ofSize: 20, weight: .bold)
-        
-        
-        
-        
-        self.edtUsuario.delegate = self
-        self.edtPassword.delegate = self
     }
-
-   
+    
+    
+    @IBAction func btnAccionVerificar(_ sender: Any) {
+        
+        let vista : CambiarPasswordController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CambiarPasswordController") as! CambiarPasswordController
+        self.present(vista, animated: true, completion: nil)
+        
+        
+        
+      
+    }
+    
+    @IBAction func btnAtras(_ sender: Any) {
+        let vista : LoginController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginController") as! LoginController
+        self.present(vista, animated: true, completion: nil)
+    }
+    
+    
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
-        if(textField == edtUsuario){
-                
-            textField.resignFirstResponder()
-            edtPassword.becomeFirstResponder()
-        }
-        else if textField == edtPassword {
-            //textField.resignFirstResponder()
+        if textField == edtCodigo {
             self.view.endEditing(true)
         }
         
@@ -73,31 +74,6 @@ class LoginController: UIViewController, UITextFieldDelegate {
     
     
     
-    
-    func verRegistro(){
-        
-        //self.view.makeToast("holiss", duration: 3.0, position: .bottom, style: styleAzul)
-      
-        
-        let vistaRegistro : RecuperacionController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RecuperacionController") as! RecuperacionController
-        //vistaRegistro.telefono = telefono
-        //vistaRegistro.deviceid = deviceid
-        
-        self.present(vistaRegistro, animated: true, completion: nil)
-        
-    }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    @IBAction func btnAccionLogin(_ sender: Any) {
-        verRegistro()
-    }
     
     
     
@@ -145,5 +121,5 @@ class LoginController: UIViewController, UITextFieldDelegate {
         NotificationCenter.default.removeObserver(self)
     }
     
+    
 }
-

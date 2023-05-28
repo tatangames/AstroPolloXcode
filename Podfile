@@ -11,6 +11,8 @@ target 'AstroPollo' do
   pod 'lottie-ios'
   pod 'MBProgressHUD'      
   pod 'SDWebImage'
+  pod 'SwiftyJSON'
+
 
 
   target 'AstroPolloTests' do

@@ -5,12 +5,14 @@ PODS:
   - SDWebImage (5.15.8):
     - SDWebImage/Core (= 5.15.8)
   - SDWebImage/Core (5.15.8)
+  - SwiftyJSON (5.0.1)
 
 DEPENDENCIES:
   - Alamofire
   - lottie-ios
   - MBProgressHUD
   - SDWebImage
+  - SwiftyJSON
 
 SPEC REPOS:
   trunk:
@@ -18,13 +20,15 @@ SPEC REPOS:
     - lottie-ios
     - MBProgressHUD
     - SDWebImage
+    - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: 0123a34370cb170936ae79a8df46cc62b2edeb88
   lottie-ios: 809ecf2d460ed650a6aed7aa88b2ec45fab4779c
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   SDWebImage: cb032eba469c54e0000e78bcb0a13cdde0a52798
+  SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
 
-PODFILE CHECKSUM: 2d3350321f2ae226e50a77e0ef697e19ac37a385
+PODFILE CHECKSUM: 7d70e25b1994ae3c1a3ee287c839fc4d63e39c83
 
 COCOAPODS: 1.12.1

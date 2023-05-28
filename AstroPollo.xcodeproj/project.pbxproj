@@ -18,6 +18,14 @@
 		8F2643242A206895003CB6EA /* AstroPolloTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2643232A206895003CB6EA /* AstroPolloTests.swift */; };
 		8F26432E2A206895003CB6EA /* AstroPolloUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F26432D2A206895003CB6EA /* AstroPolloUITests.swift */; };
 		8F2643302A206895003CB6EA /* AstroPolloUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F26432F2A206895003CB6EA /* AstroPolloUITestsLaunchTests.swift */; };
+		8F4810962A23B3710024FBC3 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4810952A23B3710024FBC3 /* Toast.swift */; };
+		8F4810982A23B9D70024FBC3 /* RecuperacionCorreoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4810972A23B9D70024FBC3 /* RecuperacionCorreoController.swift */; };
+		8F48109A2A23BA8E0024FBC3 /* jsonemail.json in Resources */ = {isa = PBXBuildFile; fileRef = 8F4810992A23BA8E0024FBC3 /* jsonemail.json */; };
+		8F48109E2A23C5590024FBC3 /* VerificarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F48109D2A23C5590024FBC3 /* VerificarController.swift */; };
+		8F4810A02A23C5E10024FBC3 /* jsonemailenviado.json in Resources */ = {isa = PBXBuildFile; fileRef = 8F48109F2A23C5E10024FBC3 /* jsonemailenviado.json */; };
+		8F4810A22A23CE970024FBC3 /* CambiarPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4810A12A23CE970024FBC3 /* CambiarPasswordController.swift */; };
+		8F4810A52A23D1D30024FBC3 /* jsonpassword.json in Resources */ = {isa = PBXBuildFile; fileRef = 8F4810A32A23D1D30024FBC3 /* jsonpassword.json */; };
+		8F4810A62A23D1D30024FBC3 /* jsonunlockpassword.json in Resources */ = {isa = PBXBuildFile; fileRef = 8F4810A42A23D1D30024FBC3 /* jsonunlockpassword.json */; };
 		8F8B9BE32A229F4900070D34 /* VerificadorEditText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8B9BE22A229F4900070D34 /* VerificadorEditText.swift */; };
 		8F8B9BE52A229FA500070D34 /* EstiloTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8B9BE42A229FA500070D34 /* EstiloTextField.swift */; };
 		8F8B9BE72A22A1B000070D34 /* TextFieldImagen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8B9BE62A22A1B000070D34 /* TextFieldImagen.swift */; };
@@ -27,7 +35,6 @@
 		8F8B9BF02A22D91D00070D34 /* jsonhotdog.json in Resources */ = {isa = PBXBuildFile; fileRef = 8F8B9BEF2A22D91D00070D34 /* jsonhotdog.json */; };
 		8FD912042A21799500624541 /* SplashController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD912032A21799500624541 /* SplashController.swift */; };
 		8FD912072A217E3600624541 /* jsonhambu.json in Resources */ = {isa = PBXBuildFile; fileRef = 8FD912062A217E3600624541 /* jsonhambu.json */; };
-		8FD9120A2A218C6600624541 /* logopizza.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FD912092A218C6600624541 /* logopizza.png */; };
 		8FD912122A219DC900624541 /* hotpizza.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8FD912112A219DC900624541 /* hotpizza.ttf */; };
 		9C6A566894115573DCD24381 /* Pods_AstroPollo_AstroPolloUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEF2EA853D0F7C215656C00C /* Pods_AstroPollo_AstroPolloUITests.framework */; };
 /* End PBXBuildFile section */
@@ -67,6 +74,14 @@
 		8F2643292A206895003CB6EA /* AstroPolloUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AstroPolloUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F26432D2A206895003CB6EA /* AstroPolloUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstroPolloUITests.swift; sourceTree = "<group>"; };
 		8F26432F2A206895003CB6EA /* AstroPolloUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstroPolloUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8F4810952A23B3710024FBC3 /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Toast.swift; path = ../../../../EjemploDos/EjemploDos/Controller/Extras/Toast.swift; sourceTree = "<group>"; };
+		8F4810972A23B9D70024FBC3 /* RecuperacionCorreoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecuperacionCorreoController.swift; sourceTree = "<group>"; };
+		8F4810992A23BA8E0024FBC3 /* jsonemail.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = jsonemail.json; sourceTree = "<group>"; };
+		8F48109D2A23C5590024FBC3 /* VerificarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificarController.swift; sourceTree = "<group>"; };
+		8F48109F2A23C5E10024FBC3 /* jsonemailenviado.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = jsonemailenviado.json; sourceTree = "<group>"; };
+		8F4810A12A23CE970024FBC3 /* CambiarPasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CambiarPasswordController.swift; sourceTree = "<group>"; };
+		8F4810A32A23D1D30024FBC3 /* jsonpassword.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = jsonpassword.json; sourceTree = "<group>"; };
+		8F4810A42A23D1D30024FBC3 /* jsonunlockpassword.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = jsonunlockpassword.json; sourceTree = "<group>"; };
 		8F8B9BE22A229F4900070D34 /* VerificadorEditText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificadorEditText.swift; sourceTree = "<group>"; };
 		8F8B9BE42A229FA500070D34 /* EstiloTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstiloTextField.swift; sourceTree = "<group>"; };
 		8F8B9BE62A22A1B000070D34 /* TextFieldImagen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldImagen.swift; sourceTree = "<group>"; };
@@ -76,7 +91,6 @@
 		8F8B9BEF2A22D91D00070D34 /* jsonhotdog.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = jsonhotdog.json; sourceTree = "<group>"; };
 		8FD912032A21799500624541 /* SplashController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashController.swift; sourceTree = "<group>"; };
 		8FD912062A217E3600624541 /* jsonhambu.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = jsonhambu.json; sourceTree = "<group>"; };
-		8FD912092A218C6600624541 /* logopizza.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logopizza.png; sourceTree = "<group>"; };
 		8FD912112A219DC900624541 /* hotpizza.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = hotpizza.ttf; sourceTree = "<group>"; };
 		A497996E4D2646F31667013B /* Pods-AstroPollo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AstroPollo.debug.xcconfig"; path = "Target Support Files/Pods-AstroPollo/Pods-AstroPollo.debug.xcconfig"; sourceTree = "<group>"; };
 		BEF2EA853D0F7C215656C00C /* Pods_AstroPollo_AstroPolloUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AstroPollo_AstroPolloUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -162,9 +176,12 @@
 			isa = PBXGroup;
 			children = (
 				8FD9120F2A219D7500624541 /* Resources */,
-				8FD912082A218C5400624541 /* Imagenes */,
 				8FD912062A217E3600624541 /* jsonhambu.json */,
+				8F48109F2A23C5E10024FBC3 /* jsonemailenviado.json */,
 				8F8B9BEF2A22D91D00070D34 /* jsonhotdog.json */,
+				8F4810A32A23D1D30024FBC3 /* jsonpassword.json */,
+				8F4810A42A23D1D30024FBC3 /* jsonunlockpassword.json */,
+				8F4810992A23BA8E0024FBC3 /* jsonemail.json */,
 				8FD912012A21796D00624541 /* Controladores */,
 				8F26430C2A206894003CB6EA /* AppDelegate.swift */,
 				8F26430E2A206894003CB6EA /* SceneDelegate.swift */,
@@ -201,6 +218,7 @@
 				8F8B9BE42A229FA500070D34 /* EstiloTextField.swift */,
 				8F8B9BE62A22A1B000070D34 /* TextFieldImagen.swift */,
 				8F8B9BE82A22A91E00070D34 /* CustomTextField.swift */,
+				8F4810952A23B3710024FBC3 /* Toast.swift */,
 			);
 			path = Extra;
 			sourceTree = "<group>";
@@ -210,6 +228,9 @@
 			children = (
 				8F8B9BEB2A22AB2B00070D34 /* LoginController.swift */,
 				8F8B9BED2A22D7D900070D34 /* RegistroController.swift */,
+				8F4810972A23B9D70024FBC3 /* RecuperacionCorreoController.swift */,
+				8F48109D2A23C5590024FBC3 /* VerificarController.swift */,
+				8F4810A12A23CE970024FBC3 /* CambiarPasswordController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -229,14 +250,6 @@
 				8FD912032A21799500624541 /* SplashController.swift */,
 			);
 			path = Splash;
-			sourceTree = "<group>";
-		};
-		8FD912082A218C5400624541 /* Imagenes */ = {
-			isa = PBXGroup;
-			children = (
-				8FD912092A218C6600624541 /* logopizza.png */,
-			);
-			path = Imagenes;
 			sourceTree = "<group>";
 		};
 		8FD9120F2A219D7500624541 /* Resources */ = {
@@ -365,12 +378,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8FD9120A2A218C6600624541 /* logopizza.png in Resources */,
+				8F48109A2A23BA8E0024FBC3 /* jsonemail.json in Resources */,
+				8F4810A02A23C5E10024FBC3 /* jsonemailenviado.json in Resources */,
 				8FD912122A219DC900624541 /* hotpizza.ttf in Resources */,
 				8F8B9BF02A22D91D00070D34 /* jsonhotdog.json in Resources */,
 				8FD912072A217E3600624541 /* jsonhambu.json in Resources */,
 				8F2643192A206895003CB6EA /* LaunchScreen.storyboard in Resources */,
+				8F4810A62A23D1D30024FBC3 /* jsonunlockpassword.json in Resources */,
 				8F2643162A206895003CB6EA /* Assets.xcassets in Resources */,
+				8F4810A52A23D1D30024FBC3 /* jsonpassword.json in Resources */,
 				8F2643142A206894003CB6EA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -502,11 +518,15 @@
 				8F8B9BEE2A22D7D900070D34 /* RegistroController.swift in Sources */,
 				8F8B9BE72A22A1B000070D34 /* TextFieldImagen.swift in Sources */,
 				8FD912042A21799500624541 /* SplashController.swift in Sources */,
+				8F4810982A23B9D70024FBC3 /* RecuperacionCorreoController.swift in Sources */,
 				8F8B9BE52A229FA500070D34 /* EstiloTextField.swift in Sources */,
 				8F8B9BE32A229F4900070D34 /* VerificadorEditText.swift in Sources */,
+				8F48109E2A23C5590024FBC3 /* VerificarController.swift in Sources */,
 				8F8B9BEC2A22AB2B00070D34 /* LoginController.swift in Sources */,
+				8F4810A22A23CE970024FBC3 /* CambiarPasswordController.swift in Sources */,
 				8F8B9BE92A22A91E00070D34 /* CustomTextField.swift in Sources */,
 				8F2643112A206894003CB6EA /* ViewController.swift in Sources */,
+				8F4810962A23B3710024FBC3 /* Toast.swift in Sources */,
 				8F26430D2A206894003CB6EA /* AppDelegate.swift in Sources */,
 				8F26430F2A206894003CB6EA /* SceneDelegate.swift in Sources */,
 			);
@@ -700,7 +720,7 @@
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -736,7 +756,7 @@
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

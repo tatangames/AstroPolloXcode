@@ -73,6 +73,12 @@ class RegistroController: UIViewController, UITextFieldDelegate {
     
     
     @IBAction func btnAccionRegistro(_ sender: Any) {
+        
+        // VERIFICAR LOS INPUT
+        
+        
+        
+        
     }
     
     

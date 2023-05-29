@@ -24,6 +24,8 @@ class RegistroController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var btnRegistro: UIButton!
     
     
+    var idfirebase = ""
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,6 +85,10 @@ class RegistroController: UIViewController, UITextFieldDelegate {
     
     func verificar(){
         
+        cerrarTeclado()
+        
+        
+      
         
     }
     
@@ -102,7 +108,9 @@ class RegistroController: UIViewController, UITextFieldDelegate {
     
     
     
-    
+    func cerrarTeclado(){
+        view.endEditing(true) // cierre del teclado
+    }
     
     
     

@@ -143,7 +143,7 @@
                                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardAppearance="alert" textContentType="username"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
-                                                                        <integer key="value" value="50"/>
+                                                                        <integer key="value" value="100"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                     <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="icono_usuario"/>
                                                                 </userDefinedRuntimeAttributes>
@@ -297,7 +297,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q49-Na-OXd">
-                                                <rect key="frame" x="8" y="269" width="374" height="300"/>
+                                                <rect key="frame" x="8" y="256.66666666666669" width="374" height="300.00000000000006"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="CbF-ID-8ie">
                                                         <rect key="frame" x="16" y="30" width="342" height="21.666666666666671"/>
@@ -317,16 +317,16 @@
                                                             <constraint firstAttribute="height" constant="40" id="DVN-oL-nYS"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardAppearance="alert" textContentType="email"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" keyboardAppearance="alert" textContentType="email"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
-                                                                <integer key="value" value="50"/>
+                                                                <integer key="value" value="100"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="icono_usuario"/>
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="cJg-to-6qw">
-                                                        <rect key="frame" x="16" y="179" width="342" height="40"/>
+                                                        <rect key="frame" x="16" y="178.99999999999994" width="342" height="40"/>
                                                         <color key="backgroundColor" name="ColorRojo"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="1NO-Xe-OaU"/>
@@ -359,15 +359,6 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="recuperación de contraseña" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mrX-mu-FiO">
-                                                <rect key="frame" x="8" y="215" width="374" height="32"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="32" id="0pX-Ef-57Z"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lFz-Hj-ZNU">
                                                 <rect key="frame" x="0.0" y="0.0" width="390" height="215"/>
                                                 <subviews>
@@ -399,16 +390,27 @@
                                                     <constraint firstItem="642-pK-tCv" firstAttribute="leading" secondItem="lFz-Hj-ZNU" secondAttribute="leading" constant="8" id="xJw-h1-0Nt"/>
                                                 </constraints>
                                             </view>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gai-de-DpC">
+                                                <rect key="frame" x="8" y="214" width="374" height="27.666666666666657"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recuperación  de Contraseña" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mrX-mu-FiO">
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="27.666666666666668"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                         <color key="backgroundColor" name="ColorRojo"/>
                                         <constraints>
+                                            <constraint firstItem="gai-de-DpC" firstAttribute="leading" secondItem="Ucc-4k-vwB" secondAttribute="leading" constant="8" id="5FV-i9-Qfd"/>
+                                            <constraint firstAttribute="trailing" secondItem="gai-de-DpC" secondAttribute="trailing" constant="8" id="8e5-58-2L2"/>
                                             <constraint firstItem="lFz-Hj-ZNU" firstAttribute="leading" secondItem="Ucc-4k-vwB" secondAttribute="leading" id="BdB-an-FmP"/>
                                             <constraint firstAttribute="height" constant="844" id="C6q-CA-gyX"/>
-                                            <constraint firstItem="Q49-Na-OXd" firstAttribute="top" secondItem="mrX-mu-FiO" secondAttribute="bottom" constant="22" id="L7p-GH-7pU"/>
-                                            <constraint firstAttribute="trailing" secondItem="mrX-mu-FiO" secondAttribute="trailing" constant="8" id="OcR-jQ-5hB"/>
-                                            <constraint firstItem="mrX-mu-FiO" firstAttribute="top" secondItem="lFz-Hj-ZNU" secondAttribute="bottom" id="QMK-7a-tpc"/>
+                                            <constraint firstItem="Q49-Na-OXd" firstAttribute="top" secondItem="gai-de-DpC" secondAttribute="bottom" constant="15" id="OJs-kK-9CL"/>
                                             <constraint firstAttribute="trailing" secondItem="Q49-Na-OXd" secondAttribute="trailing" constant="8" id="Whj-ir-v4H"/>
-                                            <constraint firstItem="mrX-mu-FiO" firstAttribute="leading" secondItem="Ucc-4k-vwB" secondAttribute="leading" constant="8" id="ezI-fV-Dh6"/>
+                                            <constraint firstItem="gai-de-DpC" firstAttribute="top" secondItem="Ucc-4k-vwB" secondAttribute="top" constant="214" id="eLs-DQ-Mdy"/>
                                             <constraint firstItem="Q49-Na-OXd" firstAttribute="leading" secondItem="Ucc-4k-vwB" secondAttribute="leading" constant="8" id="jmc-m4-exg"/>
                                             <constraint firstItem="lFz-Hj-ZNU" firstAttribute="top" secondItem="Ucc-4k-vwB" secondAttribute="top" id="uIn-Xk-eVw"/>
                                             <constraint firstAttribute="trailing" secondItem="lFz-Hj-ZNU" secondAttribute="trailing" id="zxY-iN-HYy"/>
@@ -507,7 +509,7 @@
                                                             <constraint firstAttribute="height" constant="40" id="UpC-lx-yls"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" keyboardAppearance="alert" textContentType="name"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardAppearance="alert"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
                                                                 <integer key="value" value="4"/>
@@ -668,33 +670,33 @@
                                                 <rect key="frame" x="8" y="232" width="374" height="300"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="5OV-yJ-jPa">
-                                                        <rect key="frame" x="16" y="30" width="342" height="43"/>
+                                                        <rect key="frame" x="16" y="30" width="342" height="21.666666666666671"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingresa el código que hemos enviado a tu correo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nAe-cL-b9h">
-                                                                <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingresa la nueva Contraseña" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nAe-cL-b9h">
+                                                                <rect key="frame" x="0.0" y="0.0" width="342" height="21.666666666666668"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                                 <color key="textColor" name="ColorGrisV1"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
                                                     </stackView>
-                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Ingresar código" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Q9-oh-Hzl" customClass="CustomTextField" customModule="AstroPollo">
-                                                        <rect key="frame" x="16" y="104.33333333333331" width="342" height="40"/>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Q9-oh-Hzl" customClass="CustomTextField" customModule="AstroPollo">
+                                                        <rect key="frame" x="16" y="83" width="342" height="40"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="WEZ-bN-vGb"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" keyboardAppearance="alert" textContentType="name"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardAppearance="alert" textContentType="password"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
-                                                                <integer key="value" value="4"/>
+                                                                <integer key="value" value="16"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="icono_usuario"/>
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="IPi-ya-X2j">
-                                                        <rect key="frame" x="16" y="200.33333333333337" width="342" height="40"/>
+                                                        <rect key="frame" x="16" y="179" width="342" height="40"/>
                                                         <color key="backgroundColor" name="ColorRojo"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="W4R-jR-nhu"/>
@@ -705,7 +707,6 @@
                                                         </state>
                                                         <connections>
                                                             <action selector="btnAccionActualizar:" destination="1LR-bT-cQr" eventType="touchUpInside" id="vuf-Wp-kFQ"/>
-                                                            <action selector="btnAccionVerificar:" destination="1LR-bT-cQr" eventType="touchUpInside" id="c7S-R6-yze"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -901,13 +902,16 @@
                                                         <buttonConfiguration key="configuration" style="plain" title="Contraseña olvidada?">
                                                             <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="15"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="btnAccionPassOlvidada:" destination="twL-CF-MzN" eventType="touchUpInside" id="DpM-6z-8Yn"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e7M-pI-nou">
-                                                        <rect key="frame" x="110.66666666666667" y="283" width="152.66666666666663" height="42.666666666666686"/>
+                                                        <rect key="frame" x="116.00000000000001" y="283" width="142.33333333333337" height="40.333333333333314"/>
                                                         <color key="tintColor" name="ColorGrisV1"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Registrarse">
-                                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="24"/>
+                                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="22"/>
                                                         </buttonConfiguration>
                                                     </button>
                                                 </subviews>

@@ -26,6 +26,8 @@
 		8F4810A22A23CE970024FBC3 /* CambiarPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4810A12A23CE970024FBC3 /* CambiarPasswordController.swift */; };
 		8F4810A52A23D1D30024FBC3 /* jsonpassword.json in Resources */ = {isa = PBXBuildFile; fileRef = 8F4810A32A23D1D30024FBC3 /* jsonpassword.json */; };
 		8F4810A62A23D1D30024FBC3 /* jsonunlockpassword.json in Resources */ = {isa = PBXBuildFile; fileRef = 8F4810A42A23D1D30024FBC3 /* jsonunlockpassword.json */; };
+		8F4810A82A23F2CD0024FBC3 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4810A72A23F2CD0024FBC3 /* Validator.swift */; };
+		8F4810AB2A23F3E30024FBC3 /* APINetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4810AA2A23F3E30024FBC3 /* APINetwork.swift */; };
 		8F8B9BE32A229F4900070D34 /* VerificadorEditText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8B9BE22A229F4900070D34 /* VerificadorEditText.swift */; };
 		8F8B9BE52A229FA500070D34 /* EstiloTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8B9BE42A229FA500070D34 /* EstiloTextField.swift */; };
 		8F8B9BE72A22A1B000070D34 /* TextFieldImagen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8B9BE62A22A1B000070D34 /* TextFieldImagen.swift */; };
@@ -82,6 +84,8 @@
 		8F4810A12A23CE970024FBC3 /* CambiarPasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CambiarPasswordController.swift; sourceTree = "<group>"; };
 		8F4810A32A23D1D30024FBC3 /* jsonpassword.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = jsonpassword.json; sourceTree = "<group>"; };
 		8F4810A42A23D1D30024FBC3 /* jsonunlockpassword.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = jsonunlockpassword.json; sourceTree = "<group>"; };
+		8F4810A72A23F2CD0024FBC3 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		8F4810AA2A23F3E30024FBC3 /* APINetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APINetwork.swift; sourceTree = "<group>"; };
 		8F8B9BE22A229F4900070D34 /* VerificadorEditText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificadorEditText.swift; sourceTree = "<group>"; };
 		8F8B9BE42A229FA500070D34 /* EstiloTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstiloTextField.swift; sourceTree = "<group>"; };
 		8F8B9BE62A22A1B000070D34 /* TextFieldImagen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldImagen.swift; sourceTree = "<group>"; };
@@ -175,6 +179,7 @@
 		8F26430B2A206894003CB6EA /* AstroPollo */ = {
 			isa = PBXGroup;
 			children = (
+				8F4810A92A23F3C90024FBC3 /* Network */,
 				8FD9120F2A219D7500624541 /* Resources */,
 				8FD912062A217E3600624541 /* jsonhambu.json */,
 				8F48109F2A23C5E10024FBC3 /* jsonemailenviado.json */,
@@ -211,6 +216,14 @@
 			path = AstroPolloUITests;
 			sourceTree = "<group>";
 		};
+		8F4810A92A23F3C90024FBC3 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				8F4810AA2A23F3E30024FBC3 /* APINetwork.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		8F8B9BE12A229F2100070D34 /* Extra */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,6 +232,7 @@
 				8F8B9BE62A22A1B000070D34 /* TextFieldImagen.swift */,
 				8F8B9BE82A22A91E00070D34 /* CustomTextField.swift */,
 				8F4810952A23B3710024FBC3 /* Toast.swift */,
+				8F4810A72A23F2CD0024FBC3 /* Validator.swift */,
 			);
 			path = Extra;
 			sourceTree = "<group>";
@@ -522,6 +536,7 @@
 				8F8B9BE52A229FA500070D34 /* EstiloTextField.swift in Sources */,
 				8F8B9BE32A229F4900070D34 /* VerificadorEditText.swift in Sources */,
 				8F48109E2A23C5590024FBC3 /* VerificarController.swift in Sources */,
+				8F4810A82A23F2CD0024FBC3 /* Validator.swift in Sources */,
 				8F8B9BEC2A22AB2B00070D34 /* LoginController.swift in Sources */,
 				8F4810A22A23CE970024FBC3 /* CambiarPasswordController.swift in Sources */,
 				8F8B9BE92A22A91E00070D34 /* CustomTextField.swift in Sources */,
@@ -529,6 +544,7 @@
 				8F4810962A23B3710024FBC3 /* Toast.swift in Sources */,
 				8F26430D2A206894003CB6EA /* AppDelegate.swift in Sources */,
 				8F26430F2A206894003CB6EA /* SceneDelegate.swift in Sources */,
+				8F4810AB2A23F3E30024FBC3 /* APINetwork.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

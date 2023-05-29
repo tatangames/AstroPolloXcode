@@ -28,6 +28,10 @@
 		8F4810A62A23D1D30024FBC3 /* jsonunlockpassword.json in Resources */ = {isa = PBXBuildFile; fileRef = 8F4810A42A23D1D30024FBC3 /* jsonunlockpassword.json */; };
 		8F4810A82A23F2CD0024FBC3 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4810A72A23F2CD0024FBC3 /* Validator.swift */; };
 		8F4810AB2A23F3E30024FBC3 /* APINetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4810AA2A23F3E30024FBC3 /* APINetwork.swift */; };
+		8F4810AE2A24551A0024FBC3 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4810AD2A24551A0024FBC3 /* TabBarViewController.swift */; };
+		8F4810B02A2456A00024FBC3 /* ServiciosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4810AF2A2456A00024FBC3 /* ServiciosViewController.swift */; };
+		8F4810B22A24586C0024FBC3 /* ServiciosCollectionCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4810B12A24586C0024FBC3 /* ServiciosCollectionCellController.swift */; };
+		8F4810B52A2458B90024FBC3 /* OrdenesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4810B42A2458B90024FBC3 /* OrdenesViewController.swift */; };
 		8F8B9BE32A229F4900070D34 /* VerificadorEditText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8B9BE22A229F4900070D34 /* VerificadorEditText.swift */; };
 		8F8B9BE52A229FA500070D34 /* EstiloTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8B9BE42A229FA500070D34 /* EstiloTextField.swift */; };
 		8F8B9BE72A22A1B000070D34 /* TextFieldImagen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8B9BE62A22A1B000070D34 /* TextFieldImagen.swift */; };
@@ -86,6 +90,10 @@
 		8F4810A42A23D1D30024FBC3 /* jsonunlockpassword.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = jsonunlockpassword.json; sourceTree = "<group>"; };
 		8F4810A72A23F2CD0024FBC3 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		8F4810AA2A23F3E30024FBC3 /* APINetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APINetwork.swift; sourceTree = "<group>"; };
+		8F4810AD2A24551A0024FBC3 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		8F4810AF2A2456A00024FBC3 /* ServiciosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiciosViewController.swift; sourceTree = "<group>"; };
+		8F4810B12A24586C0024FBC3 /* ServiciosCollectionCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiciosCollectionCellController.swift; sourceTree = "<group>"; };
+		8F4810B42A2458B90024FBC3 /* OrdenesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdenesViewController.swift; sourceTree = "<group>"; };
 		8F8B9BE22A229F4900070D34 /* VerificadorEditText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificadorEditText.swift; sourceTree = "<group>"; };
 		8F8B9BE42A229FA500070D34 /* EstiloTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstiloTextField.swift; sourceTree = "<group>"; };
 		8F8B9BE62A22A1B000070D34 /* TextFieldImagen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldImagen.swift; sourceTree = "<group>"; };
@@ -224,6 +232,24 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		8F4810AC2A2454FB0024FBC3 /* Principal */ = {
+			isa = PBXGroup;
+			children = (
+				8F4810AD2A24551A0024FBC3 /* TabBarViewController.swift */,
+				8F4810AF2A2456A00024FBC3 /* ServiciosViewController.swift */,
+				8F4810B12A24586C0024FBC3 /* ServiciosCollectionCellController.swift */,
+			);
+			path = Principal;
+			sourceTree = "<group>";
+		};
+		8F4810B32A2458A20024FBC3 /* Ordenes */ = {
+			isa = PBXGroup;
+			children = (
+				8F4810B42A2458B90024FBC3 /* OrdenesViewController.swift */,
+			);
+			path = Ordenes;
+			sourceTree = "<group>";
+		};
 		8F8B9BE12A229F2100070D34 /* Extra */ = {
 			isa = PBXGroup;
 			children = (
@@ -252,6 +278,8 @@
 		8FD912012A21796D00624541 /* Controladores */ = {
 			isa = PBXGroup;
 			children = (
+				8F4810B32A2458A20024FBC3 /* Ordenes */,
+				8F4810AC2A2454FB0024FBC3 /* Principal */,
 				8F8B9BEA2A22AB1D00070D34 /* Login */,
 				8FD912022A21797700624541 /* Splash */,
 			);
@@ -529,15 +557,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F4810B02A2456A00024FBC3 /* ServiciosViewController.swift in Sources */,
+				8F4810B52A2458B90024FBC3 /* OrdenesViewController.swift in Sources */,
 				8F8B9BEE2A22D7D900070D34 /* RegistroController.swift in Sources */,
 				8F8B9BE72A22A1B000070D34 /* TextFieldImagen.swift in Sources */,
 				8FD912042A21799500624541 /* SplashController.swift in Sources */,
 				8F4810982A23B9D70024FBC3 /* RecuperacionCorreoController.swift in Sources */,
 				8F8B9BE52A229FA500070D34 /* EstiloTextField.swift in Sources */,
 				8F8B9BE32A229F4900070D34 /* VerificadorEditText.swift in Sources */,
+				8F4810B22A24586C0024FBC3 /* ServiciosCollectionCellController.swift in Sources */,
 				8F48109E2A23C5590024FBC3 /* VerificarController.swift in Sources */,
 				8F4810A82A23F2CD0024FBC3 /* Validator.swift in Sources */,
 				8F8B9BEC2A22AB2B00070D34 /* LoginController.swift in Sources */,
+				8F4810AE2A24551A0024FBC3 /* TabBarViewController.swift in Sources */,
 				8F4810A22A23CE970024FBC3 /* CambiarPasswordController.swift in Sources */,
 				8F8B9BE92A22A91E00070D34 /* CustomTextField.swift in Sources */,
 				8F2643112A206894003CB6EA /* ViewController.swift in Sources */,

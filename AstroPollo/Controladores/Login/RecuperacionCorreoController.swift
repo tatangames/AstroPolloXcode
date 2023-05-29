@@ -7,6 +7,9 @@
 
 import UIKit
 import Lottie
+import MBProgressHUD
+import SwiftyJSON
+import Alamofire
 
 class RecuperacionController: UIViewController, UITextFieldDelegate {
     
@@ -28,8 +31,7 @@ class RecuperacionController: UIViewController, UITextFieldDelegate {
         vistaAnimacion.contentMode = .scaleAspectFit
         vistaAnimacion.loopMode = .loop
         vistaAnimacion.play()
-        
-        
+                
         edtCorreo.setupLeftImageView(image: UIImage(systemName: "envelope.fill")!)
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapView(gesture:)))
@@ -46,11 +48,127 @@ class RecuperacionController: UIViewController, UITextFieldDelegate {
     }
     
     
+    // VALIDACION DE CORREO ELECTRONICO
+    func verificarEntrada(){
+        
+        cerrarTeclado()
+       
+        // CORREO ELECTRONICO ES REQUERIDO
+        if(Validator().validarEntradaRequerida(texto: edtCorreo.text ?? "") == 1){
+            mensajeToastAzul(mensaje: "Correo es requerido")
+            return
+        }
+        
+        
+        // VALIDAR CORREO ESTE ESCRITO CORRECTAMENTE
+        if !Validator().validarCorreoElectronico(edtCorreo.text ?? "") {
+            mensajeToastAzul(mensaje: "El correo no es Valido")
+            return
+        }
+        
+        peticionEnviarCorreo()
+    }
+    
+    
+    func peticionEnviarCorreo(){
+        
+        MBProgressHUD.showAdded(to: self.view, animated: true)
+                
+        let params = [
+            "correo": edtCorreo.text ?? "",
+        ]
+        
+        let encodeURL = apiEnviarCorreoRecuperarContrasena
+        
+        AF.request(encodeURL, method: .post, parameters: params).responseJSON{ (response) in
+                                        
+            switch response.result{
+              case .success(let value):
+                  
+                  MBProgressHUD.hide(for: self.view, animated: true)
+                                                 
+                  let json = JSON(value)
+                                  
+                  let codigo = json["success"]
+                                     
+                     if(codigo == 1){
+                        
+                         // CORREO ENVIADO
+                         self.alertaCorreoEnviado()
+                       
+                     } else if(codigo == 2){
+                    
+                       
+                         // CORREO NO ENCONTRADO
+                         self.mensajeToastAzul(mensaje: "Correo no registrado")
+                         
+                         
+                     }
+                     else{
+                         // error de conexion
+                         self.mensajeSinConexion()
+                     }
+        
+              case .failure( _):
+                  MBProgressHUD.hide(for: self.view, animated: true)
+                  self.retryPeticionEnviarCorreo()
+              }
+        }
+        
+    }
+    
+    func retryPeticionEnviarCorreo(){
+         MBProgressHUD.hide(for: self.view, animated: true)
+        peticionEnviarCorreo()
+    }
+    
+    
+    func mensajeSinConexion(){
+         mensajeToastAzul(mensaje: "Sin conexion")
+         MBProgressHUD.hide(for: self.view, animated: true)
+    }
+    
+    
+    
+    
+    
+    func alertaCorreoEnviado(){
+        
+        let alert = UIAlertController(title: "Código Enviado", message: "Verificar su correo electrónico", preferredStyle: UIAlertController.Style.alert)
+              
+             alert.addAction(UIAlertAction(title: "Aceptar", style: UIAlertAction.Style.default, handler: {(action) in
+                 alert.dismiss(animated: true, completion: nil)
+             
+                 self.vistaIngresarCodigo()
+                 
+             }))
+              
+             self.present(alert, animated: true, completion: nil)
+    }
+    
+    
+    func vistaIngresarCodigo(){
+        
+        
+        let vistaSiguiente : VerificarController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "VerificarController") as! VerificarController
+        vistaSiguiente.correo = edtCorreo.text ?? ""
+        
+        self.present(vistaSiguiente, animated: true, completion: nil)
+        
+        
+    }
+    
+    func cerrarTeclado(){
+        view.endEditing(true) // cierre del teclado
+    }
+    
+    
+    func mensajeToastAzul(mensaje: String){
+        self.view.makeToast(mensaje, duration: 3.0, position: .bottom, style: styleAzul)
+    }
+    
     @IBAction func btnAccionEnviar(_ sender: Any) {
-        
-        let vista : VerificarController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "VerificarController") as! VerificarController
-        self.present(vista, animated: true, completion: nil)
-        
+        verificarEntrada()
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -61,9 +179,6 @@ class RecuperacionController: UIViewController, UITextFieldDelegate {
         
         return true
     }
-    
-    
-    
     
     @IBAction func btnAtras(_ sender: Any) {
         

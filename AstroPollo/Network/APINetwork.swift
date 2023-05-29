@@ -7,6 +7,12 @@
 
 import Foundation
 
+
+
+let apiVersionApp = "1,0,0 IOS"
+
+
+
 //let baseUrl:String = "http://165.227.196.71/api/"
 //let baseUrlImagen: String = "http://165.227.196.71/storage/imagenes/"
 
@@ -22,6 +28,6 @@ let apiVerificarCodigoResetPassword = baseUrl+"cliente/verificar/codigo-correo-p
 
 let apiCambiarPasswordPerdida = baseUrl+"cliente/actualizar/password"
 
-
+let apiRegistrarse = baseUrl+"cliente/registro"
 
 

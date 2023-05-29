@@ -63,6 +63,34 @@ class Validator {
     
     
     
+    // COMPROBAR CORREO REGISTRO SI LLEVA TEXTO
+    func verificarEntradaCorreo(texto: String) -> Int {
+        
+        
+        if(texto.count > 0){
+            
+            do {
+                if try NSRegularExpression(pattern: "^[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}$", options: .caseInsensitive).firstMatch(in: texto, options: [], range: NSRange(location: 0, length: texto.count)) == nil {
+                    return 1
+                }
+            } catch {
+                return 1
+            }
+        }
+        
+      
+        return 2
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     

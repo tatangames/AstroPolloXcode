@@ -42,21 +42,16 @@ class LoginController: UIViewController, UITextFieldDelegate {
      
         self.edtUsuario.delegate = self
         self.edtPassword.delegate = self
+        
+        
+        
+        
+        
+        
+        
     }
 
    
-    
-   
-    
-    
-    
-    
-   
-    
-    
-    
-    
-    
     
     @IBAction func btnAccionPassOlvidada(_ sender: Any) {
         let vistaSiguiente : RecuperacionController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RecuperacionController") as! RecuperacionController
@@ -68,6 +63,7 @@ class LoginController: UIViewController, UITextFieldDelegate {
     
     @IBAction func btnAccionLogin(_ sender: Any) {
        
+        pasarPantallaMenu()
         
        cerrarTeclado()
         
@@ -152,7 +148,9 @@ class LoginController: UIViewController, UITextFieldDelegate {
     func pasarPantallaMenu(){
         
         
+        let vista : TabBarViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBarViewController") as! TabBarViewController
         
+        self.present(vista, animated: true, completion: nil)
         
         
     }

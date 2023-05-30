@@ -38,6 +38,9 @@ let apiActualizarPasswordPerfil = baseUrl+"cliente/perfil/actualizar/contrasena"
 
 let apiActualizarCorreo = baseUrl+"cliente/actualizar/correo"
 
+let apiListadoDirecciones = baseUrl+"cliente/listado/direcciones"
+
+
 
 
 

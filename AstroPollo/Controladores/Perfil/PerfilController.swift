@@ -59,7 +59,13 @@ class PerfilController: UIViewController, UITableViewDelegate, UITableViewDataSo
                
         let datos = data[indexPath.row].posicion
       
-        if(datos == 2){
+        
+        if(datos == 1){
+            // DIRECCIONES
+            pasarVistaDirecciones()
+        }
+        
+        else if(datos == 2){
             // ACTUALIZAR CONTRASEÑA
             pasarVistaContrasena()
         }
@@ -80,6 +86,13 @@ class PerfilController: UIViewController, UITableViewDelegate, UITableViewDataSo
             pasarCerrarSesion()
         }
         
+        
+    }
+    
+    func pasarVistaDirecciones(){
+        let vistaSiguiente : ListaDireccionesController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ListaDireccionesController") as! ListaDireccionesController
+        
+        self.present(vistaSiguiente, animated: true, completion: nil)
         
     }
     

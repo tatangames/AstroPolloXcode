@@ -55,6 +55,9 @@
 		8FD912122A219DC900624541 /* hotpizza.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8FD912112A219DC900624541 /* hotpizza.ttf */; };
 		8FDC4A332A264ED100C5052E /* MapaDireccionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDC4A322A264ED100C5052E /* MapaDireccionController.swift */; };
 		8FDC4A352A26520600C5052E /* BarraProgresoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDC4A342A26520600C5052E /* BarraProgresoController.swift */; };
+		8FDC4A382A2660F500C5052E /* CategoriasTodasController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDC4A372A2660F500C5052E /* CategoriasTodasController.swift */; };
+		8FDC4A3B2A26613900C5052E /* ModeloCategorias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDC4A3A2A26613900C5052E /* ModeloCategorias.swift */; };
+		8FDC4A3D2A2667BE00C5052E /* CategoriasTodasCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDC4A3C2A2667BE00C5052E /* CategoriasTodasCollectionViewCell.swift */; };
 		9C6A566894115573DCD24381 /* Pods_AstroPollo_AstroPolloUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEF2EA853D0F7C215656C00C /* Pods_AstroPollo_AstroPolloUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -130,6 +133,9 @@
 		8FD912112A219DC900624541 /* hotpizza.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = hotpizza.ttf; sourceTree = "<group>"; };
 		8FDC4A322A264ED100C5052E /* MapaDireccionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapaDireccionController.swift; sourceTree = "<group>"; };
 		8FDC4A342A26520600C5052E /* BarraProgresoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarraProgresoController.swift; sourceTree = "<group>"; };
+		8FDC4A372A2660F500C5052E /* CategoriasTodasController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriasTodasController.swift; sourceTree = "<group>"; };
+		8FDC4A3A2A26613900C5052E /* ModeloCategorias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeloCategorias.swift; sourceTree = "<group>"; };
+		8FDC4A3C2A2667BE00C5052E /* CategoriasTodasCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriasTodasCollectionViewCell.swift; sourceTree = "<group>"; };
 		A497996E4D2646F31667013B /* Pods-AstroPollo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AstroPollo.debug.xcconfig"; path = "Target Support Files/Pods-AstroPollo/Pods-AstroPollo.debug.xcconfig"; sourceTree = "<group>"; };
 		BEF2EA853D0F7C215656C00C /* Pods_AstroPollo_AstroPolloUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AstroPollo_AstroPolloUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA6A1AC5B5AFFC574BC67932 /* Pods-AstroPollo-AstroPolloUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AstroPollo-AstroPolloUITests.release.xcconfig"; path = "Target Support Files/Pods-AstroPollo-AstroPolloUITests/Pods-AstroPollo-AstroPolloUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -277,6 +283,7 @@
 		8F3EC8042A2563D7006BC0AD /* Modelos */ = {
 			isa = PBXGroup;
 			children = (
+				8FDC4A392A26612B00C5052E /* Categorias */,
 				8F3EC8152A259A65006BC0AD /* Direcciones */,
 				8F3EC8052A2563E3006BC0AD /* Perfil */,
 			);
@@ -379,6 +386,7 @@
 		8FD912012A21796D00624541 /* Controladores */ = {
 			isa = PBXGroup;
 			children = (
+				8FDC4A362A26609F00C5052E /* Categorias */,
 				8F3EC7FA2A254338006BC0AD /* Perfil */,
 				8F4810B32A2458A20024FBC3 /* Ordenes */,
 				8F4810AC2A2454FB0024FBC3 /* Principal */,
@@ -420,6 +428,23 @@
 				8FDC4A342A26520600C5052E /* BarraProgresoController.swift */,
 			);
 			path = Mapa;
+			sourceTree = "<group>";
+		};
+		8FDC4A362A26609F00C5052E /* Categorias */ = {
+			isa = PBXGroup;
+			children = (
+				8FDC4A372A2660F500C5052E /* CategoriasTodasController.swift */,
+				8FDC4A3C2A2667BE00C5052E /* CategoriasTodasCollectionViewCell.swift */,
+			);
+			path = Categorias;
+			sourceTree = "<group>";
+		};
+		8FDC4A392A26612B00C5052E /* Categorias */ = {
+			isa = PBXGroup;
+			children = (
+				8FDC4A3A2A26613900C5052E /* ModeloCategorias.swift */,
+			);
+			path = Categorias;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -709,6 +734,7 @@
 				8F3EC7FC2A254374006BC0AD /* PerfilController.swift in Sources */,
 				8F3EC8012A255464006BC0AD /* HorariosController.swift in Sources */,
 				8F3EC80F2A258A95006BC0AD /* DatosGuardados.swift in Sources */,
+				8FDC4A3B2A26613900C5052E /* ModeloCategorias.swift in Sources */,
 				8F8B9BEE2A22D7D900070D34 /* RegistroController.swift in Sources */,
 				8F3EC8172A259A74006BC0AD /* ModeloDirecciones.swift in Sources */,
 				8F8B9BE72A22A1B000070D34 /* TextFieldImagen.swift in Sources */,
@@ -725,8 +751,10 @@
 				8F8B9BEC2A22AB2B00070D34 /* LoginController.swift in Sources */,
 				8F4810AE2A24551A0024FBC3 /* TabBarViewController.swift in Sources */,
 				8F4810A22A23CE970024FBC3 /* CambiarPasswordController.swift in Sources */,
+				8FDC4A3D2A2667BE00C5052E /* CategoriasTodasCollectionViewCell.swift in Sources */,
 				8F3EC8192A25A237006BC0AD /* SeleccionarDireccionController.swift in Sources */,
 				8F8B9BE92A22A91E00070D34 /* CustomTextField.swift in Sources */,
+				8FDC4A382A2660F500C5052E /* CategoriasTodasController.swift in Sources */,
 				8F3EC8072A2563F2006BC0AD /* ModeloHorario.swift in Sources */,
 				8F3EC8122A259345006BC0AD /* ListaDireccionesController.swift in Sources */,
 				8F2643112A206894003CB6EA /* ViewController.swift in Sources */,

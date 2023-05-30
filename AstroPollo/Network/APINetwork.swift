@@ -46,5 +46,5 @@ let apiBorrarDireccion = baseUrl+"cliente/eliminar/direccion/seleccionada"
 
 let apiListaDePoligonos = baseUrl+"cliente/listado/zonas/poligonos"
 
-
+let apiCategoriasTodas = baseUrl+"cliente/listado/todas/categorias"
 

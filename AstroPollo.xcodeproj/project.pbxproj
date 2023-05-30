@@ -18,6 +18,14 @@
 		8F2643242A206895003CB6EA /* AstroPolloTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2643232A206895003CB6EA /* AstroPolloTests.swift */; };
 		8F26432E2A206895003CB6EA /* AstroPolloUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F26432D2A206895003CB6EA /* AstroPolloUITests.swift */; };
 		8F2643302A206895003CB6EA /* AstroPolloUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F26432F2A206895003CB6EA /* AstroPolloUITestsLaunchTests.swift */; };
+		8F3EC7FC2A254374006BC0AD /* PerfilController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3EC7FB2A254374006BC0AD /* PerfilController.swift */; };
+		8F3EC7FE2A2548ED006BC0AD /* PerfilViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3EC7FD2A2548ED006BC0AD /* PerfilViewCell.swift */; };
+		8F3EC8012A255464006BC0AD /* HorariosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3EC8002A255464006BC0AD /* HorariosController.swift */; };
+		8F3EC8032A256004006BC0AD /* HorariosViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3EC8022A256004006BC0AD /* HorariosViewCell.swift */; };
+		8F3EC8072A2563F2006BC0AD /* ModeloHorario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3EC8062A2563F2006BC0AD /* ModeloHorario.swift */; };
+		8F3EC80A2A256FF8006BC0AD /* PasswordPerfilController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3EC8092A256FF8006BC0AD /* PasswordPerfilController.swift */; };
+		8F3EC80D2A257965006BC0AD /* PerfilCorreoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3EC80C2A257965006BC0AD /* PerfilCorreoController.swift */; };
+		8F3EC80F2A258A95006BC0AD /* DatosGuardados.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3EC80E2A258A94006BC0AD /* DatosGuardados.swift */; };
 		8F4810962A23B3710024FBC3 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4810952A23B3710024FBC3 /* Toast.swift */; };
 		8F4810982A23B9D70024FBC3 /* RecuperacionCorreoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4810972A23B9D70024FBC3 /* RecuperacionCorreoController.swift */; };
 		8F48109A2A23BA8E0024FBC3 /* jsonemail.json in Resources */ = {isa = PBXBuildFile; fileRef = 8F4810992A23BA8E0024FBC3 /* jsonemail.json */; };
@@ -32,7 +40,6 @@
 		8F4810B02A2456A00024FBC3 /* ServiciosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4810AF2A2456A00024FBC3 /* ServiciosViewController.swift */; };
 		8F4810B22A24586C0024FBC3 /* ServiciosCollectionCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4810B12A24586C0024FBC3 /* ServiciosCollectionCellController.swift */; };
 		8F4810B52A2458B90024FBC3 /* OrdenesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4810B42A2458B90024FBC3 /* OrdenesViewController.swift */; };
-		8F8B9BE32A229F4900070D34 /* VerificadorEditText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8B9BE22A229F4900070D34 /* VerificadorEditText.swift */; };
 		8F8B9BE52A229FA500070D34 /* EstiloTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8B9BE42A229FA500070D34 /* EstiloTextField.swift */; };
 		8F8B9BE72A22A1B000070D34 /* TextFieldImagen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8B9BE62A22A1B000070D34 /* TextFieldImagen.swift */; };
 		8F8B9BE92A22A91E00070D34 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8B9BE82A22A91E00070D34 /* CustomTextField.swift */; };
@@ -80,6 +87,14 @@
 		8F2643292A206895003CB6EA /* AstroPolloUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AstroPolloUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F26432D2A206895003CB6EA /* AstroPolloUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstroPolloUITests.swift; sourceTree = "<group>"; };
 		8F26432F2A206895003CB6EA /* AstroPolloUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstroPolloUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8F3EC7FB2A254374006BC0AD /* PerfilController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilController.swift; sourceTree = "<group>"; };
+		8F3EC7FD2A2548ED006BC0AD /* PerfilViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilViewCell.swift; sourceTree = "<group>"; };
+		8F3EC8002A255464006BC0AD /* HorariosController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorariosController.swift; sourceTree = "<group>"; };
+		8F3EC8022A256004006BC0AD /* HorariosViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorariosViewCell.swift; sourceTree = "<group>"; };
+		8F3EC8062A2563F2006BC0AD /* ModeloHorario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeloHorario.swift; sourceTree = "<group>"; };
+		8F3EC8092A256FF8006BC0AD /* PasswordPerfilController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordPerfilController.swift; sourceTree = "<group>"; };
+		8F3EC80C2A257965006BC0AD /* PerfilCorreoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilCorreoController.swift; sourceTree = "<group>"; };
+		8F3EC80E2A258A94006BC0AD /* DatosGuardados.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatosGuardados.swift; sourceTree = "<group>"; };
 		8F4810952A23B3710024FBC3 /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Toast.swift; path = ../../../../EjemploDos/EjemploDos/Controller/Extras/Toast.swift; sourceTree = "<group>"; };
 		8F4810972A23B9D70024FBC3 /* RecuperacionCorreoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecuperacionCorreoController.swift; sourceTree = "<group>"; };
 		8F4810992A23BA8E0024FBC3 /* jsonemail.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = jsonemail.json; sourceTree = "<group>"; };
@@ -94,7 +109,6 @@
 		8F4810AF2A2456A00024FBC3 /* ServiciosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiciosViewController.swift; sourceTree = "<group>"; };
 		8F4810B12A24586C0024FBC3 /* ServiciosCollectionCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiciosCollectionCellController.swift; sourceTree = "<group>"; };
 		8F4810B42A2458B90024FBC3 /* OrdenesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdenesViewController.swift; sourceTree = "<group>"; };
-		8F8B9BE22A229F4900070D34 /* VerificadorEditText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificadorEditText.swift; sourceTree = "<group>"; };
 		8F8B9BE42A229FA500070D34 /* EstiloTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstiloTextField.swift; sourceTree = "<group>"; };
 		8F8B9BE62A22A1B000070D34 /* TextFieldImagen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldImagen.swift; sourceTree = "<group>"; };
 		8F8B9BE82A22A91E00070D34 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
@@ -187,6 +201,7 @@
 		8F26430B2A206894003CB6EA /* AstroPollo */ = {
 			isa = PBXGroup;
 			children = (
+				8F3EC8042A2563D7006BC0AD /* Modelos */,
 				8F4810A92A23F3C90024FBC3 /* Network */,
 				8FD9120F2A219D7500624541 /* Resources */,
 				8FD912062A217E3600624541 /* jsonhambu.json */,
@@ -224,6 +239,59 @@
 			path = AstroPolloUITests;
 			sourceTree = "<group>";
 		};
+		8F3EC7FA2A254338006BC0AD /* Perfil */ = {
+			isa = PBXGroup;
+			children = (
+				8F3EC80B2A257952006BC0AD /* PerfilCorreo */,
+				8F3EC8082A256FDE006BC0AD /* Contrasena */,
+				8F3EC7FF2A255454006BC0AD /* Horarios */,
+				8F3EC7FB2A254374006BC0AD /* PerfilController.swift */,
+				8F3EC7FD2A2548ED006BC0AD /* PerfilViewCell.swift */,
+			);
+			path = Perfil;
+			sourceTree = "<group>";
+		};
+		8F3EC7FF2A255454006BC0AD /* Horarios */ = {
+			isa = PBXGroup;
+			children = (
+				8F3EC8002A255464006BC0AD /* HorariosController.swift */,
+				8F3EC8022A256004006BC0AD /* HorariosViewCell.swift */,
+			);
+			path = Horarios;
+			sourceTree = "<group>";
+		};
+		8F3EC8042A2563D7006BC0AD /* Modelos */ = {
+			isa = PBXGroup;
+			children = (
+				8F3EC8052A2563E3006BC0AD /* Perfil */,
+			);
+			path = Modelos;
+			sourceTree = "<group>";
+		};
+		8F3EC8052A2563E3006BC0AD /* Perfil */ = {
+			isa = PBXGroup;
+			children = (
+				8F3EC8062A2563F2006BC0AD /* ModeloHorario.swift */,
+			);
+			path = Perfil;
+			sourceTree = "<group>";
+		};
+		8F3EC8082A256FDE006BC0AD /* Contrasena */ = {
+			isa = PBXGroup;
+			children = (
+				8F3EC8092A256FF8006BC0AD /* PasswordPerfilController.swift */,
+			);
+			path = Contrasena;
+			sourceTree = "<group>";
+		};
+		8F3EC80B2A257952006BC0AD /* PerfilCorreo */ = {
+			isa = PBXGroup;
+			children = (
+				8F3EC80C2A257965006BC0AD /* PerfilCorreoController.swift */,
+			);
+			path = PerfilCorreo;
+			sourceTree = "<group>";
+		};
 		8F4810A92A23F3C90024FBC3 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -253,12 +321,12 @@
 		8F8B9BE12A229F2100070D34 /* Extra */ = {
 			isa = PBXGroup;
 			children = (
-				8F8B9BE22A229F4900070D34 /* VerificadorEditText.swift */,
 				8F8B9BE42A229FA500070D34 /* EstiloTextField.swift */,
 				8F8B9BE62A22A1B000070D34 /* TextFieldImagen.swift */,
 				8F8B9BE82A22A91E00070D34 /* CustomTextField.swift */,
 				8F4810952A23B3710024FBC3 /* Toast.swift */,
 				8F4810A72A23F2CD0024FBC3 /* Validator.swift */,
+				8F3EC80E2A258A94006BC0AD /* DatosGuardados.swift */,
 			);
 			path = Extra;
 			sourceTree = "<group>";
@@ -278,6 +346,7 @@
 		8FD912012A21796D00624541 /* Controladores */ = {
 			isa = PBXGroup;
 			children = (
+				8F3EC7FA2A254338006BC0AD /* Perfil */,
 				8F4810B32A2458A20024FBC3 /* Ordenes */,
 				8F4810AC2A2454FB0024FBC3 /* Principal */,
 				8F8B9BEA2A22AB1D00070D34 /* Login */,
@@ -559,21 +628,28 @@
 			files = (
 				8F4810B02A2456A00024FBC3 /* ServiciosViewController.swift in Sources */,
 				8F4810B52A2458B90024FBC3 /* OrdenesViewController.swift in Sources */,
+				8F3EC7FC2A254374006BC0AD /* PerfilController.swift in Sources */,
+				8F3EC8012A255464006BC0AD /* HorariosController.swift in Sources */,
+				8F3EC80F2A258A95006BC0AD /* DatosGuardados.swift in Sources */,
 				8F8B9BEE2A22D7D900070D34 /* RegistroController.swift in Sources */,
 				8F8B9BE72A22A1B000070D34 /* TextFieldImagen.swift in Sources */,
 				8FD912042A21799500624541 /* SplashController.swift in Sources */,
 				8F4810982A23B9D70024FBC3 /* RecuperacionCorreoController.swift in Sources */,
 				8F8B9BE52A229FA500070D34 /* EstiloTextField.swift in Sources */,
-				8F8B9BE32A229F4900070D34 /* VerificadorEditText.swift in Sources */,
 				8F4810B22A24586C0024FBC3 /* ServiciosCollectionCellController.swift in Sources */,
 				8F48109E2A23C5590024FBC3 /* VerificarController.swift in Sources */,
 				8F4810A82A23F2CD0024FBC3 /* Validator.swift in Sources */,
+				8F3EC7FE2A2548ED006BC0AD /* PerfilViewCell.swift in Sources */,
+				8F3EC80A2A256FF8006BC0AD /* PasswordPerfilController.swift in Sources */,
 				8F8B9BEC2A22AB2B00070D34 /* LoginController.swift in Sources */,
 				8F4810AE2A24551A0024FBC3 /* TabBarViewController.swift in Sources */,
 				8F4810A22A23CE970024FBC3 /* CambiarPasswordController.swift in Sources */,
 				8F8B9BE92A22A91E00070D34 /* CustomTextField.swift in Sources */,
+				8F3EC8072A2563F2006BC0AD /* ModeloHorario.swift in Sources */,
 				8F2643112A206894003CB6EA /* ViewController.swift in Sources */,
+				8F3EC8032A256004006BC0AD /* HorariosViewCell.swift in Sources */,
 				8F4810962A23B3710024FBC3 /* Toast.swift in Sources */,
+				8F3EC80D2A257965006BC0AD /* PerfilCorreoController.swift in Sources */,
 				8F26430D2A206894003CB6EA /* AppDelegate.swift in Sources */,
 				8F26430F2A206894003CB6EA /* SceneDelegate.swift in Sources */,
 				8F4810AB2A23F3E30024FBC3 /* APINetwork.swift in Sources */,

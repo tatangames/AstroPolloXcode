@@ -30,4 +30,15 @@ let apiCambiarPasswordPerdida = baseUrl+"cliente/actualizar/password"
 
 let apiRegistrarse = baseUrl+"cliente/registro"
 
+let apiHorarioRestaurante = baseUrl+"cliente/informacion/restaurante/horario"
+
+let apiInformacionCliente = baseUrl+"cliente/informacion/personal"
+
+let apiActualizarPasswordPerfil = baseUrl+"cliente/perfil/actualizar/contrasena"
+
+let apiActualizarCorreo = baseUrl+"cliente/actualizar/correo"
+
+
+
+
 

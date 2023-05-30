@@ -48,3 +48,8 @@ let apiListaDePoligonos = baseUrl+"cliente/listado/zonas/poligonos"
 
 let apiCategoriasTodas = baseUrl+"cliente/listado/todas/categorias"
 
+let apiProductosListadoMenu = baseUrl+"cliente/listado/productos/servicios"
+
+
+
+

@@ -12,7 +12,8 @@ target 'AstroPollo' do
   pod 'MBProgressHUD'      
   pod 'SDWebImage'
   pod 'SwiftyJSON'
-
+  pod 'GoogleMaps'
+  pod 'GooglePlaces'
 
 
   target 'AstroPolloTests' do

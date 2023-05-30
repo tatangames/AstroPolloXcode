@@ -53,6 +53,8 @@
 		8FD912042A21799500624541 /* SplashController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD912032A21799500624541 /* SplashController.swift */; };
 		8FD912072A217E3600624541 /* jsonhambu.json in Resources */ = {isa = PBXBuildFile; fileRef = 8FD912062A217E3600624541 /* jsonhambu.json */; };
 		8FD912122A219DC900624541 /* hotpizza.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8FD912112A219DC900624541 /* hotpizza.ttf */; };
+		8FDC4A332A264ED100C5052E /* MapaDireccionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDC4A322A264ED100C5052E /* MapaDireccionController.swift */; };
+		8FDC4A352A26520600C5052E /* BarraProgresoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDC4A342A26520600C5052E /* BarraProgresoController.swift */; };
 		9C6A566894115573DCD24381 /* Pods_AstroPollo_AstroPolloUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEF2EA853D0F7C215656C00C /* Pods_AstroPollo_AstroPolloUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -126,6 +128,8 @@
 		8FD912032A21799500624541 /* SplashController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashController.swift; sourceTree = "<group>"; };
 		8FD912062A217E3600624541 /* jsonhambu.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = jsonhambu.json; sourceTree = "<group>"; };
 		8FD912112A219DC900624541 /* hotpizza.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = hotpizza.ttf; sourceTree = "<group>"; };
+		8FDC4A322A264ED100C5052E /* MapaDireccionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapaDireccionController.swift; sourceTree = "<group>"; };
+		8FDC4A342A26520600C5052E /* BarraProgresoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarraProgresoController.swift; sourceTree = "<group>"; };
 		A497996E4D2646F31667013B /* Pods-AstroPollo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AstroPollo.debug.xcconfig"; path = "Target Support Files/Pods-AstroPollo/Pods-AstroPollo.debug.xcconfig"; sourceTree = "<group>"; };
 		BEF2EA853D0F7C215656C00C /* Pods_AstroPollo_AstroPolloUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AstroPollo_AstroPolloUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA6A1AC5B5AFFC574BC67932 /* Pods-AstroPollo-AstroPolloUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AstroPollo-AstroPolloUITests.release.xcconfig"; path = "Target Support Files/Pods-AstroPollo-AstroPolloUITests/Pods-AstroPollo-AstroPolloUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -250,6 +254,7 @@
 		8F3EC7FA2A254338006BC0AD /* Perfil */ = {
 			isa = PBXGroup;
 			children = (
+				8FDC4A312A264EC100C5052E /* Mapa */,
 				8F3EC8102A259334006BC0AD /* Direcciones */,
 				8F3EC80B2A257952006BC0AD /* PerfilCorreo */,
 				8F3EC8082A256FDE006BC0AD /* Contrasena */,
@@ -408,6 +413,15 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		8FDC4A312A264EC100C5052E /* Mapa */ = {
+			isa = PBXGroup;
+			children = (
+				8FDC4A322A264ED100C5052E /* MapaDireccionController.swift */,
+				8FDC4A342A26520600C5052E /* BarraProgresoController.swift */,
+			);
+			path = Mapa;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -420,6 +434,7 @@
 				8F2643062A206894003CB6EA /* Frameworks */,
 				8F2643072A206894003CB6EA /* Resources */,
 				A9BE6E0BBCF748BE9B19D3DD /* [CP] Embed Pods Frameworks */,
+				5918896C8FE0C52F0B8D33A5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -458,6 +473,7 @@
 				8F2643262A206895003CB6EA /* Frameworks */,
 				8F2643272A206895003CB6EA /* Resources */,
 				6FB7696B76F956F1C0199331 /* [CP] Embed Pods Frameworks */,
+				A01F52AF8BFA07399A86F5C9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -547,6 +563,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		5918896C8FE0C52F0B8D33A5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AstroPollo/Pods-AstroPollo-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AstroPollo/Pods-AstroPollo-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AstroPollo/Pods-AstroPollo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		6FB7696B76F956F1C0199331 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -562,6 +595,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AstroPollo-AstroPolloUITests/Pods-AstroPollo-AstroPolloUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A01F52AF8BFA07399A86F5C9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AstroPollo-AstroPolloUITests/Pods-AstroPollo-AstroPolloUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AstroPollo-AstroPolloUITests/Pods-AstroPollo-AstroPolloUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AstroPollo-AstroPolloUITests/Pods-AstroPollo-AstroPolloUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A9BE6E0BBCF748BE9B19D3DD /* [CP] Embed Pods Frameworks */ = {
@@ -665,6 +715,8 @@
 				8FD912042A21799500624541 /* SplashController.swift in Sources */,
 				8F4810982A23B9D70024FBC3 /* RecuperacionCorreoController.swift in Sources */,
 				8F8B9BE52A229FA500070D34 /* EstiloTextField.swift in Sources */,
+				8FDC4A332A264ED100C5052E /* MapaDireccionController.swift in Sources */,
+				8FDC4A352A26520600C5052E /* BarraProgresoController.swift in Sources */,
 				8F4810B22A24586C0024FBC3 /* ServiciosCollectionCellController.swift in Sources */,
 				8F48109E2A23C5590024FBC3 /* VerificarController.swift in Sources */,
 				8F4810A82A23F2CD0024FBC3 /* Validator.swift in Sources */,

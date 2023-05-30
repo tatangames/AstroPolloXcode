@@ -120,6 +120,7 @@ class ListaDireccionesController: UIViewController, UITableViewDelegate, UITable
                 
                   else{
                         MBProgressHUD.hide(for: self.view, animated: true)
+                        self.mensajeSinConexion()
                     }
         
               case .failure( _):
@@ -162,7 +163,9 @@ class ListaDireccionesController: UIViewController, UITableViewDelegate, UITable
     @IBAction func btnAccionAddDireccion(_ sender: Any) {
         
         
-        
+        let vista : MapaDireccionController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MapaDireccionController") as! MapaDireccionController
+               
+        self.present(vista, animated: true, completion: nil)
     }
     
     

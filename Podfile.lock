@@ -1,5 +1,11 @@
 PODS:
   - Alamofire (5.7.1)
+  - GoogleMaps (8.0.0):
+    - GoogleMaps/Maps (= 8.0.0)
+  - GoogleMaps/Base (8.0.0)
+  - GoogleMaps/Maps (8.0.0):
+    - GoogleMaps/Base
+  - GooglePlaces (8.0.0)
   - lottie-ios (4.2.0)
   - MBProgressHUD (1.2.0)
   - SDWebImage (5.15.8):
@@ -9,6 +15,8 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - GoogleMaps
+  - GooglePlaces
   - lottie-ios
   - MBProgressHUD
   - SDWebImage
@@ -17,6 +25,8 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - GoogleMaps
+    - GooglePlaces
     - lottie-ios
     - MBProgressHUD
     - SDWebImage
@@ -24,11 +34,13 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 0123a34370cb170936ae79a8df46cc62b2edeb88
+  GoogleMaps: 0dce473ab18742d0f327887853630927cbee9127
+  GooglePlaces: 46231f49e2dc52aa9a604f99e2e6b29996f30cc7
   lottie-ios: 809ecf2d460ed650a6aed7aa88b2ec45fab4779c
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   SDWebImage: cb032eba469c54e0000e78bcb0a13cdde0a52798
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
 
-PODFILE CHECKSUM: 7d70e25b1994ae3c1a3ee287c839fc4d63e39c83
+PODFILE CHECKSUM: 4f23965a692f200588e017f11e1a701dddfbf564
 
 COCOAPODS: 1.12.1

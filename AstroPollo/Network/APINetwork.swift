@@ -40,8 +40,11 @@ let apiActualizarCorreo = baseUrl+"cliente/actualizar/correo"
 
 let apiListadoDirecciones = baseUrl+"cliente/listado/direcciones"
 
+let apiSeleccionarDireccion = baseUrl+"cliente/direcciones/elegir/direccion"
 
+let apiBorrarDireccion = baseUrl+"cliente/eliminar/direccion/seleccionada"
 
+let apiListaDePoligonos = baseUrl+"cliente/listado/zonas/poligonos"
 
 
 

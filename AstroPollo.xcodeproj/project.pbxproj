@@ -61,6 +61,7 @@
 		8FDC4A402A26911F00C5052E /* ProductosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDC4A3F2A26911F00C5052E /* ProductosController.swift */; };
 		8FDC4A472A26A46C00C5052E /* ListaProductosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDC4A462A26A46C00C5052E /* ListaProductosTableViewCell.swift */; };
 		8FDC4A492A26A77000C5052E /* TitularProductoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDC4A482A26A77000C5052E /* TitularProductoTableViewCell.swift */; };
+		8FDC4A4B2A26B9B100C5052E /* ElegirCantidadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDC4A4A2A26B9B100C5052E /* ElegirCantidadController.swift */; };
 		9C6A566894115573DCD24381 /* Pods_AstroPollo_AstroPolloUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEF2EA853D0F7C215656C00C /* Pods_AstroPollo_AstroPolloUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -142,6 +143,7 @@
 		8FDC4A3F2A26911F00C5052E /* ProductosController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductosController.swift; sourceTree = "<group>"; };
 		8FDC4A462A26A46C00C5052E /* ListaProductosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaProductosTableViewCell.swift; sourceTree = "<group>"; };
 		8FDC4A482A26A77000C5052E /* TitularProductoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitularProductoTableViewCell.swift; sourceTree = "<group>"; };
+		8FDC4A4A2A26B9B100C5052E /* ElegirCantidadController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElegirCantidadController.swift; sourceTree = "<group>"; };
 		A497996E4D2646F31667013B /* Pods-AstroPollo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AstroPollo.debug.xcconfig"; path = "Target Support Files/Pods-AstroPollo/Pods-AstroPollo.debug.xcconfig"; sourceTree = "<group>"; };
 		BEF2EA853D0F7C215656C00C /* Pods_AstroPollo_AstroPolloUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AstroPollo_AstroPolloUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA6A1AC5B5AFFC574BC67932 /* Pods-AstroPollo-AstroPolloUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AstroPollo-AstroPolloUITests.release.xcconfig"; path = "Target Support Files/Pods-AstroPollo-AstroPolloUITests/Pods-AstroPollo-AstroPolloUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -461,6 +463,7 @@
 				8FDC4A3F2A26911F00C5052E /* ProductosController.swift */,
 				8FDC4A462A26A46C00C5052E /* ListaProductosTableViewCell.swift */,
 				8FDC4A482A26A77000C5052E /* TitularProductoTableViewCell.swift */,
+				8FDC4A4A2A26B9B100C5052E /* ElegirCantidadController.swift */,
 			);
 			path = Productos;
 			sourceTree = "<group>";
@@ -759,6 +762,7 @@
 				8F3EC7FC2A254374006BC0AD /* PerfilController.swift in Sources */,
 				8F3EC8012A255464006BC0AD /* HorariosController.swift in Sources */,
 				8F3EC80F2A258A95006BC0AD /* DatosGuardados.swift in Sources */,
+				8FDC4A4B2A26B9B100C5052E /* ElegirCantidadController.swift in Sources */,
 				8FDC4A3B2A26613900C5052E /* ModeloCategorias.swift in Sources */,
 				8F8B9BEE2A22D7D900070D34 /* RegistroController.swift in Sources */,
 				8F3EC8172A259A74006BC0AD /* ModeloDirecciones.swift in Sources */,

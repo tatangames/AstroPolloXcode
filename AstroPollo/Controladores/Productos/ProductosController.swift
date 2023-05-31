@@ -254,18 +254,14 @@ class ProductosController: UIViewController,  UITableViewDataSource, UITableView
 
    // elegir producto
    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-             
-      /* if indexPath.section == 0{
-           return
-       }
            
      let idproducto = platoArray[indexPath.section].tipoPlato?[indexPath.row].idProducto ?? 0
      
-       let vista : ElegirProductoViewController = UIStoryboard(name: "Main3", bundle: nil).instantiateViewController(withIdentifier: "ElegirProductoViewController") as! ElegirProductoViewController
+       let vista : ElegirCantidadController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ElegirCantidadController") as! ElegirCantidadController
          
-        vista.productoid = String(idproducto)
+        vista.idproducto = String(idproducto)
       
-      self.present(vista, animated: true, completion: nil)*/
+      self.present(vista, animated: true, completion: nil)
    }
     
     

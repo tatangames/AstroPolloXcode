@@ -14,6 +14,7 @@ target 'AstroPollo' do
   pod 'SwiftyJSON'
   pod 'GoogleMaps'
   pod 'GooglePlaces'
+  pod 'Toast-Swift'
 
 
   target 'AstroPolloTests' do

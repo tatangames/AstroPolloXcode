@@ -50,6 +50,9 @@ let apiCategoriasTodas = baseUrl+"cliente/listado/todas/categorias"
 
 let apiProductosListadoMenu = baseUrl+"cliente/listado/productos/servicios"
 
+let apiInfoProductoIndividual = baseUrl+"cliente/informacion/producto/individual"
+
+let apiAgregarProductoCarrito = baseUrl+"cliente/carrito/producto/agregar"
 
 
 

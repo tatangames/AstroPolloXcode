@@ -10,6 +10,7 @@ import MBProgressHUD
 import SwiftyJSON
 import Alamofire
 import SDWebImage
+import Toast_Swift
 
 
 class Platos {
@@ -38,12 +39,38 @@ class Platos {
 
 
 
-class ProductosController: UIViewController,  UITableViewDataSource, UITableViewDelegate  {
+protocol protocoloProductoGuardado {
+    func mostrarToast(seActualizo: Bool)
+}
+
+
+
+class ProductosController: UIViewController,  UITableViewDataSource, UITableViewDelegate, protocoloProductoGuardado  {
+        
+    func mostrarToast(seActualizo: Bool) {
+    
+       if(seActualizo){
+           //self.mensajeToast(mensaje: "Producto Agregado")
+           
+          
+           var estilo = ToastStyle()
+           
+           estilo.backgroundColor = .green
+           estilo.messageColor = .white
+           
+           self.view.makeToast("Producto Guardado", duration: 2, position: .bottom, style: estilo)
+
+       }
+    }
+    
+    
+    
+ 
     
     @IBOutlet weak var tableView: UITableView!
     
     
-    var styleAzul = ToastStyle()
+    var styleAzul = ToastStilo()
     
     var platoArray = [Platos]()
     var arr = [Platos.PlatosArray]()
@@ -91,15 +118,9 @@ class ProductosController: UIViewController,  UITableViewDataSource, UITableView
                                 let codigo = json["success"]
                                 
                                 if(codigo == 1){
-                                    
-                                                                        
-                                 
-                                                                     
-                                    
-                                    
+                                            
                                   json["productos"].array?.forEach({ (dataArray) in
-                                    
-                                                                        
+                                                                  
                                     
                                     let nombreseccion = dataArray["nombre"].stringValue
                                                                                                         
@@ -259,6 +280,7 @@ class ProductosController: UIViewController,  UITableViewDataSource, UITableView
      
        let vista : ElegirCantidadController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ElegirCantidadController") as! ElegirCantidadController
          
+        vista.delegate = self
         vista.idproducto = String(idproducto)
       
       self.present(vista, animated: true, completion: nil)

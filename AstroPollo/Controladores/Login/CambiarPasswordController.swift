@@ -26,7 +26,7 @@ class CambiarPasswordController: UIViewController, UITextFieldDelegate {
     var idcliente = ""
     
     
-    var styleAzul = ToastStyle()
+    var styleAzul = ToastStilo()
     
     
     

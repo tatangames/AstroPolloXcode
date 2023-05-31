@@ -17,7 +17,7 @@ class CategoriasTodasController: UIViewController, UICollectionViewDataSource, U
     
     
     
-    var styleAzul = ToastStyle()
+    var styleAzul = ToastStilo()
     
     var arr = [ModeloCategorias]()
     

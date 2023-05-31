@@ -19,7 +19,7 @@ class LoginController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var btnRegistrarse: UIButton!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var btLogin: UIButton!
-    var styleAzul = ToastStyle()
+    var styleAzul = ToastStilo()
     
     
     var idfirebase = ""

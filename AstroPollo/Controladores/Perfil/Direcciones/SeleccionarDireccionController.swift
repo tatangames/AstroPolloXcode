@@ -13,7 +13,7 @@ import Alamofire
 class SeleccionarDireccionController: UIViewController {
     
     
-    var styleAzul = ToastStyle()
+    var styleAzul = ToastStilo()
     var nombre = ""
     var direccion = ""
     var referencia = ""

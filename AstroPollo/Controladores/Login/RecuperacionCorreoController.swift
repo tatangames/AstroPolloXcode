@@ -20,7 +20,7 @@ class RecuperacionController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var edtCorreo: CustomTextField!
     
-    var styleAzul = ToastStyle()
+    var styleAzul = ToastStilo()
     
     @IBOutlet weak var btnEnviar: UIButton!
     

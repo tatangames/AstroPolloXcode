@@ -21,7 +21,7 @@ import SwiftyJSON
     var polygon = GMSPolygon()
     var polygonList = [GMSPolygon]()
     @IBOutlet weak var btnMapa: UIButton!
-    var styleAzul = ToastStyle()
+    var styleAzul = ToastStilo()
     
     var latitudreal = ""
     var longitudreal = ""

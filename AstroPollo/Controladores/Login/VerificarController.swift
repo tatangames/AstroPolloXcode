@@ -22,7 +22,7 @@ class VerificarController: UIViewController, UITextFieldDelegate {
     var correo = ""
     
     
-    var styleAzul = ToastStyle()
+    var styleAzul = ToastStilo()
     
     override func viewDidLoad() {
         super.viewDidLoad()

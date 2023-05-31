@@ -26,7 +26,7 @@ class RegistroController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var btnRegistro: UIButton!
     
-    var styleAzul = ToastStyle()
+    var styleAzul = ToastStilo()
     var idfirebase = ""
     
     

@@ -28,7 +28,7 @@ class PasswordPerfilController: UIViewController , UITextFieldDelegate{
     @IBOutlet weak var btnActualizar: UIButton!
     
     
-    var styleAzul = ToastStyle()
+    var styleAzul = ToastStilo()
     
     override func viewDidLoad() {
         super.viewDidLoad()

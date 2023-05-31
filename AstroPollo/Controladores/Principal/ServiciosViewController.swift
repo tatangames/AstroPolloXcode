@@ -17,7 +17,7 @@ class ServiciosViewController: UIViewController, UICollectionViewDelegate,
     @IBOutlet weak var clvCollectionView: UICollectionView!
    // var arr = [Servicios]()
     
-    var styleAzul = ToastStyle()
+    var styleAzul = ToastStilo()
     let bounds = UIScreen.main.bounds
     
     var mensaje = ""

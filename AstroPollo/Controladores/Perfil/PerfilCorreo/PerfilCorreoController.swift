@@ -25,7 +25,7 @@ class PerfilCorreoController: UIViewController , UITextFieldDelegate{
     
     
     
-    var styleAzul = ToastStyle()
+    var styleAzul = ToastStilo()
     
     override func viewDidLoad() {
         super.viewDidLoad()

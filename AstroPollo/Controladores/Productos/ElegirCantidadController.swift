@@ -33,7 +33,9 @@ class ElegirCantidadController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var txtPrecioCliente: UILabel!
     
     
-    var styleAzul = ToastStyle()
+    var styleToastAzul = ToastStilo()
+    
+    
     var utilizaNota = 0
     var usaNota = ""
     
@@ -42,11 +44,14 @@ class ElegirCantidadController: UIViewController, UITextFieldDelegate {
     var cantidadElegida = 1
     
     
+    var seGuardoProducto = false
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        styleAzul.backgroundColor = UIColor(red: 45, green: 88, blue: 156, alpha: 1)
-        styleAzul.titleColor = .white
+        styleToastAzul.backgroundColor = UIColor(named: "ColorAzulToast")!
+        styleToastAzul.titleColor = .white
         
         stackView.layoutMargins = UIEdgeInsets(top: 25, left: 20, bottom: 40, right: 20)
         stackView.isLayoutMarginsRelativeArrangement = true
@@ -183,17 +188,21 @@ class ElegirCantidadController: UIViewController, UITextFieldDelegate {
     
     
     func mensajeToastAzul(mensaje: String){
-       self.view.makeToast(mensaje, duration: 3.0, position: .bottom, style: styleAzul)
+       self.view.makeToast(mensaje, duration: 3.0, position: .bottom, style: styleToastAzul)
     }
     
     func mensajeToastVerde(mensaje: String){
-       self.view.makeToast(mensaje, duration: 3.0, position: .bottom, style: styleAzul)
+       self.view.makeToast(mensaje, duration: 3.0, position: .bottom, style: styleToastAzul)
     }
     
     
     @IBAction func btnAccionAgregar(_ sender: Any) {
         
-        verificarIngreso()
+        
+        self.seGuardoProducto = true
+        dismiss(animated: true, completion: nil)
+        
+        //verificarIngreso()
     }
     
     
@@ -293,7 +302,7 @@ class ElegirCantidadController: UIViewController, UITextFieldDelegate {
                   }
                   else if(codigo == 6){
                       
-                      self.productoGuardado()
+                      self.salir()
                       
                   }
                   
@@ -311,10 +320,20 @@ class ElegirCantidadController: UIViewController, UITextFieldDelegate {
     
     
     
-    func productoGuardado(){
+    var delegate: protocoloProductoGuardado!
+    
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        //super.viewWillDisappear(animated)
+        //removeObservers()
         
-        self.mensajeToastVerde(mensaje: "Agregado")
-       
+        if(delegate != nil){
+            delegate.mostrarToast(seActualizo: seGuardoProducto)
+        }
+    }
+    
+    func salir(){
+        self.seGuardoProducto = true
         dismiss(animated: true, completion: nil)
     }
     
@@ -370,10 +389,7 @@ class ElegirCantidadController: UIViewController, UITextFieldDelegate {
         addObservers()
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        removeObservers()
-    }
+
     
     @objc func didTapView(gesture: UITapGestureRecognizer) {
         view.endEditing(true)

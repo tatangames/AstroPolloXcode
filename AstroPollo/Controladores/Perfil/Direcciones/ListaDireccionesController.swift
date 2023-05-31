@@ -32,7 +32,7 @@ class ListaDireccionesController: UIViewController, UITableViewDelegate, UITable
     @IBOutlet weak var btnAgregarDireccion: UIButton!
     @IBOutlet weak var tableView: UITableView!
     
-    var styleAzul = ToastStyle()
+    var styleAzul = ToastStilo()
     
     var arr = [ModeloDirecciones]()
     

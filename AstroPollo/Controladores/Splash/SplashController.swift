@@ -15,29 +15,33 @@ class SplashController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-        
-        /*for family in UIFont.familyNames {
-            print(family)
-            for name in UIFont.fontNames(forFamilyName: family){
-                print(name)
-            }
-        }*/
-        
         
         setupAnimation();
         
         // TIMER
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3) {
-            self.performSegue(withIdentifier: "OpenLogin", sender: nil)
+          
+            
+            // verificacion si ya inicio sesion
+           if let usuarioid = UserDefaults.standard.getValueIdUsuario(), !usuarioid.isEmpty {
+            
+               
+               let vista : TabBarViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBarViewController") as! TabBarViewController
+               
+               self.present(vista, animated: true, completion: nil)
+           }
+           else {
+               
+               let vista : LoginController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginController") as! LoginController
+                       
+               self.present(vista, animated: true, completion: nil)
+            }
         }
         
-            
-        
-        //onboardingLottieView.animation = LottieAnimation.named("splash_hamburger.json")
-       // onboardingLottieView.play()
-        
+   
     }
+    
+    
     
     private func setupAnimation(){
   

@@ -18,7 +18,7 @@ class CambiarPasswordController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var scrollView: UIScrollView!
     
     @IBOutlet weak var vistaAnimacion: LottieAnimationView!
-    @IBOutlet weak var edtPassword: CustomTextField!
+    @IBOutlet weak var edtPassword: UITextField!
     
     @IBOutlet weak var btnActualizar: UIButton!
     
@@ -37,13 +37,17 @@ class CambiarPasswordController: UIViewController, UITextFieldDelegate {
         vistaAnimacion.loopMode = .loop
         vistaAnimacion.play()
                 
-        edtPassword.setupLeftImageView(image: UIImage(systemName: "lock.rectangle")!)
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapView(gesture:)))
                view.addGestureRecognizer(tapGesture)
 
         styleAzul.backgroundColor = UIColor(named: "ColorAzulToast")!
         styleAzul.titleColor = .white
+        
+        edtPassword.layer.cornerRadius = 8
+        edtPassword.layer.borderWidth = 1.5
+        edtPassword.layer.borderColor = UIColor.lightGray.cgColor
+        edtPassword.borderStyle = .none
         
         self.btnActualizar.layer.cornerRadius = 18
         self.btnActualizar.clipsToBounds = true

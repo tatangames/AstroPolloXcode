@@ -51,7 +51,7 @@ class ListaDireccionesController: UIViewController, UITableViewDelegate, UITable
     
     func peticionBuscarDirecciones(){
         
-        //let idClienteusuario = UserDefaults.standard.getValueIdUsuario() ?? ""
+        //let idCliente = UserDefaults.standard.getValueIdUsuario() ?? ""
           
         let idCliente = "3"
         

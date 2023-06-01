@@ -54,5 +54,5 @@ let apiInfoProductoIndividual = baseUrl+"cliente/informacion/producto/individual
 
 let apiAgregarProductoCarrito = baseUrl+"cliente/carrito/producto/agregar"
 
-
+let apiObtenerMenuPrincipal = baseUrl+"cliente/lista/servicios-bloque"
 

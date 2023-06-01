@@ -18,11 +18,11 @@ class RegistroController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var lottieAnimacion: LottieAnimationView!
     @IBOutlet weak var scrollView: UIScrollView!
     
-    @IBOutlet weak var edtUsuario: CustomTextField!
+    @IBOutlet weak var edtUsuario: UITextField!
     
-    @IBOutlet weak var edtPassword: CustomTextField!
+    @IBOutlet weak var edtPassword: UITextField!
     
-    @IBOutlet weak var edtCorreo: CustomTextField!
+    @IBOutlet weak var edtCorreo: UITextField!
     
     @IBOutlet weak var btnRegistro: UIButton!
     
@@ -36,13 +36,7 @@ class RegistroController: UIViewController, UITextFieldDelegate {
         lottieAnimacion.contentMode = .scaleAspectFit
         lottieAnimacion.loopMode = .loop
         lottieAnimacion.play()
-        
-        
-        edtUsuario.setupLeftImageView(image: UIImage(systemName: "person.fill")!)
-        edtPassword.setupLeftImageView(image: UIImage(systemName: "lock.fill")!)
-        edtCorreo.setupLeftImageView(image: UIImage(systemName: "envelope.fill")!)
-                
-        
+    
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapView(gesture:)))
                view.addGestureRecognizer(tapGesture)
 
@@ -51,6 +45,21 @@ class RegistroController: UIViewController, UITextFieldDelegate {
         
         self.btnRegistro.layer.cornerRadius = 18
         self.btnRegistro.clipsToBounds = true
+        
+        edtUsuario.layer.cornerRadius = 8
+        edtUsuario.layer.borderWidth = 1.5
+        edtUsuario.layer.borderColor = UIColor.lightGray.cgColor
+        edtUsuario.borderStyle = .none
+        
+        edtPassword.layer.cornerRadius = 8
+        edtPassword.layer.borderWidth = 1.5
+        edtPassword.layer.borderColor = UIColor.lightGray.cgColor
+        edtPassword.borderStyle = .none
+        
+        edtCorreo.layer.cornerRadius = 8
+        edtCorreo.layer.borderWidth = 1.5
+        edtCorreo.layer.borderColor = UIColor.lightGray.cgColor
+        edtCorreo.borderStyle = .none
         
         
         self.edtUsuario.delegate = self

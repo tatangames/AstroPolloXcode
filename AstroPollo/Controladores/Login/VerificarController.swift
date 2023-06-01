@@ -16,7 +16,7 @@ class VerificarController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var vistaAnimacion: LottieAnimationView!
-    @IBOutlet weak var edtCodigo: CustomTextField!
+    @IBOutlet weak var edtCodigo: UITextField!
     @IBOutlet weak var btnVerificar: UIButton!
     
     var correo = ""
@@ -32,7 +32,6 @@ class VerificarController: UIViewController, UITextFieldDelegate {
         vistaAnimacion.play()
         
         
-        edtCodigo.setupLeftImageView(image: UIImage(systemName: "lock.rectangle")!)
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapView(gesture:)))
                view.addGestureRecognizer(tapGesture)
@@ -42,6 +41,11 @@ class VerificarController: UIViewController, UITextFieldDelegate {
         
         self.btnVerificar.layer.cornerRadius = 18
         self.btnVerificar.clipsToBounds = true
+        
+        edtCodigo.layer.cornerRadius = 8
+        edtCodigo.layer.borderWidth = 1.5
+        edtCodigo.layer.borderColor = UIColor.lightGray.cgColor
+        edtCodigo.borderStyle = .none
                                           
         
         self.edtCodigo.delegate = self

@@ -13,8 +13,8 @@ import Alamofire
 class LoginController: UIViewController, UITextFieldDelegate {
     
     
-    @IBOutlet weak var edtUsuario: CustomTextField!
-    @IBOutlet weak var edtPassword: CustomTextField!
+    @IBOutlet weak var edtUsuario: UITextField!
+    @IBOutlet weak var edtPassword: UITextField!
     @IBOutlet weak var btnRecuperarPassword: UIButton!
     @IBOutlet weak var btnRegistrarse: UIButton!
     @IBOutlet weak var scrollView: UIScrollView!
@@ -28,9 +28,7 @@ class LoginController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
                 
-        edtUsuario.setupLeftImageView(image: UIImage(systemName: "person.fill")!)
-        edtPassword.setupLeftImageView(image: UIImage(systemName: "lock.fill")!)
-        
+    
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapView(gesture:)))
                view.addGestureRecognizer(tapGesture)
 
@@ -39,16 +37,19 @@ class LoginController: UIViewController, UITextFieldDelegate {
         
         self.btLogin.layer.cornerRadius = 18
         self.btLogin.clipsToBounds = true
+        
+        edtUsuario.layer.cornerRadius = 8
+        edtUsuario.layer.borderWidth = 1.5
+        edtUsuario.layer.borderColor = UIColor.lightGray.cgColor
+        edtUsuario.borderStyle = .none
+        
+        edtPassword.layer.cornerRadius = 8
+        edtPassword.layer.borderWidth = 1.5
+        edtPassword.layer.borderColor = UIColor.lightGray.cgColor
+        edtPassword.borderStyle = .none
      
         self.edtUsuario.delegate = self
         self.edtPassword.delegate = self
-        
-        
-        
-        
-        
-        
-        
     }
 
    
@@ -62,9 +63,7 @@ class LoginController: UIViewController, UITextFieldDelegate {
     
     
     @IBAction func btnAccionLogin(_ sender: Any) {
-       
-        pasarPantallaMenu()
-        
+            
        cerrarTeclado()
         
         // USAURIO ES REQUERIDO
@@ -146,13 +145,9 @@ class LoginController: UIViewController, UITextFieldDelegate {
     
     
     func pasarPantallaMenu(){
-        
-        
         let vista : TabBarViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBarViewController") as! TabBarViewController
         
         self.present(vista, animated: true, completion: nil)
-        
-        
     }
     
     
@@ -212,6 +207,12 @@ class LoginController: UIViewController, UITextFieldDelegate {
     func mensajeToastAzul(mensaje: String){
         self.view.makeToast(mensaje, duration: 3.0, position: .bottom, style: styleAzul)
     }
+    
+    
+    @IBAction func btnAccionRegistro(_ sender: Any) {
+        verRegistro()
+    }
+    
        
     
     

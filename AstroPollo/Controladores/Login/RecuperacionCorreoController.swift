@@ -18,7 +18,7 @@ class RecuperacionController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var vistaAnimacion: LottieAnimationView!
     
-    @IBOutlet weak var edtCorreo: CustomTextField!
+    @IBOutlet weak var edtCorreo: UITextField!
     
     var styleAzul = ToastStilo()
     
@@ -31,9 +31,7 @@ class RecuperacionController: UIViewController, UITextFieldDelegate {
         vistaAnimacion.contentMode = .scaleAspectFit
         vistaAnimacion.loopMode = .loop
         vistaAnimacion.play()
-                
-        edtCorreo.setupLeftImageView(image: UIImage(systemName: "envelope.fill")!)
-        
+                        
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapView(gesture:)))
                view.addGestureRecognizer(tapGesture)
 
@@ -42,7 +40,11 @@ class RecuperacionController: UIViewController, UITextFieldDelegate {
         
         self.btnEnviar.layer.cornerRadius = 18
         self.btnEnviar.clipsToBounds = true
-                                          
+                       
+        edtCorreo.layer.cornerRadius = 8
+        edtCorreo.layer.borderWidth = 1.5
+        edtCorreo.layer.borderColor = UIColor.lightGray.cgColor
+        edtCorreo.borderStyle = .none
         
         self.edtCorreo.delegate = self
     }

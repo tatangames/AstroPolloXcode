@@ -16,8 +16,8 @@ class TabBarViewController: UITabBarController {
         super.viewDidLoad()
         
         // cambiara la vista cuando se hace una orden
-        let finalVC = self.viewControllers![0] as! ServiciosViewController //first view controller in the tabbar
-        finalVC.cambiarVista = cambiarVista
+        //let finalVC = self.viewControllers![0] as! ServiciosViewController //first view controller in the tabbar
+        //finalVC.cambiarVista = cambiarVista
     }
 
 }

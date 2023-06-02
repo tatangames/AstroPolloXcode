@@ -17,15 +17,10 @@ class PrincipalController: UIViewController, UICollectionViewDelegate, UICollect
     var arrBanner = [ModeloBanner]()
     var arrCategorias = [ModeloCategoriasPrincipal]()
     
-    
+        
     @IBOutlet weak var pageControl: UIPageControl!
-    
-    @IBOutlet weak var coleccionCategorias: UICollectionView!
-    
-    
-    
-    
-    @IBOutlet weak var coleccionBanner: UICollectionView!
+    @IBOutlet weak var bannerCollecionView: UICollectionView!
+    @IBOutlet weak var categoriaCollectionView: UICollectionView!
     
     var currentCellIndex = 0
     var timer:Timer?
@@ -33,22 +28,35 @@ class PrincipalController: UIViewController, UICollectionViewDelegate, UICollect
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                
+
         styleAzul.backgroundColor = UIColor(named: "ColorAzulToast")!
         styleAzul.titleColor = .white
-        
         pageControl.currentPage = 0
         
         registrarCeldas()
-        
-     
+             
         peticionMenu()
     }
     
-     func registrarCeldas() {
-        coleccionCategorias.register(UINib(nibName: CategoryCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: CategoryCollectionViewCell.identifier)
-       
+    func registrarCeldas() {
+        categoriaCollectionView.register(UINib(nibName: CategoryCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: CategoryCollectionViewCell.identifier)
     }
+    
+    @IBAction func btnAccionPerfil(_ sender: Any) {
+     
+        if(currentCellIndex < arrBanner.count - 1){
+            currentCellIndex = currentCellIndex + 1
+        }else{
+            currentCellIndex = 0
+        }
+        
+        pageControl.currentPage = currentCellIndex
+        
+        bannerCollecionView.scrollToItem(at: IndexPath(item: currentCellIndex, section: 0),
+                                          at: .right, animated: true)
+        
+    }
+    
     
     
     @objc func slideToNext(){
@@ -61,7 +69,7 @@ class PrincipalController: UIViewController, UICollectionViewDelegate, UICollect
         }
         
         
-        coleccionBanner.scrollToItem(at: IndexPath(item: currentCellIndex, section: 0), at: .right, animated: true)
+        bannerCollecionView.scrollToItem(at: IndexPath(item: currentCellIndex, section: 0), at: .right, animated: true)
     }
     
     
@@ -120,16 +128,10 @@ class PrincipalController: UIViewController, UICollectionViewDelegate, UICollect
                           self.arrCategorias.append(ModeloCategoriasPrincipal(id: idC, nombre: nombreC, imagen: imagenC))
                       })
                         
-                      
-                      
-                      
                     
                       self.pageControl.numberOfPages = self.arrBanner.count
-                      self.coleccionBanner.reloadData()
-                     
-                      self.coleccionCategorias.reloadData()
-                      
-                      
+                      self.bannerCollecionView.reloadData()
+                      self.categoriaCollectionView.reloadData()
                       self.startTimer()
                 }
                 
@@ -161,7 +163,7 @@ class PrincipalController: UIViewController, UICollectionViewDelegate, UICollect
         
         pageControl.currentPage = currentCellIndex
         
-        coleccionBanner.scrollToItem(at: IndexPath(item: currentCellIndex, section: 0),
+        bannerCollecionView.scrollToItem(at: IndexPath(item: currentCellIndex, section: 0),
                                           at: .right, animated: true)
        
     }
@@ -187,29 +189,68 @@ class PrincipalController: UIViewController, UICollectionViewDelegate, UICollect
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return arrBanner.count
+                
+        switch collectionView {
+        case bannerCollecionView:
+            return arrBanner.count
+        case categoriaCollectionView:
+            return arrCategorias.count
+   
+        default: return 0
+        }
+        
+       // return arrBanner.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! PrincipalCollectionViewCell
-        
+   
+        /*let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellbanner", for: indexPath) as! BannerCollectionViewCell
+       
         let info = arrBanner[indexPath.row]
         let union = baseUrlImagen + info.getImagen()
                    
-        cell.imagenBanner.sd_setImage(with: URL(string: "\(union)"), placeholderImage: UIImage(named: "fotodefault"))
+       cell.imgBanner.sd_setImage(with: URL(string: "\(union)"), placeholderImage: UIImage(named: "fotodefault"))
         
-        cell.imagenBanner.layer.cornerRadius = 50
+                    
+        return cell*/
         
-        return cell
-        
+       switch collectionView {
+        case categoriaCollectionView:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryCollectionViewCell.identifier, for: indexPath) as! CategoryCollectionViewCell
+            cell.setup(category: arrCategorias[indexPath.row])
+            return cell
+        case bannerCollecionView:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellbanner", for: indexPath) as! BannerCollectionViewCell
+           
+            let info = arrBanner[indexPath.row]
+            let union = baseUrlImagen + info.getImagen()
+                       
+           cell.imgBanner.sd_setImage(with: URL(string: "\(union)"), placeholderImage: UIImage(named: "fotodefault"))
+            
+           //cell.imgBanner.layer.cornerRadius = 50
+                        
+            return cell
+    
+        default: return UICollectionViewCell()
+        }
     }
     
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        pageControl.currentPage = indexPath.row
+       
+        switch collectionView {
+         case bannerCollecionView:
+         
+            pageControl.currentPage = indexPath.row
+         default: break
+         }
+        
+       
     }
     
-
+    
+    
+ 
     
 }

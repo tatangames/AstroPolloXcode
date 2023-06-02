@@ -28,9 +28,10 @@ class ElegirCantidadController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var vistaPanel: UIView!
     @IBOutlet weak var stackView: UIStackView!
-    
-    
     @IBOutlet weak var txtPrecioCliente: UILabel!
+    
+    
+    
     
     
     var styleToastAzul = ToastStilo()

@@ -10,6 +10,8 @@
 		333DC6AECE20BD486CF7CC2E /* Pods_AstroPolloTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3888F985381C30F295DE45D /* Pods_AstroPolloTests.framework */; };
 		42ABFC5AB9B707F09B3198D8 /* Pods_AstroPollo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E57B4527E243C6C40A9FEF7A /* Pods_AstroPollo.framework */; };
 		8F0B21BA2A2BA5EE002436FE /* CarritoComprasController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0B21B92A2BA5EE002436FE /* CarritoComprasController.swift */; };
+		8F0B21BC2A2BC226002436FE /* RegistrarNuevaDireccionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0B21BB2A2BC226002436FE /* RegistrarNuevaDireccionController.swift */; };
+		8F0B21BE2A2BC39D002436FE /* jsongps.json in Resources */ = {isa = PBXBuildFile; fileRef = 8F0B21BD2A2BC39D002436FE /* jsongps.json */; };
 		8F26430D2A206894003CB6EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F26430C2A206894003CB6EA /* AppDelegate.swift */; };
 		8F26430F2A206894003CB6EA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F26430E2A206894003CB6EA /* SceneDelegate.swift */; };
 		8F2643142A206894003CB6EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F2643122A206894003CB6EA /* Main.storyboard */; };
@@ -97,6 +99,8 @@
 		73A09E7EE07D31D9CE80D1CA /* Pods-AstroPollo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AstroPollo.release.xcconfig"; path = "Target Support Files/Pods-AstroPollo/Pods-AstroPollo.release.xcconfig"; sourceTree = "<group>"; };
 		79C743BE68BC3000CF5778B5 /* Pods-AstroPolloTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AstroPolloTests.debug.xcconfig"; path = "Target Support Files/Pods-AstroPolloTests/Pods-AstroPolloTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8F0B21B92A2BA5EE002436FE /* CarritoComprasController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarritoComprasController.swift; sourceTree = "<group>"; };
+		8F0B21BB2A2BC226002436FE /* RegistrarNuevaDireccionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrarNuevaDireccionController.swift; sourceTree = "<group>"; };
+		8F0B21BD2A2BC39D002436FE /* jsongps.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = jsongps.json; sourceTree = "<group>"; };
 		8F2643092A206894003CB6EA /* AstroPollo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AstroPollo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F26430C2A206894003CB6EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8F26430E2A206894003CB6EA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -257,6 +261,7 @@
 				8F4810A92A23F3C90024FBC3 /* Network */,
 				8FD9120F2A219D7500624541 /* Resources */,
 				8FD912062A217E3600624541 /* jsonhambu.json */,
+				8F0B21BD2A2BC39D002436FE /* jsongps.json */,
 				8F48109F2A23C5E10024FBC3 /* jsonemailenviado.json */,
 				8F8B9BEF2A22D91D00070D34 /* jsonhotdog.json */,
 				8F4810A32A23D1D30024FBC3 /* jsonpassword.json */,
@@ -493,6 +498,7 @@
 			children = (
 				8FDC4A322A264ED100C5052E /* MapaDireccionController.swift */,
 				8FDC4A342A26520600C5052E /* BarraProgresoController.swift */,
+				8F0B21BB2A2BC226002436FE /* RegistrarNuevaDireccionController.swift */,
 			);
 			path = Mapa;
 			sourceTree = "<group>";
@@ -651,6 +657,7 @@
 				8F8B9BF02A22D91D00070D34 /* jsonhotdog.json in Resources */,
 				8FD912072A217E3600624541 /* jsonhambu.json in Resources */,
 				8F2643192A206895003CB6EA /* LaunchScreen.storyboard in Resources */,
+				8F0B21BE2A2BC39D002436FE /* jsongps.json in Resources */,
 				8F4810A62A23D1D30024FBC3 /* jsonunlockpassword.json in Resources */,
 				8F2643162A206895003CB6EA /* Assets.xcassets in Resources */,
 				8F4810A52A23D1D30024FBC3 /* jsonpassword.json in Resources */,
@@ -842,6 +849,7 @@
 				8FBDAF4F2A2918FF00B9A090 /* BannerCollectionViewCell.swift in Sources */,
 				8FDC4A352A26520600C5052E /* BarraProgresoController.swift in Sources */,
 				8F6C1BBE2A27D5060053CE42 /* ModeloBanner.swift in Sources */,
+				8F0B21BC2A2BC226002436FE /* RegistrarNuevaDireccionController.swift in Sources */,
 				8F48109E2A23C5590024FBC3 /* VerificarController.swift in Sources */,
 				8F4810A82A23F2CD0024FBC3 /* Validator.swift in Sources */,
 				8F3EC7FE2A2548ED006BC0AD /* PerfilViewCell.swift in Sources */,

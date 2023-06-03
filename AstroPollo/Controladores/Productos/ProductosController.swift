@@ -44,28 +44,21 @@ protocol protocoloProductoGuardado {
 }
 
 
-
 class ProductosController: UIViewController,  UITableViewDataSource, UITableViewDelegate, protocoloProductoGuardado  {
         
     func mostrarToast(seActualizo: Bool) {
     
        if(seActualizo){
-           //self.mensajeToast(mensaje: "Producto Agregado")
            
-          
            var estilo = ToastStyle()
            
-           estilo.backgroundColor = .green
+           estilo.backgroundColor = UIColor(named: "ColorAzulToast")!
            estilo.messageColor = .white
            
            self.view.makeToast("Producto Guardado", duration: 2, position: .bottom, style: estilo)
-
        }
     }
     
-    
-    
- 
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -257,21 +250,7 @@ class ProductosController: UIViewController,  UITableViewDataSource, UITableView
      
          return cell.contentView
      }
-     
-     // oculta la primera cabecera
-     /* func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-           //return 40
-           let headerHeight: CGFloat
-
-             switch section {
-             case 0:
-                 // hide the header
-                 headerHeight = CGFloat.leastNonzeroMagnitude
-                 return headerHeight
-             default:
-                return UITableView.automaticDimension
-             }
-      }*/
+  
 
    // elegir producto
    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -286,6 +265,12 @@ class ProductosController: UIViewController,  UITableViewDataSource, UITableView
       self.present(vista, animated: true, completion: nil)
    }
     
+    
+    
+    @IBAction func btnAtras(_ sender: Any) {
+        
+        dismiss(animated: true, completion: nil)
+    }
     
     
 }

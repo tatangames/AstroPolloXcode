@@ -32,6 +32,16 @@ class ListaDireccionesController: UIViewController, UITableViewDelegate, UITable
     @IBOutlet weak var btnAgregarDireccion: UIButton!
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var navegacionBtn: UINavigationBar!
+    @IBOutlet weak var navegacionNoBtn: UINavigationBar!
+   
+    
+    // PARA EVITAR QUE BOTON HACIA ATRAS ESTE ACTIVO CUANDO SE AGREGA LA PRIMERA
+    // DIRECCION AL REGISTRARSE O LOGIN
+    
+    var bloquearBotonAtras = false
+    
+    
     var styleAzul = ToastStilo()
     
     var arr = [ModeloDirecciones]()
@@ -43,6 +53,17 @@ class ListaDireccionesController: UIViewController, UITableViewDelegate, UITable
         styleAzul.titleColor = .white
         
         
+        if(bloquearBotonAtras){
+            
+            navegacionBtn.isHidden = true
+            navegacionNoBtn.isHidden = false
+            
+        }else{
+            navegacionNoBtn.isHidden = true
+            navegacionBtn.isHidden = false
+        }
+        
+        
         // ocultar lineas vacias
         tableView.tableFooterView = UIView()
         peticionBuscarDirecciones()
@@ -51,10 +72,8 @@ class ListaDireccionesController: UIViewController, UITableViewDelegate, UITable
     
     func peticionBuscarDirecciones(){
         
-        //let idCliente = UserDefaults.standard.getValueIdUsuario() ?? ""
-          
-        let idCliente = "3"
-        
+        let idCliente = UserDefaults.standard.getValueIdUsuario() ?? ""
+                  
         MBProgressHUD.showAdded(to: self.view, animated: true)
         
         let params = [
@@ -161,8 +180,7 @@ class ListaDireccionesController: UIViewController, UITableViewDelegate, UITable
     
     
     @IBAction func btnAccionAddDireccion(_ sender: Any) {
-        
-        
+                
         let vista : MapaDireccionController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MapaDireccionController") as! MapaDireccionController
                
         self.present(vista, animated: true, completion: nil)
@@ -170,7 +188,12 @@ class ListaDireccionesController: UIViewController, UITableViewDelegate, UITable
     
     
     
-    
+    @IBAction func btnAccionAtras(_ sender: Any) {
+        
+        let vista : TabBarViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBarViewController") as! TabBarViewController
+        
+        self.present(vista, animated: true, completion: nil)
+    }
     
     
     

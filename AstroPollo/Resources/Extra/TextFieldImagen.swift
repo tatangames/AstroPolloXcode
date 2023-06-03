@@ -11,7 +11,7 @@ import UIKit
 @IBDesignable
 class TextFieldImagen: UITextField {
     
-    private var kAssociationKeyMaxLength: Int = 0
+    
     
     @IBInspectable var leftImage: UIImage? {
         didSet {

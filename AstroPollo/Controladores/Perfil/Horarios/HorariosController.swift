@@ -36,10 +36,8 @@ class HorariosController: UIViewController, UITableViewDelegate, UITableViewData
     
     func peticionBuscarHorarios(){
         
-        //let idClienteusuario = UserDefaults.standard.getValueIdUsuario() ?? ""
+        let idCliente = UserDefaults.standard.getValueIdUsuario() ?? ""
           
-        let idCliente = "3"
-        
         MBProgressHUD.showAdded(to: self.view, animated: true)
         
         let params = [
@@ -78,6 +76,7 @@ class HorariosController: UIViewController, UITableViewDelegate, UITableViewData
                       self.tableView.reloadData()
                   }
                   else{
+                      self.mensajeSinConexion()
                         MBProgressHUD.hide(for: self.view, animated: true)
                     }
         

@@ -56,3 +56,4 @@ let apiAgregarProductoCarrito = baseUrl+"cliente/carrito/producto/agregar"
 
 let apiObtenerMenuPrincipal = baseUrl+"cliente/lista/servicios-bloque"
 
+let apiRegistrarNuevaDireccion = baseUrl+"cliente/nueva/direccion"

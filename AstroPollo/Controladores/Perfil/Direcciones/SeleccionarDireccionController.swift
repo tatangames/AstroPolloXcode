@@ -78,8 +78,7 @@ class SeleccionarDireccionController: UIViewController {
         
         MBProgressHUD.showAdded(to: self.view, animated: true)
         
-        //let idCliente = UserDefaults.standard.getValueIdUsuario() ?? ""
-        let idCliente = "3"
+        let idCliente = UserDefaults.standard.getValueIdUsuario() ?? ""
         
         let params = [
             "id": idCliente,
@@ -200,8 +199,7 @@ class SeleccionarDireccionController: UIViewController {
         
         MBProgressHUD.showAdded(to: self.view, animated: true)
         
-        //let idCliente = UserDefaults.standard.getValueIdUsuario() ?? ""
-        let idCliente = "3"
+        let idCliente = UserDefaults.standard.getValueIdUsuario() ?? ""
         
         let params = [
             "id": idCliente,

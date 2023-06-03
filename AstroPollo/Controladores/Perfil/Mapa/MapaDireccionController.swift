@@ -43,8 +43,13 @@ import SwiftyJSON
         indicator = BarraProgresoController(inview:self.view,loadingViewColor: UIColor.gray, indicatorColor: UIColor.black, msg: "Cargando..")
            self.view.addSubview(indicator!)
         
-            //btnMapa.contentEdgeInsets = UIEdgeInsets(top: 5, left: 20, bottom: 5, right: 20)
-                
+           
+            boton.layer.cornerRadius = 18
+            boton.clipsToBounds = true
+        
+           boton.contentEdgeInsets = UIEdgeInsets(top: 5, left: 20, bottom: 5, right: 20)
+        
+                        
             google_map.settings.compassButton = true
             google_map.isMyLocationEnabled = true
             google_map.settings.myLocationButton = true
@@ -77,10 +82,6 @@ import SwiftyJSON
     // solicitar poligonos
        func peticionServidor(){
                
-               //let usuarioid = UserDefaults.standard.getValueIdUsuario() ?? ""
-                     
-               //MBProgressHUD.showAdded(to: self.view, animated: true)
-         
                let encodeURL = apiListaDePoligonos
                
                AF.request(encodeURL, method: .get, parameters: nil).responseJSON{ (response) in
@@ -115,7 +116,7 @@ import SwiftyJSON
                                  })
                                    
                                self.polygon = GMSPolygon(path: path)
-                               self.polygon.strokeColor = UIColor(red: 25, green: 118, blue: 210, alpha: 1)
+                               self.polygon.strokeColor = UIColor(named: "ColorAzulToast")!
                                self.polygon.fillColor = UIColor(red: 0, green: 255, blue: 1, alpha: 0.1)
                                self.polygon.strokeWidth = 1.0
                                self.polygon.title = String(idZona)
@@ -126,14 +127,13 @@ import SwiftyJSON
                            })
                            
                          } else{
-                               //MBProgressHUD.hide(for: self.view, animated: true)
+                         
                             self.indicator!.stop()
                             self.mensajeToast(mensaje: "Sin conexion")
                            }
                
                      case .failure( _):
-                            //self.indicator!.stop()
-                         //MBProgressHUD.hide(for: self.view, animated: true)
+                        
                          self.reintento()
                      }
                }
@@ -194,14 +194,14 @@ import SwiftyJSON
         }
         
         
-        /*let vista : InfoDireccionViewController = UIStoryboard(name: "Main2", bundle: nil).instantiateViewController(withIdentifier: "InfoDireccionViewController") as! InfoDireccionViewController
+        let vista : RegistrarNuevaDireccionController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RegistrarNuevaDireccionController") as! RegistrarNuevaDireccionController
                vista.idzona = id
                vista.latitud = latitud
                vista.longitud = longitud
                vista.latitudreal = latitudreal
                vista.longitudreal = longitudreal
                
-           self.present(vista, animated: true, completion: nil)*/
+           self.present(vista, animated: true, completion: nil)
     }
      
      

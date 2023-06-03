@@ -149,12 +149,7 @@ class LoginController: UIViewController, UITextFieldDelegate {
         
         self.present(vista, animated: true, completion: nil)
     }
-    
-    
-    
-    
-    
-    
+        
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         

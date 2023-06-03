@@ -174,9 +174,12 @@ class RegistroController: UIViewController, UITextFieldDelegate {
                    
                         // REGISTRADO CORRECTAMENTE
                          
-                         let idcliente = json["id"].stringValue
+                         let idCliente = json["id"].stringValue
                         
-                         self.pasarVistaMenu(idcliente: idcliente)
+                         // guardar id del cliente
+                         UserDefaults.standard.setValueIdUsuario(value: idCliente)
+                         
+                         self.pasarVistaMenu()
                      }
                      else{
                          // error de conexion
@@ -190,12 +193,10 @@ class RegistroController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    func pasarVistaMenu(idcliente : String){
+    func pasarVistaMenu(){
+        let vista : TabBarViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBarViewController") as! TabBarViewController
         
-        
-        
-        
-        
+        self.present(vista, animated: true, completion: nil)
     }
     
     

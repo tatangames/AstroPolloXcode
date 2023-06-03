@@ -1431,7 +1431,7 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Restaurante" id="nh0-RH-USx">
-                                        <barButtonItem key="rightBarButtonItem" image="icono_usuario" id="RMj-9S-wrJ">
+                                        <barButtonItem key="rightBarButtonItem" image="person.fill" catalog="system" id="RMj-9S-wrJ">
                                             <color key="tintColor" name="ColorGrisV1"/>
                                             <connections>
                                                 <action selector="btnAccionPerfil:" destination="4RN-sa-xq8" id="Yfv-FY-zwu"/>
@@ -1624,24 +1624,11 @@
         <!--Perfil Controller-->
         <scene sceneID="yaC-ON-TId">
             <objects>
-                <viewController storyboardIdentifier="PerfilController" id="TEj-HU-kD5" customClass="PerfilController" customModule="AstroPollo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PerfilController" modalPresentationStyle="fullScreen" id="TEj-HU-kD5" customClass="PerfilController" customModule="AstroPollo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pQS-2c-f0f">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="272-NG-ovM">
-                                <rect key="frame" x="0.0" y="47" width="390" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="sUT-hV-zBn"/>
-                                </constraints>
-                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" red="0.1764705882" green="0.34509803919999998" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Perfil" id="p79-tK-mGB"/>
-                                </items>
-                            </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="lI3-M5-pTK">
                                 <rect key="frame" x="0.0" y="91" width="390" height="719"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1691,16 +1678,40 @@
                                     <outlet property="delegate" destination="TEj-HU-kD5" id="I5q-Sx-HBs"/>
                                 </connections>
                             </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wAc-P2-Epw">
+                                <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="5mF-5N-Ahe"/>
+                                </constraints>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <textAttributes key="largeTitleTextAttributes">
+                                    <color key="textColor" red="0.1764705882" green="0.34509803919999998" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Perfil" id="2BA-5s-zxm">
+                                        <barButtonItem key="leftBarButtonItem" image="icono_flecha" id="Bkl-ze-oSv">
+                                            <color key="tintColor" red="0.1764705882" green="0.34509803919999998" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <action selector="btnPerfil:" destination="TEj-HU-kD5" id="IWq-cS-lll"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cFD-wk-dsb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="272-NG-ovM" firstAttribute="top" secondItem="cFD-wk-dsb" secondAttribute="top" id="CTU-3X-iPg"/>
-                            <constraint firstItem="272-NG-ovM" firstAttribute="leading" secondItem="cFD-wk-dsb" secondAttribute="leading" id="Esm-mD-atU"/>
+                            <constraint firstItem="lI3-M5-pTK" firstAttribute="top" secondItem="wAc-P2-Epw" secondAttribute="bottom" id="4XB-sp-ejZ"/>
+                            <constraint firstItem="wAc-P2-Epw" firstAttribute="leading" secondItem="cFD-wk-dsb" secondAttribute="leading" id="5R5-Uq-5Wy"/>
                             <constraint firstItem="lI3-M5-pTK" firstAttribute="leading" secondItem="cFD-wk-dsb" secondAttribute="leading" id="FgF-Zc-adt"/>
+                            <constraint firstItem="wAc-P2-Epw" firstAttribute="top" secondItem="cFD-wk-dsb" secondAttribute="top" id="I3g-yJ-Mh0"/>
                             <constraint firstItem="lI3-M5-pTK" firstAttribute="trailing" secondItem="cFD-wk-dsb" secondAttribute="trailing" id="Mc8-pl-hhn"/>
-                            <constraint firstItem="272-NG-ovM" firstAttribute="trailing" secondItem="cFD-wk-dsb" secondAttribute="trailing" id="rcr-v2-otP"/>
-                            <constraint firstItem="lI3-M5-pTK" firstAttribute="top" secondItem="272-NG-ovM" secondAttribute="bottom" id="rqr-5C-BFP"/>
+                            <constraint firstItem="wAc-P2-Epw" firstAttribute="trailing" secondItem="cFD-wk-dsb" secondAttribute="trailing" id="RG3-bO-bhB"/>
                             <constraint firstItem="lI3-M5-pTK" firstAttribute="bottom" secondItem="cFD-wk-dsb" secondAttribute="bottom" id="yv3-Jl-Hlg"/>
                         </constraints>
                     </view>
@@ -2300,7 +2311,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UkU-M4-hvH">
-                                <rect key="frame" x="0.0" y="107" width="390" height="703"/>
+                                <rect key="frame" x="0.0" y="139" width="390" height="671"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="86" id="Wwt-B8-2eC" customClass="ListaDireccionesViewCell" customModule="AstroPollo" customModuleProvider="target">
@@ -2366,7 +2377,7 @@
                                 </connections>
                             </tableView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ix-GC-z4n">
-                                <rect key="frame" x="16" y="64" width="358" height="30"/>
+                                <rect key="frame" x="16" y="96" width="358" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="AbP-ou-J9q"/>
                                 </constraints>
@@ -2376,22 +2387,78 @@
                                     <action selector="btnAccionAddDireccion:" destination="pS3-6L-Ley" eventType="touchUpInside" id="FUd-Qb-3GW"/>
                                 </connections>
                             </button>
+                            <navigationBar hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jlj-WB-XIg">
+                                <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="hqf-y7-gSz"/>
+                                </constraints>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <textAttributes key="largeTitleTextAttributes">
+                                    <color key="textColor" red="0.1764705882" green="0.34509803919999998" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Direcciones" id="cMH-Tp-2uZ">
+                                        <barButtonItem key="leftBarButtonItem" image="icono_flecha" id="ux1-g1-wid">
+                                            <color key="tintColor" red="0.1764705882" green="0.34509803919999998" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <action selector="btnAccionAtras:" destination="pS3-6L-Ley" id="jSB-ev-LK7"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <navigationBar hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QwN-mA-HNJ">
+                                <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="A9h-M9-iim"/>
+                                </constraints>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <textAttributes key="largeTitleTextAttributes">
+                                    <color key="textColor" red="0.1764705882" green="0.34509803919999998" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Direcciones" id="AZj-sg-xxW">
+                                        <barButtonItem key="leftBarButtonItem" image="icono_flecha" id="Wpq-7m-s69">
+                                            <color key="tintColor" red="0.1764705882" green="0.34509803919999998" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <action selector="btnAccionAtras:" destination="pS3-6L-Ley" id="AYG-4d-cC9"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="sKL-Pk-Ge7"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="jlj-WB-XIg" firstAttribute="top" secondItem="sKL-Pk-Ge7" secondAttribute="top" id="15b-5F-A9N"/>
+                            <constraint firstItem="9ix-GC-z4n" firstAttribute="top" secondItem="jlj-WB-XIg" secondAttribute="bottom" constant="5" id="1nC-jH-6fZ"/>
                             <constraint firstItem="9ix-GC-z4n" firstAttribute="leading" secondItem="sKL-Pk-Ge7" secondAttribute="leading" constant="16" id="3H5-vm-Olf"/>
-                            <constraint firstItem="9ix-GC-z4n" firstAttribute="top" secondItem="sKL-Pk-Ge7" secondAttribute="top" constant="17" id="K3q-Pi-5OX"/>
+                            <constraint firstItem="QwN-mA-HNJ" firstAttribute="trailing" secondItem="sKL-Pk-Ge7" secondAttribute="trailing" id="5MC-g2-8ma"/>
+                            <constraint firstItem="jlj-WB-XIg" firstAttribute="trailing" secondItem="sKL-Pk-Ge7" secondAttribute="trailing" id="K2x-Kc-MOz"/>
                             <constraint firstItem="UkU-M4-hvH" firstAttribute="trailing" secondItem="sKL-Pk-Ge7" secondAttribute="trailing" id="Tto-LV-KkD"/>
+                            <constraint firstItem="jlj-WB-XIg" firstAttribute="leading" secondItem="sKL-Pk-Ge7" secondAttribute="leading" id="fnE-kw-Mad"/>
                             <constraint firstItem="sKL-Pk-Ge7" firstAttribute="trailing" secondItem="9ix-GC-z4n" secondAttribute="trailing" constant="16" id="gQ9-tP-C0g"/>
                             <constraint firstItem="UkU-M4-hvH" firstAttribute="bottom" secondItem="sKL-Pk-Ge7" secondAttribute="bottom" id="pgd-cM-sqN"/>
                             <constraint firstItem="UkU-M4-hvH" firstAttribute="top" secondItem="9ix-GC-z4n" secondAttribute="bottom" constant="13" id="sfq-1B-Ph8"/>
+                            <constraint firstItem="QwN-mA-HNJ" firstAttribute="top" secondItem="sKL-Pk-Ge7" secondAttribute="top" id="tVY-pX-vFy"/>
+                            <constraint firstItem="QwN-mA-HNJ" firstAttribute="leading" secondItem="sKL-Pk-Ge7" secondAttribute="leading" id="te6-Xh-3Bx"/>
                             <constraint firstItem="UkU-M4-hvH" firstAttribute="leading" secondItem="sKL-Pk-Ge7" secondAttribute="leading" id="zbH-LV-34j"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Direcciones" id="BI4-Ty-jOm"/>
                     <connections>
                         <outlet property="btnAgregarDireccion" destination="9ix-GC-z4n" id="Ak0-b0-HXW"/>
+                        <outlet property="navegacionBtn" destination="jlj-WB-XIg" id="ZBR-hK-NN2"/>
+                        <outlet property="navegacionNoBtn" destination="QwN-mA-HNJ" id="o7U-CQ-fQW"/>
                         <outlet property="tableView" destination="UkU-M4-hvH" id="62A-ls-4VH"/>
                     </connections>
                 </viewController>
@@ -2523,7 +2590,11 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Productos" id="YRA-FW-5qQ">
-                                        <barButtonItem key="leftBarButtonItem" image="icono_flecha" id="ONa-Y8-xkL"/>
+                                        <barButtonItem key="leftBarButtonItem" image="icono_flecha" id="ONa-Y8-xkL">
+                                            <connections>
+                                                <action selector="btnAtras:" destination="Pch-pS-La3" id="RsL-Og-qas"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -2617,7 +2688,7 @@
                                                     <action selector="btnAccionAgregar:" destination="ixc-mD-YG0" eventType="touchUpInside" id="gNh-dc-8Zc"/>
                                                 </connections>
                                             </button>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Notas para este producto" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ndP-oa-aMw">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Notas para este producto" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ndP-oa-aMw" customClass="TextFieldImagen" customModule="AstroPollo" customModuleProvider="target">
                                                 <rect key="frame" x="24" y="455" width="342" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="Zvx-4T-hwN"/>
@@ -2628,6 +2699,15 @@
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
                                                         <integer key="value" value="400"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage">
+                                                        <imageReference key="value" image="list.clipboard.fill" catalog="system" renderingMode="hierarchical">
+                                                            <hierarchicalColors>
+                                                                <color name="ColorGrisV1"/>
+                                                                <color systemColor="secondaryLabelColor"/>
+                                                                <color systemColor="tertiaryLabelColor"/>
+                                                            </hierarchicalColors>
+                                                        </imageReference>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
@@ -2701,6 +2781,9 @@
                                     <navigationItem title="Elegir Cantidad" id="etK-fP-0pE">
                                         <barButtonItem key="leftBarButtonItem" image="icono_flecha" id="W7z-kd-EmJ">
                                             <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <action selector="btnAtras:" destination="ixc-mD-YG0" id="vSh-ke-DIx"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -2764,8 +2847,266 @@
             </objects>
             <point key="canvasLocation" x="6045" y="-1160"/>
         </scene>
+        <!--Registrar Nueva Direccion Controller-->
+        <scene sceneID="eO4-va-due">
+            <objects>
+                <viewController storyboardIdentifier="RegistrarNuevaDireccionController" autoresizesArchivedViewToFullSize="NO" modalPresentationStyle="fullScreen" id="9dh-S3-zyb" customClass="RegistrarNuevaDireccionController" customModule="AstroPollo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hPN-mL-Ryp">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mLi-gw-RcR">
+                                <rect key="frame" x="0.0" y="91" width="390" height="719"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aen-hO-9BN" userLabel="ContentView">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CPJ-Fh-7Kb">
+                                                <rect key="frame" x="8" y="269" width="374" height="383"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="X7g-hF-OOJ">
+                                                        <rect key="frame" x="16" y="300" width="342" height="40"/>
+                                                        <color key="backgroundColor" name="ColorRojo"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="Ioz-sV-R2z"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                                        <state key="normal" title="Guardar Dirección">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="btnAccionRegistro:" destination="9dh-S3-zyb" eventType="touchUpInside" id="0eQ-Gd-gKb"/>
+                                                        </connections>
+                                                    </button>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="77D-6f-ebk">
+                                                        <rect key="frame" x="16" y="24" width="342" height="205"/>
+                                                        <subviews>
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0O4-US-FLB" customClass="TextFieldImagen" customModule="AstroPollo" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="342" height="40"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="40" id="zTf-bm-R3p"/>
+                                                                </constraints>
+                                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardAppearance="alert"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
+                                                                        <integer key="value" value="100"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage">
+                                                                        <imageReference key="value" image="person.fill" catalog="system" renderingMode="hierarchical">
+                                                                            <hierarchicalColors>
+                                                                                <color name="ColorGrisV1"/>
+                                                                                <color systemColor="secondaryLabelColor"/>
+                                                                                <color systemColor="tertiaryLabelColor"/>
+                                                                            </hierarchicalColors>
+                                                                        </imageReference>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </textField>
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Teléfono" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tMi-Ue-ZEo" customClass="TextFieldImagen" customModule="AstroPollo" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="55" width="342" height="40"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardAppearance="alert"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
+                                                                        <integer key="value" value="8"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage">
+                                                                        <imageReference key="value" image="phone.fill" catalog="system" renderingMode="hierarchical">
+                                                                            <hierarchicalColors>
+                                                                                <color name="ColorGrisV1"/>
+                                                                                <color systemColor="secondaryLabelColor"/>
+                                                                                <color systemColor="tertiaryLabelColor"/>
+                                                                            </hierarchicalColors>
+                                                                        </imageReference>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </textField>
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Dirección" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZOI-Cx-EeW" customClass="TextFieldImagen" customModule="AstroPollo" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="110" width="342" height="40"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardAppearance="alert"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
+                                                                        <integer key="value" value="400"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage">
+                                                                        <imageReference key="value" image="mappin" catalog="system" symbolScale="large" renderingMode="hierarchical">
+                                                                            <hierarchicalColors>
+                                                                                <color name="ColorGrisV1"/>
+                                                                                <color systemColor="secondaryLabelColor"/>
+                                                                                <color systemColor="tertiaryLabelColor"/>
+                                                                            </hierarchicalColors>
+                                                                        </imageReference>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </textField>
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Punto de Referencia" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SnF-a8-Y9R" customClass="TextFieldImagen" customModule="AstroPollo" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="165" width="342" height="40"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits" keyboardAppearance="alert"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage">
+                                                                        <imageReference key="value" image="house.fill" catalog="system" renderingMode="hierarchical">
+                                                                            <hierarchicalColors>
+                                                                                <color name="ColorGrisV1"/>
+                                                                                <color systemColor="secondaryLabelColor"/>
+                                                                                <color systemColor="tertiaryLabelColor"/>
+                                                                            </hierarchicalColors>
+                                                                        </imageReference>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
+                                                                        <integer key="value" value="400"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </textField>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="383" id="6f7-29-G6e"/>
+                                                    <constraint firstAttribute="trailing" secondItem="77D-6f-ebk" secondAttribute="trailing" constant="16" id="Amg-WY-NDQ"/>
+                                                    <constraint firstItem="X7g-hF-OOJ" firstAttribute="leading" secondItem="CPJ-Fh-7Kb" secondAttribute="leading" constant="16" id="Y72-k5-Wq4"/>
+                                                    <constraint firstItem="77D-6f-ebk" firstAttribute="top" secondItem="CPJ-Fh-7Kb" secondAttribute="top" constant="24" id="gQT-5k-II0"/>
+                                                    <constraint firstAttribute="trailing" secondItem="X7g-hF-OOJ" secondAttribute="trailing" constant="16" id="tbm-6b-IiK"/>
+                                                    <constraint firstItem="77D-6f-ebk" firstAttribute="leading" secondItem="CPJ-Fh-7Kb" secondAttribute="leading" constant="16" id="udL-Bd-SrG"/>
+                                                    <constraint firstItem="X7g-hF-OOJ" firstAttribute="top" secondItem="77D-6f-ebk" secondAttribute="bottom" constant="71" id="wnX-fH-LC7"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Registrar Dirección" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vou-vd-3E4">
+                                                <rect key="frame" x="8" y="215" width="374" height="32"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="32" id="Wpd-d3-p5a"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Izb-QC-utc">
+                                                <rect key="frame" x="0.0" y="0.0" width="390" height="215"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backregistro" translatesAutoresizingMaskIntoConstraints="NO" id="jLF-NZ-Xk2">
+                                                        <rect key="frame" x="0.0" y="0.0" width="390" height="188"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="188" id="dOd-37-Qtm"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ehd-oB-RVM" customClass="LottieAnimationView" customModule="Lottie">
+                                                        <rect key="frame" x="8" y="8" width="374" height="159"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="159" id="4BJ-sv-HMm"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="jsongps"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="jLF-NZ-Xk2" firstAttribute="leading" secondItem="Izb-QC-utc" secondAttribute="leading" id="2gF-v6-UdW"/>
+                                                    <constraint firstAttribute="trailing" secondItem="jLF-NZ-Xk2" secondAttribute="trailing" id="8ee-CC-gBX"/>
+                                                    <constraint firstItem="ehd-oB-RVM" firstAttribute="leading" secondItem="Izb-QC-utc" secondAttribute="leading" constant="8" id="MOA-cd-kj2"/>
+                                                    <constraint firstItem="ehd-oB-RVM" firstAttribute="top" secondItem="Izb-QC-utc" secondAttribute="top" constant="8" id="buk-jO-aNO"/>
+                                                    <constraint firstAttribute="trailing" secondItem="ehd-oB-RVM" secondAttribute="trailing" constant="8" id="gJX-lM-1l8"/>
+                                                    <constraint firstItem="jLF-NZ-Xk2" firstAttribute="top" secondItem="Izb-QC-utc" secondAttribute="top" id="gZ0-Dt-sd8"/>
+                                                    <constraint firstAttribute="height" constant="215" id="jzh-Ai-jKj"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" name="ColorRojo"/>
+                                        <constraints>
+                                            <constraint firstItem="Vou-vd-3E4" firstAttribute="top" secondItem="Izb-QC-utc" secondAttribute="bottom" id="GRi-xR-tNi"/>
+                                            <constraint firstItem="Izb-QC-utc" firstAttribute="leading" secondItem="Aen-hO-9BN" secondAttribute="leading" id="GnJ-Tc-0Xm"/>
+                                            <constraint firstAttribute="trailing" secondItem="Vou-vd-3E4" secondAttribute="trailing" constant="8" id="QTq-BI-0zU"/>
+                                            <constraint firstItem="CPJ-Fh-7Kb" firstAttribute="leading" secondItem="Aen-hO-9BN" secondAttribute="leading" constant="8" id="UHG-5Y-vgx"/>
+                                            <constraint firstItem="Izb-QC-utc" firstAttribute="top" secondItem="Aen-hO-9BN" secondAttribute="top" id="V2U-Ob-utR"/>
+                                            <constraint firstAttribute="trailing" secondItem="CPJ-Fh-7Kb" secondAttribute="trailing" constant="8" id="Wvj-18-4Uv"/>
+                                            <constraint firstItem="CPJ-Fh-7Kb" firstAttribute="top" secondItem="Vou-vd-3E4" secondAttribute="bottom" constant="22" id="ZHp-ll-FHi"/>
+                                            <constraint firstAttribute="trailing" secondItem="Izb-QC-utc" secondAttribute="trailing" id="b7k-UT-A5s"/>
+                                            <constraint firstItem="Vou-vd-3E4" firstAttribute="leading" secondItem="Aen-hO-9BN" secondAttribute="leading" constant="8" id="giX-dF-uLd"/>
+                                            <constraint firstAttribute="height" constant="844" id="i7k-RH-6n1"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Aen-hO-9BN" secondAttribute="trailing" id="8eZ-2l-ohx"/>
+                                    <constraint firstAttribute="bottom" secondItem="Aen-hO-9BN" secondAttribute="bottom" constant="-176" id="F28-v2-A2u"/>
+                                    <constraint firstItem="Aen-hO-9BN" firstAttribute="leading" secondItem="mLi-gw-RcR" secondAttribute="leading" id="r1N-CD-tDH"/>
+                                    <constraint firstItem="Aen-hO-9BN" firstAttribute="top" secondItem="mLi-gw-RcR" secondAttribute="top" id="zoq-VA-Ign"/>
+                                </constraints>
+                            </scrollView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9hk-Xw-YsO">
+                                <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="0ZT-sZ-cnO"/>
+                                </constraints>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <textAttributes key="largeTitleTextAttributes">
+                                    <color key="textColor" red="0.1764705882" green="0.34509803919999998" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Registro" id="vZp-wr-EqV">
+                                        <barButtonItem key="leftBarButtonItem" image="icono_flecha" id="J5R-Dg-s0G">
+                                            <color key="tintColor" red="0.1764705882" green="0.34509803919999998" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <action selector="btnAtras:" destination="9dh-S3-zyb" id="Dev-1u-dE6"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Cqj-0d-oDR"/>
+                        <color key="backgroundColor" name="ColorRojo"/>
+                        <constraints>
+                            <constraint firstItem="9hk-Xw-YsO" firstAttribute="leading" secondItem="Cqj-0d-oDR" secondAttribute="leading" id="5E1-cu-uGJ"/>
+                            <constraint firstItem="mLi-gw-RcR" firstAttribute="top" secondItem="9hk-Xw-YsO" secondAttribute="bottom" id="KTT-1H-vHK"/>
+                            <constraint firstItem="9hk-Xw-YsO" firstAttribute="trailing" secondItem="Cqj-0d-oDR" secondAttribute="trailing" id="Mhs-tR-XdN"/>
+                            <constraint firstItem="mLi-gw-RcR" firstAttribute="trailing" secondItem="Cqj-0d-oDR" secondAttribute="trailing" id="TdB-B9-0lC"/>
+                            <constraint firstItem="Aen-hO-9BN" firstAttribute="width" secondItem="hPN-mL-Ryp" secondAttribute="width" id="hP3-ZP-Twj"/>
+                            <constraint firstItem="9hk-Xw-YsO" firstAttribute="top" secondItem="Cqj-0d-oDR" secondAttribute="top" id="lN3-Ns-DMi"/>
+                            <constraint firstItem="mLi-gw-RcR" firstAttribute="leading" secondItem="Cqj-0d-oDR" secondAttribute="leading" id="wN9-uj-eY7"/>
+                            <constraint firstItem="mLi-gw-RcR" firstAttribute="bottom" secondItem="Cqj-0d-oDR" secondAttribute="bottom" id="y8z-9e-o5p"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <connections>
+                        <outlet property="btnRegistrar" destination="X7g-hF-OOJ" id="DK7-Yn-Zte"/>
+                        <outlet property="edtDireccion" destination="ZOI-Cx-EeW" id="UUZ-Rx-wKu"/>
+                        <outlet property="edtNombre" destination="0O4-US-FLB" id="b51-PC-hTT"/>
+                        <outlet property="edtReferencia" destination="SnF-a8-Y9R" id="jCz-vF-ReC"/>
+                        <outlet property="edtTelefono" destination="tMi-Ue-ZEo" id="APr-dD-JpL"/>
+                        <outlet property="scrollView" destination="mLi-gw-RcR" id="ag5-y7-cSR"/>
+                        <outlet property="vistaAnimacion" destination="ehd-oB-RVM" id="5UZ-PN-t4F"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8mD-ln-QWf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="11744.615384615385" y="-392.41706161137438"/>
+        </scene>
     </scenes>
     <designables>
+        <designable name="0O4-US-FLB">
+            <size key="intrinsicContentSize" width="51.666666666666664" height="18.666666666666668"/>
+        </designable>
         <designable name="3Q9-oh-Hzl">
             <size key="intrinsicContentSize" width="74.333333333333329" height="18.666666666666668"/>
         </designable>
@@ -2775,8 +3116,17 @@
         <designable name="Gc9-PL-3KO">
             <size key="intrinsicContentSize" width="49.666666666666664" height="18.666666666666668"/>
         </designable>
+        <designable name="SnF-a8-Y9R">
+            <size key="intrinsicContentSize" width="130.33333333333334" height="18.666666666666668"/>
+        </designable>
         <designable name="XXY-nh-mY1">
             <size key="intrinsicContentSize" width="74.333333333333329" height="18.666666666666668"/>
+        </designable>
+        <designable name="ZOI-Cx-EeW">
+            <size key="intrinsicContentSize" width="61" height="18.666666666666668"/>
+        </designable>
+        <designable name="ndP-oa-aMw">
+            <size key="intrinsicContentSize" width="178.66666666666666" height="19.666666666666668"/>
         </designable>
         <designable name="rCD-Eg-6KO">
             <size key="intrinsicContentSize" width="120.33333333333333" height="18.666666666666668"/>
@@ -2786,6 +3136,9 @@
         </designable>
         <designable name="rpG-1D-xk3">
             <size key="intrinsicContentSize" width="100.66666666666667" height="18.666666666666668"/>
+        </designable>
+        <designable name="tMi-Ue-ZEo">
+            <size key="intrinsicContentSize" width="55.333333333333336" height="18.666666666666668"/>
         </designable>
         <designable name="wpg-Bi-Xjk">
             <size key="intrinsicContentSize" width="49.666666666666664" height="18.666666666666668"/>
@@ -2798,13 +3151,18 @@
         <image name="envelope.fill" catalog="system" width="128" height="93"/>
         <image name="fork.knife.circle.fill" catalog="system" width="128" height="123"/>
         <image name="fotodefault" width="100" height="60"/>
+        <image name="house.fill" catalog="system" width="128" height="104"/>
         <image name="icono_check" width="71.666664123535156" height="71.666664123535156"/>
         <image name="icono_flecha" width="32" height="32"/>
         <image name="icono_password" width="32" height="32"/>
         <image name="icono_usuario" width="32" height="32"/>
         <image name="iconomapa" width="256" height="256"/>
+        <image name="list.clipboard.fill" catalog="system" width="103" height="128"/>
         <image name="logoastro_circular" width="432" height="432"/>
         <image name="logopizza" width="237" height="200"/>
+        <image name="mappin" catalog="system" width="106" height="128"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="phone.fill" catalog="system" width="128" height="114"/>
         <image name="pin_mapa" width="85.333335876464844" height="85.333335876464844"/>
         <image name="reloj" width="256" height="256"/>
         <namedColor name="ColorGrisV1">

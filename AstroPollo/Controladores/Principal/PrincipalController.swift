@@ -10,8 +10,28 @@ import MBProgressHUD
 import SwiftyJSON
 import Alamofire
 
-class PrincipalController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+protocol protocoloProductoGuardadoPrincipal {
+    func mostrarToast(seActualizo: Bool)
+}
+
+
+class PrincipalController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource,
+                           UICollectionViewDelegateFlowLayout, protocoloProductoGuardadoPrincipal {
  
+        
+    func mostrarToast(seActualizo: Bool) {
+    
+       if(seActualizo){
+          
+           var estilo = ToastStilo()
+           
+           estilo.backgroundColor = UIColor(named: "ColorVerde")!
+           estilo.messageColor = .white
+           
+           self.view.makeToast("Producto Guardado", duration: 2, position: .bottom, style: estilo)
+       }
+    }
+    
     
     var styleAzul = ToastStilo()
     var arrBanner = [ModeloBanner]()
@@ -45,7 +65,9 @@ class PrincipalController: UIViewController, UICollectionViewDelegate, UICollect
     
     @IBAction func btnAccionPerfil(_ sender: Any) {
      
-     
+        let vista : PerfilController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PerfilController") as! PerfilController
+        
+        self.present(vista, animated: true, completion: nil)
     }
     
     
@@ -73,9 +95,28 @@ class PrincipalController: UIViewController, UICollectionViewDelegate, UICollect
                   let json = JSON(value)
                   
                   let codigo = json["success"]
+                
+                
+                if(codigo == 1){
+                    
+                    // USUARIO BLOQUEADO
+                    let titulo = json["titulo"].stringValue
+                    let mensaje = json["mensaje"].stringValue
+                    
+                    self.alertaUsuarioBloqueado(titulo: titulo, mensaje: mensaje)
+                }
                   
+                else if(codigo == 2){
+                 
+                    // NO HAY DIRECCIONES
+                    
+                    self.redireccionVistaDireccion()
+                    
+                    
+                }
+                
                
-                  if(codigo == 3){
+                else if(codigo == 3){
                     
                    // let hayCategorias = json["haycategorias"].stringValue
                    // let hayPopulares = json["haypopulares"].stringValue
@@ -140,6 +181,41 @@ class PrincipalController: UIViewController, UICollectionViewDelegate, UICollect
         }
     }
     
+    
+    func redireccionVistaDireccion(){
+        
+        let vistaSiguiente : ListaDireccionesController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ListaDireccionesController") as! ListaDireccionesController
+        
+        vistaSiguiente.bloquearBotonAtras = true
+        
+        self.present(vistaSiguiente, animated: true, completion: nil)
+        
+        
+    }
+    
+    func alertaUsuarioBloqueado(titulo: String, mensaje: String){
+        
+        let alert = UIAlertController(title: titulo, message: mensaje, preferredStyle: UIAlertController.Style.alert)
+                
+        alert.addAction(UIAlertAction(title: "Aceptar", style: UIAlertAction.Style.default, handler: {(action) in
+            alert.dismiss(animated: true, completion: nil)
+            
+            self.salir()
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    
+    
+    // cerrar sesion y redireccionar a pantalla login
+    func salir(){
+        UserDefaults.standard.removeObject(forKey: "userid")
+
+        let vista : LoginController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginController") as! LoginController
+        self.present(vista, animated: true, completion: nil)
+    }
+ 
 
     func ajustar(){
         paginaControl.numberOfPages = arrBanner.count
@@ -223,6 +299,87 @@ class PrincipalController: UIViewController, UICollectionViewDelegate, UICollect
     
     
     
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        
+        
+        switch collectionView {
+         case bannerCollecionView:
+            let datos = arrBanner[indexPath.row]
+ 
+            let redirec = datos.getRedireccionamiento()
+            let idpro = datos.getIdProducto()
+            
+            redireccionBanner(redirecciona: redirec, idProducto: idpro)
+                        
+        case categoriaCollectionView:
+           
+            let datos = arrCategorias[indexPath.row]
+ 
+            let idcategoria = datos.getId()
+            
+            redireccionCategoria(idcategoria: idcategoria)
+            
+         case productoCollectionView:
+            let datos = arrProductos[indexPath.row]
+            let idpro = datos.getId()
+            
+            redireccionProductoPopular(idproducto: idpro)
+     
+         default:
+            
+            // POR DEFECTO ESTA BANNER
+            
+            
+            let datos = arrBanner[indexPath.row]
+ 
+            let redirec = datos.getRedireccionamiento()
+            let idpro = datos.getIdProducto()
+            
+            redireccionBanner(redirecciona: redirec, idProducto: idpro)
+         }
+    }
+    
+    
+    
+    func redireccionBanner(redirecciona: Int, idProducto: Int){
+        
+        if(redirecciona == 1){
+            
+            if(idProducto != 0){
+                                
+                let vista : ElegirCantidadController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ElegirCantidadController") as! ElegirCantidadController
+                  
+                 vista.delegatePrin = self
+                 vista.idproducto = String(idProducto)
+               
+               self.present(vista, animated: true, completion: nil)
+                
+            }
+        }
+    }
+    
+    
+    func redireccionCategoria(idcategoria: Int){
+        
+       
+       
+                
+        
+    }
+    
+    
+    func redireccionProductoPopular(idproducto: Int){
+                
+          let vista : ElegirCantidadController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ElegirCantidadController") as! ElegirCantidadController
+            
+           vista.delegatePrin = self
+           vista.idproducto = String(idproducto)
+         
+         self.present(vista, animated: true, completion: nil)
+        
+    }
     
  
     

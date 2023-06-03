@@ -85,9 +85,17 @@ class PerfilController: UIViewController, UITableViewDelegate, UITableViewDataSo
             // CERRAR SESION
             pasarCerrarSesion()
         }
-        
-        
     }
+    
+    
+    @IBAction func btnPerfil(_ sender: Any) {
+        
+        let vistaSiguiente : TabBarViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBarViewController") as! TabBarViewController
+        
+        self.present(vistaSiguiente, animated: true, completion: nil)
+    }
+    
+    
     
     func pasarVistaDirecciones(){
         let vistaSiguiente : ListaDireccionesController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ListaDireccionesController") as! ListaDireccionesController

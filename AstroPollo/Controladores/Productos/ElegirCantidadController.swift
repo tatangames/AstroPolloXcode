@@ -32,8 +32,6 @@ class ElegirCantidadController: UIViewController, UITextFieldDelegate {
     
     
     
-    
-    
     var styleToastAzul = ToastStilo()
     
     
@@ -60,6 +58,12 @@ class ElegirCantidadController: UIViewController, UITextFieldDelegate {
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapView(gesture:)))
                view.addGestureRecognizer(tapGesture)
+        
+        
+        edtNotas.layer.cornerRadius = 8
+        edtNotas.layer.borderWidth = 1.5
+        edtNotas.layer.borderColor = UIColor.lightGray.cgColor
+        edtNotas.borderStyle = .none
         
         self.edtNotas.delegate = self
         
@@ -319,18 +323,25 @@ class ElegirCantidadController: UIViewController, UITextFieldDelegate {
           }        
     }
     
+    @IBAction func btnAtras(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     
     
     var delegate: protocoloProductoGuardado!
+    var delegatePrin: protocoloProductoGuardadoPrincipal!
     
     
     override func viewWillDisappear(_ animated: Bool) {
-        //super.viewWillDisappear(animated)
-        //removeObservers()
-        
+              
         if(delegate != nil){
             delegate.mostrarToast(seActualizo: seGuardoProducto)
         }
+        
+        if(delegatePrin != nil){
+            delegatePrin.mostrarToast(seActualizo: seGuardoProducto)
+        }
+        
     }
     
     func salir(){

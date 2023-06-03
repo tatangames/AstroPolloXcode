@@ -16,11 +16,13 @@ class PrincipalController: UIViewController, UICollectionViewDelegate, UICollect
     var styleAzul = ToastStilo()
     var arrBanner = [ModeloBanner]()
     var arrCategorias = [ModeloCategoriasPrincipal]()
-        
-    
+    var arrProductos = [ModeloProductoPopular]()
+            
     @IBOutlet weak var bannerCollecionView: UICollectionView!
     @IBOutlet weak var categoriaCollectionView: UICollectionView!
     @IBOutlet weak var paginaControl: UIPageControl!
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var productoCollectionView: UICollectionView!
     
     
     
@@ -37,6 +39,8 @@ class PrincipalController: UIViewController, UICollectionViewDelegate, UICollect
     
     func registrarCeldas() {
         categoriaCollectionView.register(UINib(nibName: CategoryCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: CategoryCollectionViewCell.identifier)
+        
+        productoCollectionView.register(UINib(nibName: ProductoPoCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: ProductoPoCollectionViewCell.identifier)
     }
     
     @IBAction func btnAccionPerfil(_ sender: Any) {
@@ -89,7 +93,6 @@ class PrincipalController: UIViewController, UICollectionViewDelegate, UICollect
                       self.arrBanner.append(ModeloBanner(idProducto: idProducto, imagen: imagen, redireccionamiento: redireccionamiento))
                   })
                       
-                      
                       // LISTADO DE CATEGORIAS
                       
                       json["categorias"].array?.forEach({ (dataArray) in
@@ -101,9 +104,26 @@ class PrincipalController: UIViewController, UICollectionViewDelegate, UICollect
                                                                       
                           self.arrCategorias.append(ModeloCategoriasPrincipal(id: idC, nombre: nombreC, imagen: imagenC))
                       })
-                                                                  
+                      
+                      
+                      // LISTADO DE PRODUCTOS POPULARES
+                      
+                      json["populares"].array?.forEach({ (dataArray) in
+                                                       
+                          let idP = dataArray["id"].intValue
+                          let imagenP = dataArray["imagen"].stringValue
+                          let nombreP = dataArray["nombre"].stringValue
+                          let precioP = dataArray["precio"].stringValue
+                          let usaImagen = dataArray["utiliza_imagen"].intValue
+                                                                      
+                          self.arrProductos.append(ModeloProductoPopular(id: idP, imagen: imagenP, nombre: nombreP, utiliza_imagen: usaImagen, precio: precioP))
+                      })
+                                                                                        
                       self.bannerCollecionView.reloadData()
                       self.categoriaCollectionView.reloadData()
+                      self.productoCollectionView.reloadData()
+                     
+                      self.scrollView.isHidden = false
                       
                       self.ajustar()
                 }
@@ -161,8 +181,6 @@ class PrincipalController: UIViewController, UICollectionViewDelegate, UICollect
     
     
     
-    
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         switch collectionView {
@@ -170,6 +188,8 @@ class PrincipalController: UIViewController, UICollectionViewDelegate, UICollect
             return arrBanner.count
         case categoriaCollectionView:
             return arrCategorias.count
+        case productoCollectionView:
+            return arrProductos.count
             
         default: return 0
         }
@@ -183,6 +203,10 @@ class PrincipalController: UIViewController, UICollectionViewDelegate, UICollect
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryCollectionViewCell.identifier, for: indexPath) as! CategoryCollectionViewCell
             cell.setup(category: arrCategorias[indexPath.row])
             return cell
+       case productoCollectionView:
+           let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProductoPoCollectionViewCell.identifier, for: indexPath) as! ProductoPoCollectionViewCell
+           cell.setup(producto: arrProductos[indexPath.row])
+           return cell
         case bannerCollecionView:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellbanner", for: indexPath) as! BannerCollectionViewCell
            
@@ -199,15 +223,6 @@ class PrincipalController: UIViewController, UICollectionViewDelegate, UICollect
     
     
     
-    
-   /* func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-        
-        
-        
-        return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
-    }*/
-   
     
  
     

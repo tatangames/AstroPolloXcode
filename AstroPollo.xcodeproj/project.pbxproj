@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		333DC6AECE20BD486CF7CC2E /* Pods_AstroPolloTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3888F985381C30F295DE45D /* Pods_AstroPolloTests.framework */; };
 		42ABFC5AB9B707F09B3198D8 /* Pods_AstroPollo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E57B4527E243C6C40A9FEF7A /* Pods_AstroPollo.framework */; };
+		8F0B21BA2A2BA5EE002436FE /* CarritoComprasController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0B21B92A2BA5EE002436FE /* CarritoComprasController.swift */; };
 		8F26430D2A206894003CB6EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F26430C2A206894003CB6EA /* AppDelegate.swift */; };
 		8F26430F2A206894003CB6EA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F26430E2A206894003CB6EA /* SceneDelegate.swift */; };
 		8F2643142A206894003CB6EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F2643122A206894003CB6EA /* Main.storyboard */; };
@@ -44,6 +45,9 @@
 		8F6C1BBB2A27A3350053CE42 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6C1BBA2A27A3350053CE42 /* CustomTextField.swift */; };
 		8F6C1BBE2A27D5060053CE42 /* ModeloBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6C1BBD2A27D5060053CE42 /* ModeloBanner.swift */; };
 		8F6C1BC32A27F9ED0053CE42 /* PrincipalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6C1BC22A27F9ED0053CE42 /* PrincipalController.swift */; };
+		8F7CC7F62A2AA8D400DFBD00 /* ModeloProductoPopular.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7CC7F52A2AA8D400DFBD00 /* ModeloProductoPopular.swift */; };
+		8F7CC7F92A2AB1E300DFBD00 /* ProductoPoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7CC7F72A2AB1E300DFBD00 /* ProductoPoCollectionViewCell.swift */; };
+		8F7CC7FA2A2AB1E300DFBD00 /* ProductoPoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F7CC7F82A2AB1E300DFBD00 /* ProductoPoCollectionViewCell.xib */; };
 		8F8B9BE52A229FA500070D34 /* EstiloTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8B9BE42A229FA500070D34 /* EstiloTextField.swift */; };
 		8F8B9BE72A22A1B000070D34 /* TextFieldImagen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8B9BE62A22A1B000070D34 /* TextFieldImagen.swift */; };
 		8F8B9BEC2A22AB2B00070D34 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8B9BEB2A22AB2B00070D34 /* LoginController.swift */; };
@@ -92,6 +96,7 @@
 		1B25CD125258F0AB503BBDAC /* Pods-AstroPolloTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AstroPolloTests.release.xcconfig"; path = "Target Support Files/Pods-AstroPolloTests/Pods-AstroPolloTests.release.xcconfig"; sourceTree = "<group>"; };
 		73A09E7EE07D31D9CE80D1CA /* Pods-AstroPollo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AstroPollo.release.xcconfig"; path = "Target Support Files/Pods-AstroPollo/Pods-AstroPollo.release.xcconfig"; sourceTree = "<group>"; };
 		79C743BE68BC3000CF5778B5 /* Pods-AstroPolloTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AstroPolloTests.debug.xcconfig"; path = "Target Support Files/Pods-AstroPolloTests/Pods-AstroPolloTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8F0B21B92A2BA5EE002436FE /* CarritoComprasController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarritoComprasController.swift; sourceTree = "<group>"; };
 		8F2643092A206894003CB6EA /* AstroPollo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AstroPollo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F26430C2A206894003CB6EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8F26430E2A206894003CB6EA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -131,6 +136,9 @@
 		8F6C1BBA2A27A3350053CE42 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		8F6C1BBD2A27D5060053CE42 /* ModeloBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeloBanner.swift; sourceTree = "<group>"; };
 		8F6C1BC22A27F9ED0053CE42 /* PrincipalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrincipalController.swift; sourceTree = "<group>"; };
+		8F7CC7F52A2AA8D400DFBD00 /* ModeloProductoPopular.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeloProductoPopular.swift; sourceTree = "<group>"; };
+		8F7CC7F72A2AB1E300DFBD00 /* ProductoPoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductoPoCollectionViewCell.swift; sourceTree = "<group>"; };
+		8F7CC7F82A2AB1E300DFBD00 /* ProductoPoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductoPoCollectionViewCell.xib; sourceTree = "<group>"; };
 		8F8B9BE42A229FA500070D34 /* EstiloTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstiloTextField.swift; sourceTree = "<group>"; };
 		8F8B9BE62A22A1B000070D34 /* TextFieldImagen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldImagen.swift; sourceTree = "<group>"; };
 		8F8B9BEB2A22AB2B00070D34 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
@@ -210,6 +218,14 @@
 				1B25CD125258F0AB503BBDAC /* Pods-AstroPolloTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		8F0B21B82A2BA5CB002436FE /* Carrito */ = {
+			isa = PBXGroup;
+			children = (
+				8F0B21B92A2BA5EE002436FE /* CarritoComprasController.swift */,
+			);
+			path = Carrito;
 			sourceTree = "<group>";
 		};
 		8F2643002A206894003CB6EA = {
@@ -367,6 +383,8 @@
 				8F4810AD2A24551A0024FBC3 /* TabBarViewController.swift */,
 				8F6C1BC22A27F9ED0053CE42 /* PrincipalController.swift */,
 				8FBDAF4E2A2918FF00B9A090 /* BannerCollectionViewCell.swift */,
+				8F7CC7F72A2AB1E300DFBD00 /* ProductoPoCollectionViewCell.swift */,
+				8F7CC7F82A2AB1E300DFBD00 /* ProductoPoCollectionViewCell.xib */,
 			);
 			path = Principal;
 			sourceTree = "<group>";
@@ -432,6 +450,7 @@
 		8FD912012A21796D00624541 /* Controladores */ = {
 			isa = PBXGroup;
 			children = (
+				8F0B21B82A2BA5CB002436FE /* Carrito */,
 				8FDC4A3E2A26910800C5052E /* Productos */,
 				8FDC4A362A26609F00C5052E /* Categorias */,
 				8F3EC7FA2A254338006BC0AD /* Perfil */,
@@ -510,6 +529,7 @@
 		8FDC4A432A269C2100C5052E /* Productos */ = {
 			isa = PBXGroup;
 			children = (
+				8F7CC7F52A2AA8D400DFBD00 /* ModeloProductoPopular.swift */,
 			);
 			path = Productos;
 			sourceTree = "<group>";
@@ -635,6 +655,7 @@
 				8F2643162A206895003CB6EA /* Assets.xcassets in Resources */,
 				8F4810A52A23D1D30024FBC3 /* jsonpassword.json in Resources */,
 				8FBDAF3E2A28FECB00B9A090 /* CategoryCollectionViewCell.xib in Resources */,
+				8F7CC7FA2A2AB1E300DFBD00 /* ProductoPoCollectionViewCell.xib in Resources */,
 				8F2643142A206894003CB6EA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -797,10 +818,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F7CC7F62A2AA8D400DFBD00 /* ModeloProductoPopular.swift in Sources */,
 				8F4810B52A2458B90024FBC3 /* OrdenesViewController.swift in Sources */,
 				8F3EC7FC2A254374006BC0AD /* PerfilController.swift in Sources */,
 				8F3EC8012A255464006BC0AD /* HorariosController.swift in Sources */,
 				8F6C1BBB2A27A3350053CE42 /* CustomTextField.swift in Sources */,
+				8F0B21BA2A2BA5EE002436FE /* CarritoComprasController.swift in Sources */,
 				8F3EC80F2A258A95006BC0AD /* DatosGuardados.swift in Sources */,
 				8FDC4A4B2A26B9B100C5052E /* ElegirCantidadController.swift in Sources */,
 				8FBDAF382A28FB0100B9A090 /* CardView.swift in Sources */,
@@ -809,6 +832,7 @@
 				8F8B9BEE2A22D7D900070D34 /* RegistroController.swift in Sources */,
 				8F3EC8172A259A74006BC0AD /* ModeloDirecciones.swift in Sources */,
 				8F8B9BE72A22A1B000070D34 /* TextFieldImagen.swift in Sources */,
+				8F7CC7F92A2AB1E300DFBD00 /* ProductoPoCollectionViewCell.swift in Sources */,
 				8FD912042A21799500624541 /* SplashController.swift in Sources */,
 				8F4810982A23B9D70024FBC3 /* RecuperacionCorreoController.swift in Sources */,
 				8F8B9BE52A229FA500070D34 /* EstiloTextField.swift in Sources */,

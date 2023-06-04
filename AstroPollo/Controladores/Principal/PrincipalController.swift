@@ -363,10 +363,11 @@ class PrincipalController: UIViewController, UICollectionViewDelegate, UICollect
     
     func redireccionCategoria(idcategoria: Int){
         
+        let vista : ProductosController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ProductosController") as! ProductosController
+          
+         vista.idcategoria = String(idcategoria)
        
-       
-                
-        
+       self.present(vista, animated: true, completion: nil)
     }
     
     
@@ -378,8 +379,17 @@ class PrincipalController: UIViewController, UICollectionViewDelegate, UICollect
            vista.idproducto = String(idproducto)
          
          self.present(vista, animated: true, completion: nil)
+    }
+    
+    
+    @IBAction func btnVerMas(_ sender: Any) {
+        
+        let vista : CategoriasTodasController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CategoriasTodasController") as! CategoriasTodasController
+                 
+       self.present(vista, animated: true, completion: nil)
         
     }
+    
     
  
     

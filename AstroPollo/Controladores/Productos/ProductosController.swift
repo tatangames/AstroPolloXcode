@@ -69,6 +69,9 @@ class ProductosController: UIViewController,  UITableViewDataSource, UITableView
     var arr = [Platos.PlatosArray]()
     
     
+    var idcategoria = ""
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -89,9 +92,7 @@ class ProductosController: UIViewController,  UITableViewDataSource, UITableView
     func peticionBuscarProductor(){
                  
            MBProgressHUD.showAdded(to: self.view, animated: true)
-        
-        let idcategoria = "1"
-           
+                   
            let params = [
                "id": idcategoria
            ]

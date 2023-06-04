@@ -33,10 +33,8 @@ class CategoriasTodasController: UIViewController, UICollectionViewDataSource, U
     
     func peticionBuscarCategorias(){
         
-        //let idCliente = UserDefaults.standard.getValueIdUsuario() ?? ""
-          
-        let idCliente = "3"
-        
+        let idCliente = UserDefaults.standard.getValueIdUsuario() ?? ""
+                  
         MBProgressHUD.showAdded(to: self.view, animated: true)
         
         let params = [
@@ -70,8 +68,6 @@ class CategoriasTodasController: UIViewController, UICollectionViewDataSource, U
                   })
                       
                       self.collectionView.reloadData()
-                    
-                  
                 }
                 
                   else{
@@ -129,6 +125,28 @@ class CategoriasTodasController: UIViewController, UICollectionViewDataSource, U
         
         return cell
         
+    }
+    
+    
+    @IBAction func btnAtras(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+                    
+        let datos = arr[indexPath.row]
+
+        let idcategoria = datos.getId()
+        
+       
+        let vista : ProductosController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ProductosController") as! ProductosController
+          
+         vista.idcategoria = String(idcategoria)
+       
+       self.present(vista, animated: true, completion: nil)
     }
     
     

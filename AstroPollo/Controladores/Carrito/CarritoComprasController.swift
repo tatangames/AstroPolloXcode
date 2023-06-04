@@ -13,6 +13,11 @@ import Alamofire
 class CarritoComprasController: UIViewController {
     
  
+    @IBOutlet weak var tableView: UITableView!
+    
+    @IBOutlet weak var btnProcesar: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
       
@@ -21,5 +26,9 @@ class CarritoComprasController: UIViewController {
         
     }
     
+    
+    
+    @IBAction func btnAccionProcesar(_ sender: Any) {
+    }
     
 }

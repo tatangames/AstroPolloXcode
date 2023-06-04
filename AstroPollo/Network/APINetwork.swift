@@ -57,3 +57,16 @@ let apiAgregarProductoCarrito = baseUrl+"cliente/carrito/producto/agregar"
 let apiObtenerMenuPrincipal = baseUrl+"cliente/lista/servicios-bloque"
 
 let apiRegistrarNuevaDireccion = baseUrl+"cliente/nueva/direccion"
+
+let apiBuscarCarritoCompras = baseUrl+"cliente/carrito/ver/orden"
+
+let apiBorrarCarrito = baseUrl+"cliente/carrito/borrar/orden"
+
+let apiBorrarProductoCarrito = baseUrl+"cliente/carrito/eliminar/producto"
+
+let apiInfoProductoCarritoFila = baseUrl+"cliente/carrito/ver/producto"
+
+let apiActualizaProductoCarrito = baseUrl+"cliente/carrito/cambiar/cantidad"
+
+
+

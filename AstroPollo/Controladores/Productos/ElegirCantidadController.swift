@@ -93,9 +93,7 @@ class ElegirCantidadController: UIViewController, UITextFieldDelegate {
                     let codigo = json["success"]
                     
                     if(codigo == 1){
-                        
-                     
-                        
+                                                
                         json["producto"].array?.forEach({ (dataArray) in
                                       
                             
@@ -196,18 +194,11 @@ class ElegirCantidadController: UIViewController, UITextFieldDelegate {
        self.view.makeToast(mensaje, duration: 3.0, position: .bottom, style: styleToastAzul)
     }
     
-    func mensajeToastVerde(mensaje: String){
-       self.view.makeToast(mensaje, duration: 3.0, position: .bottom, style: styleToastAzul)
-    }
-    
+   
     
     @IBAction func btnAccionAgregar(_ sender: Any) {
-        
-        
-        self.seGuardoProducto = true
-        dismiss(animated: true, completion: nil)
-        
-        //verificarIngreso()
+               
+        verificarIngreso()
     }
     
     
@@ -229,8 +220,7 @@ class ElegirCantidadController: UIViewController, UITextFieldDelegate {
         
         MBProgressHUD.showAdded(to: self.view, animated: true)
         
-        
-        let idCliente = "3"
+        let idCliente = UserDefaults.standard.getValueIdUsuario() ?? ""
 
         let params = [
            "clienteid": idCliente,
@@ -250,9 +240,9 @@ class ElegirCantidadController: UIViewController, UITextFieldDelegate {
                                                    
                     let json = JSON(value)
                                      
-                    let codigo = json["success"]
+                  let codigo = json["success"].intValue
                   
-                  
+                                    
                         // REGLAS
                   
                         // REGLA 1: cliente no tiene direccion

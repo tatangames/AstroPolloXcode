@@ -50,9 +50,9 @@ class ProductosController: UIViewController,  UITableViewDataSource, UITableView
     
        if(seActualizo){
            
-           var estilo = ToastStyle()
+           var estilo = ToastStilo()
            
-           estilo.backgroundColor = UIColor(named: "ColorAzulToast")!
+           estilo.backgroundColor = UIColor(named: "ColorVerde")!
            estilo.messageColor = .white
            
            self.view.makeToast("Producto Guardado", duration: 2, position: .bottom, style: estilo)

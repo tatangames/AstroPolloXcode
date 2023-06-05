@@ -70,3 +70,10 @@ let apiActualizaProductoCarrito = baseUrl+"cliente/carrito/cambiar/cantidad"
 
 
 
+let apiVerOrdenProcesar = baseUrl+"cliente/carrito/ver/proceso-orden"
+
+let apiVerificarCupon = baseUrl+"cliente/verificar/cupon"
+
+let apiEnviarOrden = baseUrl+"cliente/proceso/enviar/orden"
+
+let apiEnviarNotificacionRestaurante = baseUrl+"cliente/proceso/orden/notificacion"

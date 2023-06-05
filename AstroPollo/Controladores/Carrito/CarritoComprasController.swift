@@ -15,7 +15,26 @@ protocol protocoloCarrito {
   func pasarDatoCarrito(actualizar: Bool)
 }
 
-class CarritoComprasController: UIViewController, protocoloCarrito, UITableViewDataSource, UITableViewDelegate {
+protocol protocoloProcesarOrden {
+  func actualizarVista(actualizar: Bool)
+}
+
+class CarritoComprasController: UIViewController, protocoloCarrito, UITableViewDataSource, UITableViewDelegate, protocoloProcesarOrden {
+   
+    
+    func actualizarVista(actualizar: Bool) {
+        if(actualizar){
+            var estilo = ToastStilo()
+            
+            estilo.backgroundColor = UIColor(named: "ColorAzulToast")!
+            estilo.messageColor = .white
+            
+            self.view.makeToast("Actualizado", duration: 2, position: .bottom, style: estilo)
+            
+            peticionBuscarCarrito()
+        }
+    }
+    
     
     
     func pasarDatoCarrito(actualizar: Bool) {
@@ -179,8 +198,21 @@ class CarritoComprasController: UIViewController, protocoloCarrito, UITableViewD
     
     @IBAction func btnAccionProcesar(_ sender: Any) {
         
+        if(!carritoBool){
+            mensajeToastAzul(mensaje: "Carrito de compras no encontrado")
+            return
+        }
         
-       
+        if(estadoProductoGlobal == 0){
+            
+            alertaProductoNoActivo(titulo: "Producto no Disponible", mensaje: "El Producto Marcado no se encuentra disponible, puede eliminar deslizando hacia la izquierda. Gracias")
+            return
+        }
+        
+        
+        let vistaSiguiente : ProcesarController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ProcesarController") as! ProcesarController
+                
+        self.present(vistaSiguiente, animated: true, completion: nil)
     }
     
     

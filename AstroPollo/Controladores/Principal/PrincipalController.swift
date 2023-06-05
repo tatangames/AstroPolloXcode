@@ -190,7 +190,6 @@ class PrincipalController: UIViewController, UICollectionViewDelegate, UICollect
         
         self.present(vistaSiguiente, animated: true, completion: nil)
         
-        
     }
     
     func alertaUsuarioBloqueado(titulo: String, mensaje: String){
@@ -234,8 +233,6 @@ class PrincipalController: UIViewController, UICollectionViewDelegate, UICollect
         paginaControl.currentPage = index
         bannerCollecionView.scrollToItem(at: IndexPath(item: index, section: 0), at: .right, animated: true)
     }
-    
-    
     
     
     

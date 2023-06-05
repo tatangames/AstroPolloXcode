@@ -12,10 +12,8 @@ import SwiftyJSON
 import SDWebImage
 
 class EditarProductoController: UIViewController, UITextFieldDelegate {
-    
-    
-    var idcarritofila = ""
-    
+        
+    var idcarritofila = ""    
     
     
     @IBOutlet weak var scrollView: UIScrollView!
@@ -166,7 +164,7 @@ class EditarProductoController: UIViewController, UITextFieldDelegate {
                         
                         // se formatea el texto a tipo float
                         let precio = json["producto"]["precio"].stringValue
-                        self.txtPrecio.text = "$" + precio
+                        self.txtPrecio.text = "Precio $" + precio
                         let formatFloat = Float(precio)!
                         self.precioFloat = formatFloat
                         

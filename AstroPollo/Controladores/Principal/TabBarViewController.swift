@@ -19,7 +19,7 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
         
         
         // cambiara la vista cuando se hace una orden
-        //let finalVC = self.viewControllers![0] as! ServiciosViewController //first view controller in the tabbar
+       // let finalVC = self.viewControllers![0] as! OrdenesViewCo
         //finalVC.cambiarVista = cambiarVista
     }
     
@@ -43,8 +43,8 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
         else{
             
             // vista ordenes controller
-            
-            
+            let finalVC = self.viewControllers![selectedIndex!] as! OrdenesViewController
+            finalVC.recargarTouchBoton()
         }
         
     }

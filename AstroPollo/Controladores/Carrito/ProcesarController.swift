@@ -520,7 +520,6 @@ class ProcesarController: UIViewController, UITextFieldDelegate {
                 // 3- CUPON DESCUENTO DINERO
                 // 4- CUPON DESCUENTO PORCENTAJE
                 
-                
                     if(codigo == 1){
                         
                         self.mensajeToastAzul(mensaje: "Cupón no válido")
@@ -607,7 +606,10 @@ class ProcesarController: UIViewController, UITextFieldDelegate {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         removeObservers()
-        delegateProcesar.actualizarVista(actualizar: actualizarCarrito)
+        
+        if(delegateProcesar != nil){
+            delegateProcesar.actualizarVista(actualizar: actualizarCarrito)
+        }
     }
     
         

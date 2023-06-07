@@ -457,7 +457,11 @@ class EstadoOrdenController: UIViewController{
     
     @IBAction func btnAccionCompletar(_ sender: Any) {
         
+        let vista : CalificarController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CalificarController") as! CalificarController
         
+        vista.idorden = idorden
+        
+        self.present(vista, animated: true, completion: nil)
         
     }
     

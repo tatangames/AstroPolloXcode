@@ -1,4 +1,5 @@
 PODS:
+  - AARatingBar (1.2)
   - Alamofire (5.7.1)
   - GoogleMaps (8.0.0):
     - GoogleMaps/Maps (= 8.0.0)
@@ -15,6 +16,7 @@ PODS:
   - Toast-Swift (5.0.1)
 
 DEPENDENCIES:
+  - AARatingBar
   - Alamofire
   - GoogleMaps
   - GooglePlaces
@@ -26,6 +28,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - AARatingBar
     - Alamofire
     - GoogleMaps
     - GooglePlaces
@@ -36,6 +39,7 @@ SPEC REPOS:
     - Toast-Swift
 
 SPEC CHECKSUMS:
+  AARatingBar: dc54d24687ae97688ffdb29738332d0bc5c0c09f
   Alamofire: 0123a34370cb170936ae79a8df46cc62b2edeb88
   GoogleMaps: 0dce473ab18742d0f327887853630927cbee9127
   GooglePlaces: 46231f49e2dc52aa9a604f99e2e6b29996f30cc7
@@ -45,6 +49,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: eb29e8dc8b74a53ef1d65f32ac7d7bcd44d5da43
+PODFILE CHECKSUM: cf3d1eecb6d00b9c6fac743fb8779e3800939050
 
 COCOAPODS: 1.12.1

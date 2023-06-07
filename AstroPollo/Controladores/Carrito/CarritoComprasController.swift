@@ -332,9 +332,8 @@ class CarritoComprasController: UIViewController, protocoloCarrito, UITableViewD
            
         let datos = arrCarrito[indexPath.row]
         
-        cell.txtCantidad.text = " \(datos.cantidad)x "
-        cell.txtNombre.text = datos.nombre
-               
+        cell.txtCantidad.text = " \(datos.getCantidad())x "
+        cell.txtNombre.text = datos.getNombre()
         
             
         if(datos.getUtilizaImagen() == 1){

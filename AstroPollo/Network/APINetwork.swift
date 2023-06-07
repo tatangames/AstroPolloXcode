@@ -80,3 +80,16 @@ let apiEnviarNotificacionRestaurante = baseUrl+"cliente/proceso/orden/notificaci
 let apiVerListadoOrdenes = baseUrl+"cliente/ordenes/listado/activas"
 
 let apiInforOrdenIndividual = baseUrl+"cliente/orden/informacion/estado"
+
+let apiListadoProductosOrden = baseUrl+"cliente/listado/productos/ordenes"
+
+
+
+let apiOcultarMiOrden = baseUrl+"cliente/ocultar/mi/orden"
+
+let apiCancelarOrden = baseUrl+"cliente/proceso/cancelar/orden"
+
+let apiVerMotorista = baseUrl+"cliente/orden/ver/motorista"
+
+let apiCalificarOrden = baseUrl+"cliente/orden/completar/calificacion"
+

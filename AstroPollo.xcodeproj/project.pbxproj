@@ -59,6 +59,11 @@
 		8F916CE82A2CEB9300B70407 /* ModeloCarrito.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F916CE72A2CEB9300B70407 /* ModeloCarrito.swift */; };
 		8F916CEA2A2D1A5A00B70407 /* EditarProductoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F916CE92A2D1A5A00B70407 /* EditarProductoController.swift */; };
 		8F916CEC2A2D3F8C00B70407 /* ProcesarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F916CEB2A2D3F8C00B70407 /* ProcesarController.swift */; };
+		8F91CDA52A2FA60900C6F904 /* ProductosOrdenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F91CDA42A2FA60900C6F904 /* ProductosOrdenController.swift */; };
+		8F91CDA72A2FA62500C6F904 /* ProcuctosOrdenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F91CDA62A2FA62500C6F904 /* ProcuctosOrdenTableViewCell.swift */; };
+		8F91CDA92A2FACA700C6F904 /* ModeloProductoOrden.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F91CDA82A2FACA700C6F904 /* ModeloProductoOrden.swift */; };
+		8F91CDAB2A2FF9C000C6F904 /* InformacionMotoristaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F91CDAA2A2FF9C000C6F904 /* InformacionMotoristaController.swift */; };
+		8F91CDAF2A300CAD00C6F904 /* CalificarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F91CDAE2A300CAD00C6F904 /* CalificarController.swift */; };
 		8FA6ED752A2EA40C008DEE00 /* OrdenesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA6ED742A2EA40C008DEE00 /* OrdenesTableViewCell.swift */; };
 		8FA6ED772A2EAAAB008DEE00 /* ModeloOrdenes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA6ED762A2EAAAB008DEE00 /* ModeloOrdenes.swift */; };
 		8FA6ED792A2ED1B3008DEE00 /* EstadoOrdenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA6ED782A2ED1B3008DEE00 /* EstadoOrdenController.swift */; };
@@ -159,6 +164,11 @@
 		8F916CE72A2CEB9300B70407 /* ModeloCarrito.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeloCarrito.swift; sourceTree = "<group>"; };
 		8F916CE92A2D1A5A00B70407 /* EditarProductoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditarProductoController.swift; sourceTree = "<group>"; };
 		8F916CEB2A2D3F8C00B70407 /* ProcesarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcesarController.swift; sourceTree = "<group>"; };
+		8F91CDA42A2FA60900C6F904 /* ProductosOrdenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductosOrdenController.swift; sourceTree = "<group>"; };
+		8F91CDA62A2FA62500C6F904 /* ProcuctosOrdenTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcuctosOrdenTableViewCell.swift; sourceTree = "<group>"; };
+		8F91CDA82A2FACA700C6F904 /* ModeloProductoOrden.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeloProductoOrden.swift; sourceTree = "<group>"; };
+		8F91CDAA2A2FF9C000C6F904 /* InformacionMotoristaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformacionMotoristaController.swift; sourceTree = "<group>"; };
+		8F91CDAE2A300CAD00C6F904 /* CalificarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalificarController.swift; sourceTree = "<group>"; };
 		8FA6ED742A2EA40C008DEE00 /* OrdenesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdenesTableViewCell.swift; sourceTree = "<group>"; };
 		8FA6ED762A2EAAAB008DEE00 /* ModeloOrdenes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeloOrdenes.swift; sourceTree = "<group>"; };
 		8FA6ED782A2ED1B3008DEE00 /* EstadoOrdenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstadoOrdenController.swift; sourceTree = "<group>"; };
@@ -415,9 +425,12 @@
 		8F4810B32A2458A20024FBC3 /* Ordenes */ = {
 			isa = PBXGroup;
 			children = (
+				8F91CDA32A2FA5F600C6F904 /* Detalle */,
 				8F4810B42A2458B90024FBC3 /* OrdenesViewController.swift */,
 				8FA6ED742A2EA40C008DEE00 /* OrdenesTableViewCell.swift */,
 				8FA6ED782A2ED1B3008DEE00 /* EstadoOrdenController.swift */,
+				8F91CDAA2A2FF9C000C6F904 /* InformacionMotoristaController.swift */,
+				8F91CDAE2A300CAD00C6F904 /* CalificarController.swift */,
 			);
 			path = Ordenes;
 			sourceTree = "<group>";
@@ -460,8 +473,18 @@
 			children = (
 				8F916CE72A2CEB9300B70407 /* ModeloCarrito.swift */,
 				8FA6ED762A2EAAAB008DEE00 /* ModeloOrdenes.swift */,
+				8F91CDA82A2FACA700C6F904 /* ModeloProductoOrden.swift */,
 			);
 			path = Carrito;
+			sourceTree = "<group>";
+		};
+		8F91CDA32A2FA5F600C6F904 /* Detalle */ = {
+			isa = PBXGroup;
+			children = (
+				8F91CDA42A2FA60900C6F904 /* ProductosOrdenController.swift */,
+				8F91CDA62A2FA62500C6F904 /* ProcuctosOrdenTableViewCell.swift */,
+			);
+			path = Detalle;
 			sourceTree = "<group>";
 		};
 		8FBDAF362A28FAE600B9A090 /* CustomView */ = {
@@ -856,6 +879,7 @@
 			files = (
 				8F7CC7F62A2AA8D400DFBD00 /* ModeloProductoPopular.swift in Sources */,
 				8F4810B52A2458B90024FBC3 /* OrdenesViewController.swift in Sources */,
+				8F91CDAF2A300CAD00C6F904 /* CalificarController.swift in Sources */,
 				8F916CEC2A2D3F8C00B70407 /* ProcesarController.swift in Sources */,
 				8F3EC7FC2A254374006BC0AD /* PerfilController.swift in Sources */,
 				8F3EC8012A255464006BC0AD /* HorariosController.swift in Sources */,
@@ -878,11 +902,13 @@
 				8FAFBCB92A2835C400455C6C /* ModeloCategoriasPrincipal.swift in Sources */,
 				8FDC4A332A264ED100C5052E /* MapaDireccionController.swift in Sources */,
 				8FA6ED752A2EA40C008DEE00 /* OrdenesTableViewCell.swift in Sources */,
+				8F91CDA52A2FA60900C6F904 /* ProductosOrdenController.swift in Sources */,
 				8FBDAF4F2A2918FF00B9A090 /* BannerCollectionViewCell.swift in Sources */,
 				8FDC4A352A26520600C5052E /* BarraProgresoController.swift in Sources */,
 				8F6C1BBE2A27D5060053CE42 /* ModeloBanner.swift in Sources */,
 				8F0B21BC2A2BC226002436FE /* RegistrarNuevaDireccionController.swift in Sources */,
 				8F48109E2A23C5590024FBC3 /* VerificarController.swift in Sources */,
+				8F91CDA92A2FACA700C6F904 /* ModeloProductoOrden.swift in Sources */,
 				8F4810A82A23F2CD0024FBC3 /* Validator.swift in Sources */,
 				8F3EC7FE2A2548ED006BC0AD /* PerfilViewCell.swift in Sources */,
 				8FBDAF3A2A28FE4500B9A090 /* UIView+Extension.swift in Sources */,
@@ -892,8 +918,10 @@
 				8F8B9BEC2A22AB2B00070D34 /* LoginController.swift in Sources */,
 				8F4810AE2A24551A0024FBC3 /* TabBarViewController.swift in Sources */,
 				8F4810A22A23CE970024FBC3 /* CambiarPasswordController.swift in Sources */,
+				8F91CDA72A2FA62500C6F904 /* ProcuctosOrdenTableViewCell.swift in Sources */,
 				8FDC4A3D2A2667BE00C5052E /* CategoriasTodasCollectionViewCell.swift in Sources */,
 				8F3EC8192A25A237006BC0AD /* SeleccionarDireccionController.swift in Sources */,
+				8F91CDAB2A2FF9C000C6F904 /* InformacionMotoristaController.swift in Sources */,
 				8FDC4A382A2660F500C5052E /* CategoriasTodasController.swift in Sources */,
 				8F3EC8072A2563F2006BC0AD /* ModeloHorario.swift in Sources */,
 				8FA6ED772A2EAAAB008DEE00 /* ModeloOrdenes.swift in Sources */,

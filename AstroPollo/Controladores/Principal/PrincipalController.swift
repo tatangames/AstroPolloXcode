@@ -14,10 +14,14 @@ protocol protocoloProductoGuardadoPrincipal {
     func mostrarToast(seActualizo: Bool)
 }
 
-
 class PrincipalController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource,
                            UICollectionViewDelegateFlowLayout, protocoloProductoGuardadoPrincipal {
  
+    
+    var cambiarVistaOrdenesController = false
+    
+    
+    
         
     func mostrarToast(seActualizo: Bool) {
     
@@ -165,10 +169,18 @@ class PrincipalController: UIViewController, UICollectionViewDelegate, UICollect
                       self.productoCollectionView.reloadData()
                      
                       self.scrollView.isHidden = false
-                      
+                                        
+                      // para timer de banner
                       self.ajustar()
-                }
-                
+                    
+                    
+                    if(self.cambiarVistaOrdenesController){
+                        self.cambiarVistaOrdenesController = false
+                        self.tabBarController?.selectedIndex = 2
+                    }
+                    
+                    
+                  }
                   else{
                         MBProgressHUD.hide(for: self.view, animated: true)
                         self.mensajeSinConexion()

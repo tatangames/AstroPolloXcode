@@ -15,6 +15,7 @@ target 'AstroPollo' do
   pod 'GoogleMaps'
   pod 'GooglePlaces'
   pod 'Toast-Swift' 
+  pod 'AARatingBar'
 
   target 'AstroPolloTests' do
     inherit! :search_paths

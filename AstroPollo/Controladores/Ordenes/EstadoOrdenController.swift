@@ -94,10 +94,22 @@ class EstadoOrdenController: UIViewController{
         refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
         scrollView.refreshControl = refreshControl
+        
+        
+        ocultarControles()
                 
             
         peticionBuscarOrden()
     }
+    
+    func ocultarControles(){
+        
+        btnMotorista.isHidden = true
+        btnCompletar.isHidden = true
+        
+    }
+    
+    
     
     @objc func refresh(){
         peticionBuscarOrden()
@@ -134,6 +146,7 @@ class EstadoOrdenController: UIViewController{
                     json["ordenes"].array?.forEach({ (data1) in
                                               
                         self.txtNumOrden.text = "Orden #: \(self.idorden)"
+                        
                         self.txtIniciada.text = data1["textoiniciada"].stringValue
                         self.txtFechaIniciada.text = data1["fechaestimada"].stringValue
                         
@@ -158,6 +171,7 @@ class EstadoOrdenController: UIViewController{
                             
                             self.txtEncamino.text = data1["textocamino"].stringValue
                             self.txtFechaCamino.text = data1["fechacamino"].stringValue
+                            
                             
                             
                             self.circuloEncamino.image = UIImage(named: "marcador_azul")
@@ -188,12 +202,15 @@ class EstadoOrdenController: UIViewController{
                         
                         if(estadoCancelado == 1){
                             
+                            let notaCancelada = data1["nota_cancelada"].stringValue
+                                                        
                             self.txtIniciada.text = ""
                             self.txtFechaIniciada.text = ""
                             
                             self.boolOrdenCancelada = true
                             
                             self.txtCancelado.text = "ORDEN CANCELADA"
+                            self.txtCancelado.isHidden = false
                             
                             self.btnCancelar.setTitle("Borrar", for: .normal)
                             
@@ -201,6 +218,8 @@ class EstadoOrdenController: UIViewController{
                             
                             
                             // MOSTRAR ALERTA CON EL TEXTO DE PORQUE CANCELADA
+                            
+                            self.alertaNotaCancelada(mensaje: notaCancelada)
                         }
                         
                         
@@ -221,6 +240,19 @@ class EstadoOrdenController: UIViewController{
                 self.retryPeticionBuscarOrden()
             }
         }
+    }
+    
+    func alertaNotaCancelada(mensaje: String){
+        
+        
+        let alert = UIAlertController(title: "Orden Cancelada", message: mensaje, preferredStyle: UIAlertController.Style.alert)
+              
+             alert.addAction(UIAlertAction(title: "Aceptar", style: UIAlertAction.Style.default, handler: {(action) in
+                 alert.dismiss(animated: true, completion: nil)
+             
+             }))
+              
+             self.present(alert, animated: true, completion: nil)
     }
     
     
@@ -246,22 +278,178 @@ class EstadoOrdenController: UIViewController{
     
     @IBAction func btnAccionProducto(_ sender: Any) {
         
+        let vista : ProductosOrdenController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ProductosOrdenController") as! ProductosOrdenController
+     
+        vista.idorden = idorden
         
-        
+        self.present(vista, animated: true, completion: nil)        
     }
     
     
     @IBAction func btnAccionCancelar(_ sender: Any) {
         
+        cancelarOrden()
+    }
+    
+    func cancelarOrden(){
         
-        
+        if(boolOrdenCancelada){
+            peticionOcultarMiOrden()
+        }else{
+            
+            let alert = UIAlertController(title: "Cancelar Orden", message: "", preferredStyle: UIAlertController.Style.alert)
+                     
+                 alert.addAction(UIAlertAction(title: "No", style: UIAlertAction.Style.default, handler: {(action) in
+                     alert.dismiss(animated: true, completion: nil)
+                  
+                 }))
+                 
+                 alert.addAction(UIAlertAction(title: "Si", style: UIAlertAction.Style.default, handler: {(action) in
+                     alert.dismiss(animated: true, completion: nil)
+                  self.peticionCancelar()
+                 }))
+                  
+                 self.present(alert, animated: true, completion: nil)
+        }
     }
     
     
     
+    func peticionOcultarMiOrden(){
+        
+        
+        MBProgressHUD.showAdded(to: self.view, animated: true)
+        
+        let params = [
+            "ordenid": String(idorden)
+        ]
+        
+        let encodeURL = apiOcultarMiOrden
+        
+        AF.request(encodeURL, method: .post, parameters: params).responseJSON{ (response) in
+            
+            switch response.result{
+            case .success(let value):
+                
+                MBProgressHUD.hide(for: self.view, animated: true)
+                self.refreshControl.endRefreshing()
+                
+                let json = JSON(value)
+                
+                let codigo = json["success"]
+                
+                if(codigo == 1){
+                    
+                    // OCULTAR LA ORDEN Y REGRESAR ATRAS
+                    self.salirAtras()
+                }
+                else{
+                    MBProgressHUD.hide(for: self.view, animated: true)
+                    self.mensajeSinConexion()
+                }
+                
+            case .failure( _):
+                MBProgressHUD.hide(for: self.view, animated: true)
+                self.mensajeSinConexion()
+            }
+        }
+    }
+    
+    
+    func peticionCancelar(){
+        
+        
+        MBProgressHUD.showAdded(to: self.view, animated: true)
+        
+        let params = [
+            "idorden": String(idorden)
+        ]
+        
+        let encodeURL = apiCancelarOrden
+        
+        AF.request(encodeURL, method: .post, parameters: params).responseJSON{ (response) in
+            
+            switch response.result{
+            case .success(let value):
+                
+                MBProgressHUD.hide(for: self.view, animated: true)
+                self.refreshControl.endRefreshing()
+                
+                let json = JSON(value)
+                
+                let codigo = json["success"]
+                
+                if(codigo == 1){
+                    
+                   // LA ORDEN NO FUE CANCELADA POR QUE YA INICIO
+                    
+                    let titulo = json["titulo"].stringValue
+                    let mensaje = json["mensaje"].stringValue
+                    
+                    self.peticionBuscarOrden()
+                    
+                    self.alertaGeneral(titulo: titulo, mensaje: mensaje)
+                }
+                else if(codigo == 2){
+                    
+                    // ORDEN CANCELADA CORRECTAMENTE
+                    
+                    let titulo = json["titulo"].stringValue
+                    let mensaje = json["mensaje"].stringValue
+                    
+                    self.alertaOrdenCancelada(titulo: titulo, mensaje: mensaje)
+                    
+                }
+                else{
+                    MBProgressHUD.hide(for: self.view, animated: true)
+                    self.mensajeSinConexion()
+                }
+                
+            case .failure( _):
+                MBProgressHUD.hide(for: self.view, animated: true)
+                self.mensajeSinConexion()
+            }
+        }
+    }
+    
+    
+    func alertaGeneral(titulo: String, mensaje: String){
+        
+        let alert = UIAlertController(title: titulo, message: mensaje, preferredStyle: UIAlertController.Style.alert)
+        
+             
+             alert.addAction(UIAlertAction(title: "Aceptar", style: UIAlertAction.Style.default, handler: {(action) in
+                 alert.dismiss(animated: true, completion: nil)
+                 
+             }))
+              
+             self.present(alert, animated: true, completion: nil)
+    }
+    
+    
+    func alertaOrdenCancelada(titulo: String, mensaje: String){
+        
+        let alert = UIAlertController(title: titulo, message: mensaje, preferredStyle: UIAlertController.Style.alert)
+        
+             
+             alert.addAction(UIAlertAction(title: "Aceptar", style: UIAlertAction.Style.default, handler: {(action) in
+                 alert.dismiss(animated: true, completion: nil)
+              
+                 self.salirAtras()
+                 
+             }))
+              
+             self.present(alert, animated: true, completion: nil)
+    }
+    
+    
     @IBAction func btnAccionMotorista(_ sender: Any) {
         
+        let vista : InformacionMotoristaController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "InformacionMotoristaController") as! InformacionMotoristaController
         
+        vista.idorden = idorden
+        
+        self.present(vista, animated: true, completion: nil)
         
     }
     
@@ -272,6 +460,8 @@ class EstadoOrdenController: UIViewController{
         
         
     }
+    
+ 
     
     
     

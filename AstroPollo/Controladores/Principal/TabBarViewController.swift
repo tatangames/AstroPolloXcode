@@ -17,10 +17,9 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
      
         self.delegate = self
         
-        
-        // cambiara la vista cuando se hace una orden
-       // let finalVC = self.viewControllers![0] as! OrdenesViewCo
-        //finalVC.cambiarVista = cambiarVista
+               
+         let finalVC = self.viewControllers![0] as! PrincipalController
+        finalVC.cambiarVistaOrdenesController = cambiarVista
     }
     
     

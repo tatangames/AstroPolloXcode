@@ -254,7 +254,7 @@
                                 </constraints>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="textColor" name="ColorAzulToast"/>
                                 </textAttributes>
                                 <textAttributes key="largeTitleTextAttributes">
                                     <color key="textColor" red="0.1764705882" green="0.34509803919999998" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -456,7 +456,7 @@
                                 </constraints>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="textColor" name="ColorAzulToast"/>
                                 </textAttributes>
                                 <textAttributes key="largeTitleTextAttributes">
                                     <color key="textColor" red="0.1764705882" green="0.34509803919999998" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -642,7 +642,7 @@
                                 </constraints>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="textColor" name="ColorAzulToast"/>
                                 </textAttributes>
                                 <textAttributes key="largeTitleTextAttributes">
                                     <color key="textColor" red="0.1764705882" green="0.34509803919999998" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -820,7 +820,7 @@
                                 </constraints>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="textColor" name="ColorAzulToast"/>
                                 </textAttributes>
                                 <textAttributes key="largeTitleTextAttributes">
                                     <color key="textColor" red="0.1764705882" green="0.34509803919999998" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -984,7 +984,7 @@
                                 </constraints>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="textColor" name="ColorAzulToast"/>
                                 </textAttributes>
                                 <textAttributes key="largeTitleTextAttributes">
                                     <color key="textColor" red="0.1764705882" green="0.34509803919999998" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1267,7 +1267,7 @@
                                 </constraints>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="textColor" name="ColorAzulToast"/>
                                 </textAttributes>
                                 <textAttributes key="largeTitleTextAttributes">
                                     <color key="textColor" red="0.1764705882" green="0.34509803919999998" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1653,7 +1653,7 @@
                                 </constraints>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="textColor" name="ColorAzulToast"/>
                                 </textAttributes>
                                 <textAttributes key="largeTitleTextAttributes">
                                     <color key="textColor" red="0.1764705882" green="0.34509803919999998" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1714,7 +1714,7 @@
                                 </constraints>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="textColor" name="ColorAzulToast"/>
                                 </textAttributes>
                                 <textAttributes key="largeTitleTextAttributes">
                                     <color key="textColor" red="0.1764705882" green="0.34509803919999998" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1947,7 +1947,7 @@
                                 </constraints>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="textColor" name="ColorAzulToast"/>
                                 </textAttributes>
                                 <textAttributes key="largeTitleTextAttributes">
                                     <color key="textColor" red="0.1764705882" green="0.34509803919999998" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2127,7 +2127,7 @@
                                 </constraints>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="textColor" name="ColorAzulToast"/>
                                 </textAttributes>
                                 <textAttributes key="largeTitleTextAttributes">
                                     <color key="textColor" red="0.1764705882" green="0.34509803919999998" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2224,7 +2224,7 @@
                                 </constraints>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="textColor" name="ColorAzulToast"/>
                                 </textAttributes>
                                 <textAttributes key="largeTitleTextAttributes">
                                     <color key="textColor" red="0.1764705882" green="0.34509803919999998" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2278,7 +2278,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UkU-M4-hvH">
-                                <rect key="frame" x="0.0" y="139" width="390" height="671"/>
+                                <rect key="frame" x="0.0" y="156" width="390" height="654"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="86" id="Wwt-B8-2eC" customClass="ListaDireccionesViewCell" customModule="AstroPollo" customModuleProvider="target">
@@ -2343,17 +2343,6 @@
                                     <outlet property="delegate" destination="pS3-6L-Ley" id="cFt-PL-fhW"/>
                                 </connections>
                             </tableView>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ix-GC-z4n">
-                                <rect key="frame" x="16" y="96" width="358" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="AbP-ou-J9q"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                <state key="normal" title="Agregar Dirección"/>
-                                <connections>
-                                    <action selector="btnAccionAddDireccion:" destination="pS3-6L-Ley" eventType="touchUpInside" id="FUd-Qb-3GW"/>
-                                </connections>
-                            </button>
                             <navigationBar hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jlj-WB-XIg">
                                 <rect key="frame" x="0.0" y="47" width="390" height="44"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2378,7 +2367,7 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <navigationBar hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QwN-mA-HNJ">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QwN-mA-HNJ">
                                 <rect key="frame" x="0.0" y="47" width="390" height="44"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -2386,7 +2375,7 @@
                                 </constraints>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="textColor" name="ColorAzulToast"/>
                                 </textAttributes>
                                 <textAttributes key="largeTitleTextAttributes">
                                     <color key="textColor" red="0.1764705882" green="0.34509803919999998" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2402,28 +2391,38 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1uZ-4l-yJM">
+                                <rect key="frame" x="114.66666666666667" y="106" width="160.66666666666663" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="wTd-Me-Gxe"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Agregar Dirección"/>
+                                <connections>
+                                    <action selector="btnAccionAddDireccion:" destination="pS3-6L-Ley" eventType="touchUpInside" id="jGN-Pb-K1v"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="sKL-Pk-Ge7"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="jlj-WB-XIg" firstAttribute="top" secondItem="sKL-Pk-Ge7" secondAttribute="top" id="15b-5F-A9N"/>
-                            <constraint firstItem="9ix-GC-z4n" firstAttribute="top" secondItem="jlj-WB-XIg" secondAttribute="bottom" constant="5" id="1nC-jH-6fZ"/>
-                            <constraint firstItem="9ix-GC-z4n" firstAttribute="leading" secondItem="sKL-Pk-Ge7" secondAttribute="leading" constant="16" id="3H5-vm-Olf"/>
+                            <constraint firstItem="1uZ-4l-yJM" firstAttribute="centerX" secondItem="Pil-h9-YcS" secondAttribute="centerX" id="17f-uz-TDO"/>
                             <constraint firstItem="QwN-mA-HNJ" firstAttribute="trailing" secondItem="sKL-Pk-Ge7" secondAttribute="trailing" id="5MC-g2-8ma"/>
                             <constraint firstItem="jlj-WB-XIg" firstAttribute="trailing" secondItem="sKL-Pk-Ge7" secondAttribute="trailing" id="K2x-Kc-MOz"/>
+                            <constraint firstItem="UkU-M4-hvH" firstAttribute="top" secondItem="1uZ-4l-yJM" secondAttribute="bottom" constant="15" id="NZa-Df-8qt"/>
                             <constraint firstItem="UkU-M4-hvH" firstAttribute="trailing" secondItem="sKL-Pk-Ge7" secondAttribute="trailing" id="Tto-LV-KkD"/>
                             <constraint firstItem="jlj-WB-XIg" firstAttribute="leading" secondItem="sKL-Pk-Ge7" secondAttribute="leading" id="fnE-kw-Mad"/>
-                            <constraint firstItem="sKL-Pk-Ge7" firstAttribute="trailing" secondItem="9ix-GC-z4n" secondAttribute="trailing" constant="16" id="gQ9-tP-C0g"/>
                             <constraint firstItem="UkU-M4-hvH" firstAttribute="bottom" secondItem="sKL-Pk-Ge7" secondAttribute="bottom" id="pgd-cM-sqN"/>
-                            <constraint firstItem="UkU-M4-hvH" firstAttribute="top" secondItem="9ix-GC-z4n" secondAttribute="bottom" constant="13" id="sfq-1B-Ph8"/>
                             <constraint firstItem="QwN-mA-HNJ" firstAttribute="top" secondItem="sKL-Pk-Ge7" secondAttribute="top" id="tVY-pX-vFy"/>
                             <constraint firstItem="QwN-mA-HNJ" firstAttribute="leading" secondItem="sKL-Pk-Ge7" secondAttribute="leading" id="te6-Xh-3Bx"/>
+                            <constraint firstItem="1uZ-4l-yJM" firstAttribute="top" secondItem="jlj-WB-XIg" secondAttribute="bottom" constant="15" id="w2o-Rg-0h1"/>
                             <constraint firstItem="UkU-M4-hvH" firstAttribute="leading" secondItem="sKL-Pk-Ge7" secondAttribute="leading" id="zbH-LV-34j"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Direcciones" id="BI4-Ty-jOm"/>
                     <connections>
-                        <outlet property="btnAgregarDireccion" destination="9ix-GC-z4n" id="Ak0-b0-HXW"/>
+                        <outlet property="btnAgregarDireccion" destination="1uZ-4l-yJM" id="3oi-mH-J2D"/>
                         <outlet property="navegacionBtn" destination="jlj-WB-XIg" id="ZBR-hK-NN2"/>
                         <outlet property="navegacionNoBtn" destination="QwN-mA-HNJ" id="o7U-CQ-fQW"/>
                         <outlet property="tableView" destination="UkU-M4-hvH" id="62A-ls-4VH"/>
@@ -2739,7 +2738,7 @@
                                 </constraints>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="textColor" name="ColorAzulToast"/>
                                 </textAttributes>
                                 <textAttributes key="largeTitleTextAttributes">
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -3344,7 +3343,7 @@
                                 </constraints>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="textColor" name="ColorAzulToast"/>
                                 </textAttributes>
                                 <textAttributes key="largeTitleTextAttributes">
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -3649,7 +3648,7 @@
                                 </constraints>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="textColor" name="ColorAzulToast"/>
                                 </textAttributes>
                                 <textAttributes key="largeTitleTextAttributes">
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -4176,7 +4175,7 @@
                                 </constraints>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="textColor" name="ColorAzulToast"/>
                                 </textAttributes>
                                 <textAttributes key="largeTitleTextAttributes">
                                     <color key="textColor" red="0.1764705882" green="0.34509803919999998" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -4310,7 +4309,7 @@
                                 </constraints>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="textColor" name="ColorAzulToast"/>
                                 </textAttributes>
                                 <textAttributes key="largeTitleTextAttributes">
                                     <color key="textColor" red="0.1764705882" green="0.34509803919999998" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -4584,7 +4583,7 @@
                                 </constraints>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="textColor" name="ColorAzulToast"/>
                                 </textAttributes>
                                 <textAttributes key="largeTitleTextAttributes">
                                     <color key="textColor" red="0.1764705882" green="0.34509803919999998" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

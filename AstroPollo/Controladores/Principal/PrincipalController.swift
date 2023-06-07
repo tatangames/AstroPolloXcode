@@ -122,10 +122,7 @@ class PrincipalController: UIViewController, UICollectionViewDelegate, UICollect
                
                 else if(codigo == 3){
                     
-                   // let hayCategorias = json["haycategorias"].stringValue
-                   // let hayPopulares = json["haypopulares"].stringValue
-                   
-                    
+                                  
                     // LISTADO DE BANNER
                                                                           
                   json["slider"].array?.forEach({ (dataArray) in

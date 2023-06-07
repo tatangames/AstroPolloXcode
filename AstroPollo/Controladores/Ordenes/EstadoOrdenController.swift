@@ -213,6 +213,7 @@ class EstadoOrdenController: UIViewController{
                             self.txtCancelado.isHidden = false
                             
                             self.btnCancelar.setTitle("Borrar", for: .normal)
+                            self.btnCancelar.isHidden = false
                             
                             self.circuloCancelada.isHidden = false
                             

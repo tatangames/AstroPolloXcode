@@ -51,19 +51,7 @@ class ListaDireccionesController: UIViewController, UITableViewDelegate, UITable
         
         styleAzul.backgroundColor = UIColor(named: "ColorAzulToast")!
         styleAzul.titleColor = .white
-        
-        
-        if(bloquearBotonAtras){
-            
-            navegacionBtn.isHidden = true
-            navegacionNoBtn.isHidden = false
-            
-        }else{
-            navegacionNoBtn.isHidden = true
-            navegacionBtn.isHidden = false
-        }
-        
-        
+                
         // ocultar lineas vacias
         tableView.tableFooterView = UIView()
         peticionBuscarDirecciones()
@@ -190,9 +178,12 @@ class ListaDireccionesController: UIViewController, UITableViewDelegate, UITable
     
     @IBAction func btnAccionAtras(_ sender: Any) {
         
-        let vista : TabBarViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBarViewController") as! TabBarViewController
-        
-        self.present(vista, animated: true, completion: nil)
+        if(!bloquearBotonAtras){
+            
+            let vista : TabBarViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBarViewController") as! TabBarViewController
+            
+            self.present(vista, animated: true, completion: nil)
+        }
     }
     
     

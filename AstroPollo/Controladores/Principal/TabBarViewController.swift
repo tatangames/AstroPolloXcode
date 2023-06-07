@@ -18,7 +18,7 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
         self.delegate = self
         
                
-         let finalVC = self.viewControllers![0] as! PrincipalController
+        let finalVC = self.viewControllers![0] as! PrincipalController
         finalVC.cambiarVistaOrdenesController = cambiarVista
     }
     
@@ -31,7 +31,7 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
         if(selectedIndex == 0){
             
             // vista menu
-            
+            // NO SE RECARGA AL TOCAR BOTON MENU
         }
         else if(selectedIndex == 1){
             

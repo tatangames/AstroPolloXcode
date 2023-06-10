@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		333DC6AECE20BD486CF7CC2E /* Pods_AstroPolloTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3888F985381C30F295DE45D /* Pods_AstroPolloTests.framework */; };
 		42ABFC5AB9B707F09B3198D8 /* Pods_AstroPollo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E57B4527E243C6C40A9FEF7A /* Pods_AstroPollo.framework */; };
+		8F08871A2A33F53B00AA8388 /* PrincipalAccesoLibreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0887192A33F53B00AA8388 /* PrincipalAccesoLibreController.swift */; };
+		8F08871D2A33FE4E00AA8388 /* ProductosLibreAccesoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F08871C2A33FE4E00AA8388 /* ProductosLibreAccesoController.swift */; };
+		8F08871F2A3402AD00AA8388 /* ProIndividualLibreAccesoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F08871E2A3402AD00AA8388 /* ProIndividualLibreAccesoController.swift */; };
+		8F0887222A34166600AA8388 /* ListaPremiosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0887212A34166600AA8388 /* ListaPremiosController.swift */; };
+		8F0887242A34172D00AA8388 /* ListaPremiosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0887232A34172D00AA8388 /* ListaPremiosTableViewCell.swift */; };
 		8F0B21BA2A2BA5EE002436FE /* CarritoComprasController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0B21B92A2BA5EE002436FE /* CarritoComprasController.swift */; };
 		8F0B21BC2A2BC226002436FE /* RegistrarNuevaDireccionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0B21BB2A2BC226002436FE /* RegistrarNuevaDireccionController.swift */; };
 		8F0B21BE2A2BC39D002436FE /* jsongps.json in Resources */ = {isa = PBXBuildFile; fileRef = 8F0B21BD2A2BC39D002436FE /* jsongps.json */; };
@@ -110,6 +115,11 @@
 		1B25CD125258F0AB503BBDAC /* Pods-AstroPolloTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AstroPolloTests.release.xcconfig"; path = "Target Support Files/Pods-AstroPolloTests/Pods-AstroPolloTests.release.xcconfig"; sourceTree = "<group>"; };
 		73A09E7EE07D31D9CE80D1CA /* Pods-AstroPollo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AstroPollo.release.xcconfig"; path = "Target Support Files/Pods-AstroPollo/Pods-AstroPollo.release.xcconfig"; sourceTree = "<group>"; };
 		79C743BE68BC3000CF5778B5 /* Pods-AstroPolloTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AstroPolloTests.debug.xcconfig"; path = "Target Support Files/Pods-AstroPolloTests/Pods-AstroPolloTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8F0887192A33F53B00AA8388 /* PrincipalAccesoLibreController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrincipalAccesoLibreController.swift; sourceTree = "<group>"; };
+		8F08871C2A33FE4E00AA8388 /* ProductosLibreAccesoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductosLibreAccesoController.swift; sourceTree = "<group>"; };
+		8F08871E2A3402AD00AA8388 /* ProIndividualLibreAccesoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProIndividualLibreAccesoController.swift; sourceTree = "<group>"; };
+		8F0887212A34166600AA8388 /* ListaPremiosController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaPremiosController.swift; sourceTree = "<group>"; };
+		8F0887232A34172D00AA8388 /* ListaPremiosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaPremiosTableViewCell.swift; sourceTree = "<group>"; };
 		8F0B21B92A2BA5EE002436FE /* CarritoComprasController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarritoComprasController.swift; sourceTree = "<group>"; };
 		8F0B21BB2A2BC226002436FE /* RegistrarNuevaDireccionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrarNuevaDireccionController.swift; sourceTree = "<group>"; };
 		8F0B21BD2A2BC39D002436FE /* jsongps.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = jsongps.json; sourceTree = "<group>"; };
@@ -246,6 +256,41 @@
 				1B25CD125258F0AB503BBDAC /* Pods-AstroPolloTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		8F0887172A33F4CB00AA8388 /* AccesoLibre */ = {
+			isa = PBXGroup;
+			children = (
+				8F08871B2A33FE3D00AA8388 /* Productos */,
+				8F0887182A33F4D300AA8388 /* Principal */,
+			);
+			path = AccesoLibre;
+			sourceTree = "<group>";
+		};
+		8F0887182A33F4D300AA8388 /* Principal */ = {
+			isa = PBXGroup;
+			children = (
+				8F0887192A33F53B00AA8388 /* PrincipalAccesoLibreController.swift */,
+			);
+			path = Principal;
+			sourceTree = "<group>";
+		};
+		8F08871B2A33FE3D00AA8388 /* Productos */ = {
+			isa = PBXGroup;
+			children = (
+				8F08871C2A33FE4E00AA8388 /* ProductosLibreAccesoController.swift */,
+				8F08871E2A3402AD00AA8388 /* ProIndividualLibreAccesoController.swift */,
+			);
+			path = Productos;
+			sourceTree = "<group>";
+		};
+		8F0887202A3414FE00AA8388 /* Premios */ = {
+			isa = PBXGroup;
+			children = (
+				8F0887212A34166600AA8388 /* ListaPremiosController.swift */,
+				8F0887232A34172D00AA8388 /* ListaPremiosTableViewCell.swift */,
+			);
+			path = Premios;
 			sourceTree = "<group>";
 		};
 		8F0B21B82A2BA5CB002436FE /* Carrito */ = {
@@ -507,6 +552,8 @@
 		8FD912012A21796D00624541 /* Controladores */ = {
 			isa = PBXGroup;
 			children = (
+				8F0887202A3414FE00AA8388 /* Premios */,
+				8F0887172A33F4CB00AA8388 /* AccesoLibre */,
 				8F0B21B82A2BA5CB002436FE /* Carrito */,
 				8FDC4A3E2A26910800C5052E /* Productos */,
 				8FDC4A362A26609F00C5052E /* Categorias */,
@@ -882,9 +929,11 @@
 				8F91CDAF2A300CAD00C6F904 /* CalificarController.swift in Sources */,
 				8F916CEC2A2D3F8C00B70407 /* ProcesarController.swift in Sources */,
 				8F3EC7FC2A254374006BC0AD /* PerfilController.swift in Sources */,
+				8F08871F2A3402AD00AA8388 /* ProIndividualLibreAccesoController.swift in Sources */,
 				8F3EC8012A255464006BC0AD /* HorariosController.swift in Sources */,
 				8F6C1BBB2A27A3350053CE42 /* CustomTextField.swift in Sources */,
 				8F0B21BA2A2BA5EE002436FE /* CarritoComprasController.swift in Sources */,
+				8F08871A2A33F53B00AA8388 /* PrincipalAccesoLibreController.swift in Sources */,
 				8F916CE82A2CEB9300B70407 /* ModeloCarrito.swift in Sources */,
 				8F3EC80F2A258A95006BC0AD /* DatosGuardados.swift in Sources */,
 				8FDC4A4B2A26B9B100C5052E /* ElegirCantidadController.swift in Sources */,
@@ -892,6 +941,7 @@
 				8FDC4A3B2A26613900C5052E /* ModeloCategorias.swift in Sources */,
 				8FBDAF3D2A28FECB00B9A090 /* CategoryCollectionViewCell.swift in Sources */,
 				8F8B9BEE2A22D7D900070D34 /* RegistroController.swift in Sources */,
+				8F08871D2A33FE4E00AA8388 /* ProductosLibreAccesoController.swift in Sources */,
 				8F3EC8172A259A74006BC0AD /* ModeloDirecciones.swift in Sources */,
 				8F8B9BE72A22A1B000070D34 /* TextFieldImagen.swift in Sources */,
 				8F7CC7F92A2AB1E300DFBD00 /* ProductoPoCollectionViewCell.swift in Sources */,
@@ -920,6 +970,7 @@
 				8F4810A22A23CE970024FBC3 /* CambiarPasswordController.swift in Sources */,
 				8F91CDA72A2FA62500C6F904 /* ProcuctosOrdenTableViewCell.swift in Sources */,
 				8FDC4A3D2A2667BE00C5052E /* CategoriasTodasCollectionViewCell.swift in Sources */,
+				8F0887242A34172D00AA8388 /* ListaPremiosTableViewCell.swift in Sources */,
 				8F3EC8192A25A237006BC0AD /* SeleccionarDireccionController.swift in Sources */,
 				8F91CDAB2A2FF9C000C6F904 /* InformacionMotoristaController.swift in Sources */,
 				8FDC4A382A2660F500C5052E /* CategoriasTodasController.swift in Sources */,
@@ -929,6 +980,7 @@
 				8F3EC8032A256004006BC0AD /* HorariosViewCell.swift in Sources */,
 				8F4810962A23B3710024FBC3 /* Toast.swift in Sources */,
 				8F3EC80D2A257965006BC0AD /* PerfilCorreoController.swift in Sources */,
+				8F0887222A34166600AA8388 /* ListaPremiosController.swift in Sources */,
 				8F5E846D2A2C2D80001F3C87 /* CarritoCollectionViewCell.swift in Sources */,
 				8F26430D2A206894003CB6EA /* AppDelegate.swift in Sources */,
 				8F3EC8142A259836006BC0AD /* ListaDireccionesViewCell.swift in Sources */,
@@ -1042,7 +1094,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1096,7 +1148,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1114,7 +1166,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = FJ4W94ZM68;
+				DEVELOPMENT_TEAM = 42VSDQG6FV;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AstroPollo/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Astro Pollo";
@@ -1150,7 +1202,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = FJ4W94ZM68;
+				DEVELOPMENT_TEAM = 42VSDQG6FV;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AstroPollo/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Astro Pollo";

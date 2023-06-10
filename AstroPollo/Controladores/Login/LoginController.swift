@@ -52,6 +52,17 @@ class LoginController: UIViewController, UITextFieldDelegate {
         self.edtPassword.delegate = self
     }
 
+    
+    @IBAction func btnVistaLibre(_ sender: Any) {
+        
+        let vistaSiguiente : PrincipalAccesoLibreController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PrincipalAccesoLibreController") as! PrincipalAccesoLibreController
+        
+        self.present(vistaSiguiente, animated: true, completion: nil)
+    }
+    
+    
+    
+    
    
     
     @IBAction func btnAccionPassOlvidada(_ sender: Any) {

@@ -95,3 +95,5 @@ let apiVerMotorista = baseUrl+"cliente/orden/ver/motorista"
 
 let apiCalificarOrden = baseUrl+"cliente/orden/completar/calificacion"
 
+
+let apiListadoPremios = baseUrl+"cliente/premios/listado"

@@ -7,6 +7,12 @@
 
 import UIKit
 
+
+
+protocol TableViewBotonPremio {
+    func onClickCellPremio(index: Int)
+}
+
 class ListaPremiosTableViewCell: UITableViewCell {
 
     
@@ -15,6 +21,11 @@ class ListaPremiosTableViewCell: UITableViewCell {
     @IBOutlet weak var imgCheck: UIImageView!
     
     
+    @IBOutlet weak var btnSeleccionar: UIButton!
+    
+    var cellDelegatePremio: TableViewBotonPremio?
+    
+    var index: IndexPath?
     
     
     override func awakeFromNib() {
@@ -27,5 +38,9 @@ class ListaPremiosTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
+    @IBAction func btnPremio(_ sender: Any) {
+        cellDelegatePremio?.onClickCellPremio(index: (index?.row)!)
+    }
+    
 }

@@ -7,6 +7,11 @@
 
 import UIKit
 
+
+protocol TableViewBotonEstado {
+    func onClickCellEstado(index: Int)
+}
+
 class OrdenesTableViewCell: UITableViewCell {
 
     @IBOutlet weak var txtNumOrden: UILabel!
@@ -21,6 +26,15 @@ class OrdenesTableViewCell: UITableViewCell {
     
     
     
+    @IBOutlet weak var btnEstado: UIButton!
+    
+    var cellDelegateEstado: TableViewBotonEstado?
+    
+    var index: IndexPath?
+    
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -31,5 +45,12 @@ class OrdenesTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    
+    @IBAction func btnAccionEstado(_ sender: Any) {
+        cellDelegateEstado?.onClickCellEstado(index: (index?.row)!)
+    }
+    
+    
 
 }

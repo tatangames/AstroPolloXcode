@@ -15,8 +15,8 @@ let apiVersionApp = "ios 1.0.0"
 
 
 
-let baseUrl:String = "http://165.227.196.71/api/"
-let baseUrlImagen: String = "http://165.227.196.71/storage/imagenes/"
+let baseUrl:String = ""
+let baseUrlImagen: String = ""
 
 
 //let baseUrl:String = "http://192.168.1.29:8080/api/"
@@ -96,4 +96,14 @@ let apiVerMotorista = baseUrl+"cliente/orden/ver/motorista"
 let apiCalificarOrden = baseUrl+"cliente/orden/completar/calificacion"
 
 
+
+// ** PREMIOS **
+
+
 let apiListadoPremios = baseUrl+"cliente/premios/listado"
+
+let apiBorrarPremioSeleccionado = baseUrl+"cliente/premios/deseleccionar"
+
+let apiSeleccionarPremio = baseUrl+"cliente/premios/seleccionar"
+
+

@@ -25,7 +25,7 @@ class PerfilController: UIViewController, UITableViewDelegate, UITableViewDataSo
         DatosPerfil(posicion: 2, titulo: "Cambio de Contraseña", imagen: "iconocandado"),
         DatosPerfil(posicion: 3, titulo: "Perfil", imagen: "iconomensaje"),
         DatosPerfil(posicion: 4, titulo: "Horarios", imagen: "reloj"),
-      //  DatosPerfil(posicion: 5, titulo: "Historial de Compras", imagen: "iconohistorial"),
+        DatosPerfil(posicion: 5, titulo: "Premios", imagen: "medalla"),
         DatosPerfil(posicion: 6, titulo: "Cerrar Sesión", imagen: "iconounlock"),
     ]
     
@@ -81,6 +81,11 @@ class PerfilController: UIViewController, UITableViewDelegate, UITableViewDataSo
             pasarVistaHorario()
         }
         
+        else if(datos == 5){
+            // PREMIOS
+            pasarVistaPremios()
+        }
+        
         else if(datos == 6){
             // CERRAR SESION
             pasarCerrarSesion()
@@ -99,6 +104,12 @@ class PerfilController: UIViewController, UITableViewDelegate, UITableViewDataSo
     
     func pasarVistaDirecciones(){
         let vistaSiguiente : ListaDireccionesController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ListaDireccionesController") as! ListaDireccionesController
+        
+        self.present(vistaSiguiente, animated: true, completion: nil)
+    }
+    
+    func pasarVistaPremios(){
+        let vistaSiguiente : ListaPremiosController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ListaPremiosController") as! ListaPremiosController
         
         self.present(vistaSiguiente, animated: true, completion: nil)
     }

@@ -94,7 +94,8 @@ class CarritoComprasController: UIViewController, protocoloCarrito, UITableViewD
         
         arrCarrito.removeAll()
         tableView.reloadData()
-                
+        
+        
         let idCliente = UserDefaults.standard.getValueIdUsuario() ?? ""
         
         MBProgressHUD.showAdded(to: self.view, animated: true)

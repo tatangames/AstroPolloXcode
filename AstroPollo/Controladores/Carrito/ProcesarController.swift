@@ -45,8 +45,6 @@ class ProcesarController: UIViewController, UITextFieldDelegate {
     
     
     
-    
-    
     var seguroEnviar = true
     var minimo = 0 // bloqueo si falta minimo de consumo
     var minimoConsumo = ""
@@ -162,7 +160,7 @@ class ProcesarController: UIViewController, UITextFieldDelegate {
                         self.txtCupon.isHidden = true
                         self.stackTotalCupon.isHidden = false
                         
-                       // self.constraintVertical1.constant = 58
+                        
                         
                     }else{
                         
@@ -170,16 +168,20 @@ class ProcesarController: UIViewController, UITextFieldDelegate {
                         self.btnCupon.isHidden = true
                         self.txtCupon.isHidden = true
                         self.stackTotalCupon.isHidden = true
-                        
-                       // self.constraintVertical1.constant = 15
                     }
                     
                     
+                    
                     // TEXTO DE PREMIOS
-                    // ahorita oculto 04/06/2023
                     
-                    self.txtPremioPuntos.isHidden = true
+                    let datoHayPremio = json["usapremio"].intValue
+                    let datoTextoPremio = json["textopremio"].stringValue
                     
+                    if(datoHayPremio == 1){
+                        self.txtPremioPuntos.text = datoTextoPremio
+                    }else{
+                        self.txtPremioPuntos.text = ""
+                    }
                     
                     // MOSTRAR VISTA
                     
@@ -477,6 +479,8 @@ class ProcesarController: UIViewController, UITextFieldDelegate {
                
                self.stackTotalCupon.isHidden = true
                
+               self.btnCupon.backgroundColor = UIColor(named: "ColorVerde")
+               
                // RECARGAR
                self.peticionBuscar()
             
@@ -583,6 +587,8 @@ class ProcesarController: UIViewController, UITextFieldDelegate {
         self.tengoCupon = 1
         self.btnCupon.setTitle("Borrar", for: .normal)
         self.estadoBoton = 2
+        
+        self.btnCupon.backgroundColor = UIColor(named: "ColorRojo")
         
         self.txtCupon.text = mensaje
         self.txtCupon.isHidden = false

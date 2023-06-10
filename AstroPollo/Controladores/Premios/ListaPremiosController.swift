@@ -12,8 +12,23 @@ import Alamofire
 
 
 
-class ListaPremiosController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+
+
+
+class ListaPremiosController: UIViewController, UITableViewDelegate, UITableViewDataSource, TableViewBotonPremio{
+   
     
+    
+    func onClickCellPremio(index: Int) {
+        let datoFila = arrPremios[index]
+       
+        if(datoFila.getSeleccionado() == 1){
+            alertaBorrar()
+        }else{
+            alertaSeleccion(idpremio: datoFila.getId())
+        }
+    }
+  
     
     var styleAzul = ToastStilo()
     
@@ -23,9 +38,11 @@ class ListaPremiosController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var tableView: UITableView!
     
     
+    @IBOutlet weak var stackVista: UIStackView!
     
     
     
+    var arrPremios = [ModelosPremio]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,19 +53,24 @@ class ListaPremiosController: UIViewController, UITableViewDelegate, UITableView
         // ocultar lineas vacias
         tableView.tableFooterView = UIView()
         peticionBuscarPremios()
+        
     }
     
+    
     func peticionBuscarPremios(){
+        
+        arrPremios.removeAll()
+        tableView.reloadData()
         
         let idCliente = UserDefaults.standard.getValueIdUsuario() ?? ""
                   
         MBProgressHUD.showAdded(to: self.view, animated: true)
         
         let params = [
-            "id": idCliente
+            "clienteid": idCliente
         ]
         
-        let encodeURL = apiListadoDirecciones
+        let encodeURL = apiListadoPremios
         
         AF.request(encodeURL, method: .post, parameters: params).responseJSON{ (response) in
                                         
@@ -62,48 +84,31 @@ class ListaPremiosController: UIViewController, UITableViewDelegate, UITableView
                   let codigo = json["success"]
                   
                   if(codigo == 1){
+                                           
+                      let conteo = json["conteo"].intValue
+                      let nota = json["nota"].stringValue
+                      let puntos = json["puntos"].stringValue
+                                            
+                      self.textoPremio.text = nota
+                      self.txtPuntos.text = puntos
+                           
                       
-                      self.btnAgregarDireccion.isHidden = false
+                      json["listado"].array?.forEach({ (dataArray) in
+                                                       
+                          let id = dataArray["id"].intValue
+                          let nombre = dataArray["nombre"].stringValue
+                          let puntos = dataArray["puntos"].intValue
+                          let activo = dataArray["activo"].intValue
+                          let seleccionado = dataArray["seleccionado"].intValue
                       
-                      // SIN DIRECCIONES SE DEBE REGISTRAR UNA DIRECCION
-                      
-                      let titulo = json["titulo"].stringValue
-                      let mensaje = json["mensaje"].stringValue
-                      
-                      self.alertaSinDirecciones(titulo: titulo, mensaje: mensaje)
+                                                                      
+                          self.arrPremios.append(ModelosPremio(id: id, nombre: nombre, puntos: puntos, activo: activo, seleccionado: seleccionado))
+                      })
+                        
+                        
+                        self.stackVista.isHidden = false
+                        self.tableView.reloadData()
                   }
-                
-                else if(codigo == 2){
-                   
-                    
-                    // LISTADO DE DIRECCIONES
-                                                                          
-                  json["direcciones"].array?.forEach({ (dataArray) in
-                                                   
-                      let id = dataArray["id"].intValue
-                      let nombre = dataArray["nombre"].stringValue
-                      let direccion = dataArray["direccion"].stringValue
-                      
-                      
-                      var referencia = ""
-                      if dataArray["punto_referencia"] == JSON.null {
-                         // nada
-                      }else{
-                          referencia = dataArray["punto_referencia"].stringValue
-                      }
-                      
-                      
-                      let seleccionado = dataArray["seleccionado"].intValue
-                      let telefono = dataArray["telefono"].stringValue
-                                                                  
-                      self.arr.append(ModeloDirecciones(id: id, nombre: nombre, direccion: direccion, punto_referencia: referencia, seleccionado: seleccionado, telefono: telefono))
-                  })
-                    
-                    self.btnAgregarDireccion.isHidden = false
-                    
-                    
-                    self.tableView.reloadData()
-                }
                 
                   else{
                         MBProgressHUD.hide(for: self.view, animated: true)
@@ -112,7 +117,7 @@ class ListaPremiosController: UIViewController, UITableViewDelegate, UITableView
         
               case .failure( _):
                   MBProgressHUD.hide(for: self.view, animated: true)
-                  self.retryPeticionBuscarDirecciones()
+                  self.retryPeticionBuscarPremios()
               }
         }
     }
@@ -128,12 +133,11 @@ class ListaPremiosController: UIViewController, UITableViewDelegate, UITableView
     }
     
     
-    func retryPeticionBuscarDirecciones(){
+    func retryPeticionBuscarPremios(){
         MBProgressHUD.hide(for: self.view, animated: true)
-        peticionBuscarDirecciones()
+        peticionBuscarPremios()
     }
-    
-    
+        
     
     
     @IBAction func btnAtras(_ sender: Any) {
@@ -142,6 +146,234 @@ class ListaPremiosController: UIViewController, UITableViewDelegate, UITableView
     }
     
     
+    
+    
+    func alertaBorrar(){
+        
+        let alert = UIAlertController(title: "Borrar Selección", message: nil, preferredStyle: UIAlertController.Style.alert)
+                 
+             alert.addAction(UIAlertAction(title: "No", style: UIAlertAction.Style.default, handler: {(action) in
+                 alert.dismiss(animated: true, completion: nil)
+              
+             }))
+             
+             alert.addAction(UIAlertAction(title: "Si", style: UIAlertAction.Style.default, handler: {(action) in
+                 alert.dismiss(animated: true, completion: nil)
+                 self.peticionBorrarSeleccion()
+             }))
+              
+             self.present(alert, animated: true, completion: nil)
+    }
+    
+        
+    func peticionBorrarSeleccion(){
+        
+        
+        let idCliente = UserDefaults.standard.getValueIdUsuario() ?? ""
+                  
+        MBProgressHUD.showAdded(to: self.view, animated: true)
+        
+        let params = [
+            "clienteid": idCliente
+        ]
+        
+        let encodeURL = apiBorrarPremioSeleccionado
+        
+        AF.request(encodeURL, method: .post, parameters: params).responseJSON{ (response) in
+                                        
+            switch response.result{
+              case .success(let value):
+                  
+                  MBProgressHUD.hide(for: self.view, animated: true)
+                                                 
+                  let json = JSON(value)
+                  
+                  let codigo = json["success"]
+                  
+                  if(codigo == 1){
+                   
+                        // PREMIO SELECCIONADO BORRADO
+                      
+                      self.mensajeToastAzul(mensaje: "Actualizado")
+                      self.peticionBuscarPremios()
+                      
+                  }
+                
+                  else{
+                        MBProgressHUD.hide(for: self.view, animated: true)
+                        self.mensajeSinConexion()
+                    }
+        
+              case .failure( _):
+                  MBProgressHUD.hide(for: self.view, animated: true)
+                  self.mensajeSinConexion()
+              }
+        }
+    }
+    
+    
+    func alertaSeleccion(idpremio: Int){
+        
+        
+        let alert = UIAlertController(title: "Seleccionar Premio", message: nil, preferredStyle: UIAlertController.Style.alert)
+                 
+             alert.addAction(UIAlertAction(title: "No", style: UIAlertAction.Style.default, handler: {(action) in
+                 alert.dismiss(animated: true, completion: nil)
+              
+             }))
+             
+             alert.addAction(UIAlertAction(title: "Si", style: UIAlertAction.Style.default, handler: {(action) in
+                 alert.dismiss(animated: true, completion: nil)
+                 self.peticionSeleccionarPremio(idpremio: idpremio)
+             }))
+              
+             self.present(alert, animated: true, completion: nil)
+        
+    }
+    
+    
+    func peticionSeleccionarPremio(idpremio: Int){
+        
+        
+        let idCliente = UserDefaults.standard.getValueIdUsuario() ?? ""
+                  
+        MBProgressHUD.showAdded(to: self.view, animated: true)
+        
+        let params = [
+            "clienteid": idCliente,
+            "idpremio": String(idpremio)
+        ]
+        
+        let encodeURL = apiSeleccionarPremio
+        
+        AF.request(encodeURL, method: .post, parameters: params).responseJSON{ (response) in
+                                        
+            switch response.result{
+              case .success(let value):
+                  
+                  MBProgressHUD.hide(for: self.view, animated: true)
+                                                 
+                  let json = JSON(value)
+                  
+                  let codigo = json["success"]
+                  
+                  if(codigo == 1){
+                   
+                        // PREMIO NO ESTA DISPONIBLE YA
+                      
+                      self.peticionBuscarPremios()
+                      
+                      let titulo = json["titulo"].stringValue
+                      let mensaje = json["mensaje"].stringValue
+                      
+                      self.alertaReglas(titulo: titulo, mensaje: mensaje)
+                  }
+                
+                else if(codigo == 2){
+                        
+                    
+                    // PUNTOS NO ALCANZAN
+                    
+                    
+                    let titulo = json["titulo"].stringValue
+                    let mensaje = json["mensaje"].stringValue
+                    
+                    self.alertaReglas(titulo: titulo, mensaje: mensaje)
+                }
+                    
+                else if(codigo == 3){
+                    
+                    // PREMIO SELECCIONADO
+                    
+                    
+                    self.peticionBuscarPremios()
+                    
+                    let titulo = json["titulo"].stringValue
+                    let mensaje = json["mensaje"].stringValue
+                    
+                    self.alertaReglas(titulo: titulo, mensaje: mensaje)
+                }
+                  else{
+                        MBProgressHUD.hide(for: self.view, animated: true)
+                        self.mensajeSinConexion()
+                    }
+        
+              case .failure( _):
+                  MBProgressHUD.hide(for: self.view, animated: true)
+                  self.mensajeSinConexion()
+              }
+        }
+        
+    }
+    
+    
+    
+    func alertaReglas(titulo: String, mensaje: String){
+        
+        
+        let alert = UIAlertController(title: titulo, message: mensaje, preferredStyle: UIAlertController.Style.alert)
+            
+             alert.addAction(UIAlertAction(title: "Aceptar", style: UIAlertAction.Style.default, handler: {(action) in
+                 alert.dismiss(animated: true, completion: nil)
+                 
+             }))
+              
+             self.present(alert, animated: true, completion: nil)
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    // METODOS TABLE VIEW
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+       return arrPremios.count
+    }
+       
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+                        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! ListaPremiosTableViewCell
+           
+        let datos = arrPremios[indexPath.row]
+        
+        
+        cell.txtPremio.text = datos.getNombre()
+        cell.txtPuntos.text = "Puntos: " + String(datos.getPuntos())
+        
+        if(datos.getSeleccionado() == 1){
+            
+            cell.btnSeleccionar.setTitle("Borrar Selección", for: .normal)
+            cell.btnSeleccionar.backgroundColor = UIColor(named: "ColorRojo")
+            
+            cell.imgCheck.isHidden = false
+        }else{
+            cell.imgCheck.isHidden = true
+            
+            cell.btnSeleccionar.setTitle("Seleccionar", for: .normal)
+            cell.btnSeleccionar.backgroundColor = UIColor(named: "ColorVerde")
+        }
+        cell.btnSeleccionar.layer.cornerRadius = 10
+        cell.btnSeleccionar.clipsToBounds = true
+        cell.index = indexPath
+        cell.cellDelegatePremio = self
+                                
+        cell.selectionStyle = .none
+                          
+        return cell
+    }
+    
+    
+
     
     
     

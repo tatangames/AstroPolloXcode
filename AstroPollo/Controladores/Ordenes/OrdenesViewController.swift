@@ -18,7 +18,8 @@ protocol protocoloEstadoOrden {
 }
 
 class OrdenesViewController: UIViewController, UITableViewDelegate,
-                             UITableViewDataSource, protocoloEstadoOrden {
+                             UITableViewDataSource, protocoloEstadoOrden,
+    TableViewBotonEstado{
     
     
     func pasarEstadoOrden(data: Bool) {
@@ -28,6 +29,18 @@ class OrdenesViewController: UIViewController, UITableViewDelegate,
         }
     }
     
+    
+    func onClickCellEstado(index: Int) {
+        let datoFila = arrOrdenes[index]
+       
+     
+        let vista : EstadoOrdenController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "EstadoOrdenController") as! EstadoOrdenController
+     
+        vista.idorden = datoFila.getIdOrden()
+        vista.delegateEstadoOrden = self
+        
+        self.present(vista, animated: true, completion: nil)
+    }
     
     
     @IBOutlet weak var tableView: UITableView!
@@ -68,6 +81,8 @@ class OrdenesViewController: UIViewController, UITableViewDelegate,
     
     
     func peticionBuscarOrdenes(){
+        
+        print("cargando datos")
         
         arrOrdenes.removeAll()
         tableView.reloadData()
@@ -178,6 +193,10 @@ class OrdenesViewController: UIViewController, UITableViewDelegate,
         
         if(datos.getEstadoCancelada() == 1){
             
+            cell.txtEstado.textColor = .red
+            
+            
+            
             if(!datos.getNotaCancelada().isEmpty){
                 cell.txtNotaCancelada.text = "Nota: " + datos.getNotaCancelada()
                 cell.txtNotaCancelada.isHidden = false
@@ -189,6 +208,7 @@ class OrdenesViewController: UIViewController, UITableViewDelegate,
         }else{
             cell.txtNotaCancelada.isHidden = true
             
+            cell.txtEstado.textColor = .black
         }
         
         
@@ -216,6 +236,13 @@ class OrdenesViewController: UIViewController, UITableViewDelegate,
         }
         
         
+        cell.btnEstado.layer.cornerRadius = 10
+        cell.btnEstado.clipsToBounds = true
+        cell.index = indexPath
+        cell.cellDelegateEstado = self
+                                
+        
+        
         
         // PREMIOS
         cell.txtPremio.isHidden = true
@@ -225,20 +252,6 @@ class OrdenesViewController: UIViewController, UITableViewDelegate,
        return cell
    }
       
-      func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-          
-          let datos = arrOrdenes[indexPath.row]
-          
-          
-          let vista : EstadoOrdenController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "EstadoOrdenController") as! EstadoOrdenController
-       
-          vista.idorden = datos.getIdOrden()
-          vista.delegateEstadoOrden = self
-          
-          self.present(vista, animated: true, completion: nil)
-      }
-
-    
     
     
     

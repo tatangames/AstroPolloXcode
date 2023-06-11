@@ -169,11 +169,7 @@ class SeleccionarDireccionController: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
-    
-    
-    
-    
-    
+        
     
     @IBAction func btnAccionSeleccionar(_ sender: Any) {
         

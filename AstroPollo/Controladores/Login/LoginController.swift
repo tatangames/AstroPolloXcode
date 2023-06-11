@@ -9,6 +9,7 @@ import UIKit
 import MBProgressHUD
 import SwiftyJSON
 import Alamofire
+import OneSignal
 
 class LoginController: UIViewController, UITextFieldDelegate {
     
@@ -50,6 +51,12 @@ class LoginController: UIViewController, UITextFieldDelegate {
      
         self.edtUsuario.delegate = self
         self.edtPassword.delegate = self
+        
+        if let deviceState = OneSignal.getDeviceState() {
+            let userId = deviceState.userId
+            
+            idfirebase = userId ?? ""
+         }
     }
 
     

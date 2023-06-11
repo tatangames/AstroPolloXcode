@@ -10,14 +10,9 @@ import Alamofire
 import MBProgressHUD
 import SwiftyJSON
 import SDWebImage
+import OneSignal
 
 class ProcesarController: UIViewController, UITextFieldDelegate {
-    
-    
-    // VERSION APLICACION CUANDO ENVIAMOS UNA ORDEN
-    
-    var versionApp = "ios 1.0.0"
-    
     
     
     
@@ -54,7 +49,8 @@ class ProcesarController: UIViewController, UITextFieldDelegate {
     var estadoBoton = 1 //para agregar cupon, 2: borrar cupon
     
     var cupon = ""
-    var idfirabase = ""
+    
+    var idfirebase = ""
     
     
     var actualizarCarrito = false
@@ -90,6 +86,12 @@ class ProcesarController: UIViewController, UITextFieldDelegate {
         
         textoTotalCupon.isHidden = true
         txtTotalCupon.isHidden = true
+        
+        if let deviceState = OneSignal.getDeviceState() {
+            let userId = deviceState.userId
+            
+            idfirebase = userId ?? ""
+         }
         
         
         peticionBuscar()
@@ -261,8 +263,8 @@ class ProcesarController: UIViewController, UITextFieldDelegate {
                 "nota": edtNotas.text ?? "",
                 "cupon": cupon,
                 "aplicacupon": String(tengoCupon),
-                "version": versionApp,
-                "idfirebase": idfirabase
+                "version": apiVersionApp,
+                "idfirebase": idfirebase
             ]
             
             let encodeURL = apiEnviarOrden

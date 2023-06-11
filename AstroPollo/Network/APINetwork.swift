@@ -15,12 +15,12 @@ let apiVersionApp = "ios 1.0.0"
 
 
 
-let baseUrl:String = ""
-let baseUrlImagen: String = ""
+//let baseUrl:String = ""
+//let baseUrlImagen: String = ""
 
 
-//let baseUrl:String = "http://192.168.1.29:8080/api/"
-//let baseUrlImagen: String = "http://192.168.1.29:8080/storage/imagenes/"
+let baseUrl:String = "http://192.168.1.29:8080/api/"
+let baseUrlImagen: String = "http://192.168.1.29:8080/storage/imagenes/"
 
 let apiIniciarSesion = baseUrl+"cliente/login"
 

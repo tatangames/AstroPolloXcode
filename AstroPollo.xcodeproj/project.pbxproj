@@ -92,6 +92,10 @@
 		8FDC4A472A26A46C00C5052E /* ListaProductosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDC4A462A26A46C00C5052E /* ListaProductosTableViewCell.swift */; };
 		8FDC4A492A26A77000C5052E /* TitularProductoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDC4A482A26A77000C5052E /* TitularProductoTableViewCell.swift */; };
 		8FDC4A4B2A26B9B100C5052E /* ElegirCantidadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDC4A4A2A26B9B100C5052E /* ElegirCantidadController.swift */; };
+		8FF4077A2A35737B003FED77 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF407792A35737B003FED77 /* NotificationService.swift */; };
+		8FF4077E2A35737B003FED77 /* OneSignalNotificationServiceExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 8FF407772A35737B003FED77 /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8FF407852A3574FB003FED77 /* OneSignal in Frameworks */ = {isa = PBXBuildFile; productRef = 8FF407842A3574FB003FED77 /* OneSignal */; };
+		8FF407872A3574FB003FED77 /* OneSignalExtension in Frameworks */ = {isa = PBXBuildFile; productRef = 8FF407862A3574FB003FED77 /* OneSignalExtension */; };
 		9C6A566894115573DCD24381 /* Pods_AstroPollo_AstroPolloUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEF2EA853D0F7C215656C00C /* Pods_AstroPollo_AstroPolloUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -110,7 +114,28 @@
 			remoteGlobalIDString = 8F2643082A206894003CB6EA;
 			remoteInfo = AstroPollo;
 		};
+		8FF4077C2A35737B003FED77 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8F2643012A206894003CB6EA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8FF407762A35737B003FED77;
+			remoteInfo = OneSignalNotificationServiceExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8FF4077F2A35737B003FED77 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				8FF4077E2A35737B003FED77 /* OneSignalNotificationServiceExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1830CF8B3A8CB74BDB14A43C /* Pods-AstroPollo-AstroPolloUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AstroPollo-AstroPolloUITests.debug.xcconfig"; path = "Target Support Files/Pods-AstroPollo-AstroPolloUITests/Pods-AstroPollo-AstroPolloUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -204,6 +229,10 @@
 		8FDC4A462A26A46C00C5052E /* ListaProductosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaProductosTableViewCell.swift; sourceTree = "<group>"; };
 		8FDC4A482A26A77000C5052E /* TitularProductoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitularProductoTableViewCell.swift; sourceTree = "<group>"; };
 		8FDC4A4A2A26B9B100C5052E /* ElegirCantidadController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElegirCantidadController.swift; sourceTree = "<group>"; };
+		8FF407772A35737B003FED77 /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FF407792A35737B003FED77 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		8FF4077B2A35737B003FED77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8FF407882A357604003FED77 /* AstroPollo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AstroPollo.entitlements; sourceTree = "<group>"; };
 		A497996E4D2646F31667013B /* Pods-AstroPollo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AstroPollo.debug.xcconfig"; path = "Target Support Files/Pods-AstroPollo/Pods-AstroPollo.debug.xcconfig"; sourceTree = "<group>"; };
 		BEF2EA853D0F7C215656C00C /* Pods_AstroPollo_AstroPolloUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AstroPollo_AstroPolloUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA6A1AC5B5AFFC574BC67932 /* Pods-AstroPollo-AstroPolloUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AstroPollo-AstroPolloUITests.release.xcconfig"; path = "Target Support Files/Pods-AstroPollo-AstroPolloUITests/Pods-AstroPollo-AstroPolloUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -217,6 +246,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				42ABFC5AB9B707F09B3198D8 /* Pods_AstroPollo.framework in Frameworks */,
+				8FF407872A3574FB003FED77 /* OneSignalExtension in Frameworks */,
+				8FF407852A3574FB003FED77 /* OneSignal in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,6 +264,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C6A566894115573DCD24381 /* Pods_AstroPollo_AstroPolloUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FF407742A35737B003FED77 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +352,7 @@
 				8F26430B2A206894003CB6EA /* AstroPollo */,
 				8F2643222A206895003CB6EA /* AstroPolloTests */,
 				8F26432C2A206895003CB6EA /* AstroPolloUITests */,
+				8FF407782A35737B003FED77 /* OneSignalNotificationServiceExtension */,
 				8F26430A2A206894003CB6EA /* Products */,
 				63B05CDA08BFA32071B264B3 /* Pods */,
 				441F80B2C2ED97EEBB315E5D /* Frameworks */,
@@ -326,6 +365,7 @@
 				8F2643092A206894003CB6EA /* AstroPollo.app */,
 				8F26431F2A206895003CB6EA /* AstroPolloTests.xctest */,
 				8F2643292A206895003CB6EA /* AstroPolloUITests.xctest */,
+				8FF407772A35737B003FED77 /* OneSignalNotificationServiceExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -333,6 +373,7 @@
 		8F26430B2A206894003CB6EA /* AstroPollo */ = {
 			isa = PBXGroup;
 			children = (
+				8FF407882A357604003FED77 /* AstroPollo.entitlements */,
 				8F3EC8042A2563D7006BC0AD /* Modelos */,
 				8F4810A92A23F3C90024FBC3 /* Network */,
 				8FD9120F2A219D7500624541 /* Resources */,
@@ -653,6 +694,15 @@
 			path = Productos;
 			sourceTree = "<group>";
 		};
+		8FF407782A35737B003FED77 /* OneSignalNotificationServiceExtension */ = {
+			isa = PBXGroup;
+			children = (
+				8FF407792A35737B003FED77 /* NotificationService.swift */,
+				8FF4077B2A35737B003FED77 /* Info.plist */,
+			);
+			path = OneSignalNotificationServiceExtension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -666,12 +716,18 @@
 				8F2643072A206894003CB6EA /* Resources */,
 				A9BE6E0BBCF748BE9B19D3DD /* [CP] Embed Pods Frameworks */,
 				5918896C8FE0C52F0B8D33A5 /* [CP] Copy Pods Resources */,
+				8FF4077F2A35737B003FED77 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				8FF4077D2A35737B003FED77 /* PBXTargetDependency */,
 			);
 			name = AstroPollo;
+			packageProductDependencies = (
+				8FF407842A3574FB003FED77 /* OneSignal */,
+				8FF407862A3574FB003FED77 /* OneSignalExtension */,
+			);
 			productName = AstroPollo;
 			productReference = 8F2643092A206894003CB6EA /* AstroPollo.app */;
 			productType = "com.apple.product-type.application";
@@ -716,6 +772,23 @@
 			productReference = 8F2643292A206895003CB6EA /* AstroPolloUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		8FF407762A35737B003FED77 /* OneSignalNotificationServiceExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8FF407822A35737B003FED77 /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */;
+			buildPhases = (
+				8FF407732A35737B003FED77 /* Sources */,
+				8FF407742A35737B003FED77 /* Frameworks */,
+				8FF407752A35737B003FED77 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OneSignalNotificationServiceExtension;
+			productName = OneSignalNotificationServiceExtension;
+			productReference = 8FF407772A35737B003FED77 /* OneSignalNotificationServiceExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -737,6 +810,9 @@
 						CreatedOnToolsVersion = 14.3;
 						TestTargetID = 8F2643082A206894003CB6EA;
 					};
+					8FF407762A35737B003FED77 = {
+						CreatedOnToolsVersion = 14.3;
+					};
 				};
 			};
 			buildConfigurationList = 8F2643042A206894003CB6EA /* Build configuration list for PBXProject "AstroPollo" */;
@@ -748,6 +824,9 @@
 				Base,
 			);
 			mainGroup = 8F2643002A206894003CB6EA;
+			packageReferences = (
+				8FF407832A3574FB003FED77 /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */,
+			);
 			productRefGroup = 8F26430A2A206894003CB6EA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -755,6 +834,7 @@
 				8F2643082A206894003CB6EA /* AstroPollo */,
 				8F26431E2A206895003CB6EA /* AstroPolloTests */,
 				8F2643282A206895003CB6EA /* AstroPolloUITests */,
+				8FF407762A35737B003FED77 /* OneSignalNotificationServiceExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -789,6 +869,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		8F2643272A206895003CB6EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FF407752A35737B003FED77 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1025,6 +1112,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8FF407732A35737B003FED77 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FF4077A2A35737B003FED77 /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1037,6 +1132,11 @@
 			isa = PBXTargetDependency;
 			target = 8F2643082A206894003CB6EA /* AstroPollo */;
 			targetProxy = 8F26432A2A206895003CB6EA /* PBXContainerItemProxy */;
+		};
+		8FF4077D2A35737B003FED77 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8FF407762A35737B003FED77 /* OneSignalNotificationServiceExtension */;
+			targetProxy = 8FF4077C2A35737B003FED77 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1178,8 +1278,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A497996E4D2646F31667013B /* Pods-AstroPollo.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AstroPollo/AstroPollo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 42VSDQG6FV;
@@ -1202,7 +1304,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.tatanstudios.AstroPollo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tatanstudios.astropollo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -1214,8 +1316,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 73A09E7EE07D31D9CE80D1CA /* Pods-AstroPollo.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AstroPollo/AstroPollo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 42VSDQG6FV;
@@ -1238,7 +1342,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.tatanstudios.AstroPollo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tatanstudios.astropollo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -1326,6 +1430,58 @@
 			};
 			name = Release;
 		};
+		8FF407802A35737B003FED77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 42VSDQG6FV;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = OneSignalNotificationServiceExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tatanstudios.astropollo.OneSignalNotificationServiceExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8FF407812A35737B003FED77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 42VSDQG6FV;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = OneSignalNotificationServiceExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tatanstudios.astropollo.OneSignalNotificationServiceExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1365,7 +1521,40 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		8FF407822A35737B003FED77 /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FF407802A35737B003FED77 /* Debug */,
+				8FF407812A35737B003FED77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8FF407832A3574FB003FED77 /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/OneSignal/OneSignal-XCFramework";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8FF407842A3574FB003FED77 /* OneSignal */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8FF407832A3574FB003FED77 /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */;
+			productName = OneSignal;
+		};
+		8FF407862A3574FB003FED77 /* OneSignalExtension */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8FF407832A3574FB003FED77 /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */;
+			productName = OneSignalExtension;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8F2643012A206894003CB6EA /* Project object */;
 }

@@ -126,6 +126,8 @@ class ProductosController: UIViewController,  UITableViewDataSource, UITableView
                                             let imagen = data4["imagen"].stringValue
                                             let precio = data4["precio"].stringValue
                                             let utilizaimagen = data4["utiliza_imagen"].intValue
+                                          
+                                         
                                             
                                             // AGREGANDO CADA PRODUCTO
                                             
@@ -136,7 +138,7 @@ class ProductosController: UIViewController,  UITableViewDataSource, UITableView
                                       self.platoArray.append(Platos.init(nombreSeccion: nombreseccion, tipoPlato: self.arr))
                                                     
                                       
-                                    self.arr.removeAll()
+                                      self.arr.removeAll()
                                   })
                                     
                                                                         
@@ -175,9 +177,7 @@ class ProductosController: UIViewController,  UITableViewDataSource, UITableView
      // numero de cada seccion
      func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
            
-           if section == 0 {
-               return 1
-           }
+         
           // return mobileBrand[section].modelName?.count ?? 0
            let contador = platoArray[section].tipoPlato?.count ?? 0
                  

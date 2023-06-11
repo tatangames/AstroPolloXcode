@@ -10,6 +10,7 @@ import Lottie
 import MBProgressHUD
 import SwiftyJSON
 import Alamofire
+import OneSignal
 
 class RegistroController: UIViewController, UITextFieldDelegate {
     
@@ -65,6 +66,13 @@ class RegistroController: UIViewController, UITextFieldDelegate {
         self.edtUsuario.delegate = self
         self.edtPassword.delegate = self
         self.edtCorreo.delegate = self
+        
+        
+        if let deviceState = OneSignal.getDeviceState() {
+            let userId = deviceState.userId
+            
+            idfirebase = userId ?? ""
+         }
     }
     
     

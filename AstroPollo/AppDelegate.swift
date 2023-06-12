@@ -18,8 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        GMSServices.provideAPIKey("")
-        GMSPlacesClient.provideAPIKey("")
+        GMSServices.provideAPIKey("AIzaSyBPolKvObH7-GitOpdf7EegyIe6Ol7a1Go")
+        GMSPlacesClient.provideAPIKey("AIzaSyBPolKvObH7-GitOpdf7EegyIe6Ol7a1Go")
         
         
        
@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          
          // OneSignal initialization
          OneSignal.initWithLaunchOptions(launchOptions)
-         OneSignal.setAppId("")
+         OneSignal.setAppId("f86a2ee4-a10b-4a86-a063-151be6845bce")
          
          // promptForPushNotifications will show the native iOS notification permission prompt.
          // We recommend removing the following code and instead using an In-App Message to prompt for notification permission (See step 8)

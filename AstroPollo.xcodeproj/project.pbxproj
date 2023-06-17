@@ -17,6 +17,7 @@
 		8F0B21BA2A2BA5EE002436FE /* CarritoComprasController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0B21B92A2BA5EE002436FE /* CarritoComprasController.swift */; };
 		8F0B21BC2A2BC226002436FE /* RegistrarNuevaDireccionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0B21BB2A2BC226002436FE /* RegistrarNuevaDireccionController.swift */; };
 		8F0B21BE2A2BC39D002436FE /* jsongps.json in Resources */ = {isa = PBXBuildFile; fileRef = 8F0B21BD2A2BC39D002436FE /* jsongps.json */; };
+		8F0F71BD2A3928AE0065C0A0 /* EliminacionClienteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0F71BC2A3928AE0065C0A0 /* EliminacionClienteController.swift */; };
 		8F26430D2A206894003CB6EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F26430C2A206894003CB6EA /* AppDelegate.swift */; };
 		8F26430F2A206894003CB6EA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F26430E2A206894003CB6EA /* SceneDelegate.swift */; };
 		8F2643142A206894003CB6EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F2643122A206894003CB6EA /* Main.storyboard */; };
@@ -150,6 +151,7 @@
 		8F0B21B92A2BA5EE002436FE /* CarritoComprasController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarritoComprasController.swift; sourceTree = "<group>"; };
 		8F0B21BB2A2BC226002436FE /* RegistrarNuevaDireccionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrarNuevaDireccionController.swift; sourceTree = "<group>"; };
 		8F0B21BD2A2BC39D002436FE /* jsongps.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = jsongps.json; sourceTree = "<group>"; };
+		8F0F71BC2A3928AE0065C0A0 /* EliminacionClienteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EliminacionClienteController.swift; sourceTree = "<group>"; };
 		8F2643092A206894003CB6EA /* AstroPollo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AstroPollo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F26430C2A206894003CB6EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8F26430E2A206894003CB6EA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -509,6 +511,7 @@
 				8FBDAF4E2A2918FF00B9A090 /* BannerCollectionViewCell.swift */,
 				8F7CC7F72A2AB1E300DFBD00 /* ProductoPoCollectionViewCell.swift */,
 				8F7CC7F82A2AB1E300DFBD00 /* ProductoPoCollectionViewCell.xib */,
+				8F0F71BC2A3928AE0065C0A0 /* EliminacionClienteController.swift */,
 			);
 			path = Principal;
 			sourceTree = "<group>";
@@ -1028,6 +1031,7 @@
 			files = (
 				8F7CC7F62A2AA8D400DFBD00 /* ModeloProductoPopular.swift in Sources */,
 				8F4810B52A2458B90024FBC3 /* OrdenesViewController.swift in Sources */,
+				8F0F71BD2A3928AE0065C0A0 /* EliminacionClienteController.swift in Sources */,
 				8F91CDAF2A300CAD00C6F904 /* CalificarController.swift in Sources */,
 				8F916CEC2A2D3F8C00B70407 /* ProcesarController.swift in Sources */,
 				8F3EC7FC2A254374006BC0AD /* PerfilController.swift in Sources */,
@@ -1210,7 +1214,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1264,7 +1268,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1283,7 +1287,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = AstroPollo/AstroPollo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = 42VSDQG6FV;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AstroPollo/Info.plist;
@@ -1299,17 +1303,20 @@
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.6;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tatanstudios.astropollo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1322,7 +1329,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = AstroPollo/AstroPollo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = 42VSDQG6FV;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AstroPollo/Info.plist;
@@ -1338,17 +1345,20 @@
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.6;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tatanstudios.astropollo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -1366,9 +1376,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tatanstudios.AstroPolloTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AstroPollo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AstroPollo";
 			};
 			name = Debug;
@@ -1387,9 +1400,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tatanstudios.AstroPolloTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AstroPollo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AstroPollo";
 			};
 			name = Release;
@@ -1403,12 +1419,16 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 42VSDQG6FV;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tatanstudios.AstroPolloUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_TARGET_NAME = AstroPollo;
 			};
 			name = Debug;
@@ -1422,12 +1442,16 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 42VSDQG6FV;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tatanstudios.AstroPolloUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_TARGET_NAME = AstroPollo;
 			};
 			name = Release;
@@ -1442,7 +1466,7 @@
 				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = OneSignalNotificationServiceExtension;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1454,7 +1478,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1468,7 +1492,7 @@
 				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = OneSignalNotificationServiceExtension;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1480,7 +1504,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

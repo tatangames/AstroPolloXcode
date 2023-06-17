@@ -155,9 +155,8 @@ class PasswordPerfilController: UIViewController , UITextFieldDelegate{
         
         MBProgressHUD.showAdded(to: self.view, animated: true)
         
-        //let idClienteusuario = UserDefaults.standard.getValueIdUsuario() ?? ""
+        let idCliente = UserDefaults.standard.getValueIdUsuario() ?? ""
           
-        let idCliente = "3"
                 
         let params = [
             "id" : idCliente,

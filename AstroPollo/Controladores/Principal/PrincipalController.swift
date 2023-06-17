@@ -49,12 +49,29 @@ class PrincipalController: UIViewController, UICollectionViewDelegate, UICollect
     @IBOutlet weak var productoCollectionView: UICollectionView!
     
     
+    @IBOutlet weak var btnMasCategorias: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         styleAzul.backgroundColor = UIColor(named: "ColorAzulToast")!
         styleAzul.titleColor = .white
+        
+        
+        
+        let normalTitle = "Ver Más"
+        let normalAttributedTitle = NSAttributedString(string: normalTitle, attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 21)])
+        
+        btnMasCategorias.setAttributedTitle(normalAttributedTitle, for: .normal)
+        
+        
+        // establecer el estilo bold para el estado resaltado
+        
+        let highlighedTitle = "Ver Más"
+        let highlightedAttributedTitle = NSAttributedString(string: highlighedTitle, attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 21)])
+        
+        btnMasCategorias.setAttributedTitle(highlightedAttributedTitle, for: .highlighted)
+        
         
         registrarCeldas()
         peticionMenu()

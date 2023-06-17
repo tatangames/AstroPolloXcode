@@ -24,9 +24,10 @@ class PerfilController: UIViewController, UITableViewDelegate, UITableViewDataSo
         DatosPerfil(posicion: 1, titulo: "Direcciones", imagen: "iconomapa"),
         DatosPerfil(posicion: 2, titulo: "Cambio de Contraseña", imagen: "iconocandado"),
         DatosPerfil(posicion: 3, titulo: "Perfil", imagen: "iconomensaje"),
-        DatosPerfil(posicion: 4, titulo: "Horarios", imagen: "reloj"),
-        DatosPerfil(posicion: 5, titulo: "Premios", imagen: "medalla"),
-        DatosPerfil(posicion: 6, titulo: "Cerrar Sesión", imagen: "iconounlock"),
+        DatosPerfil(posicion: 4, titulo: "Eliminar Cuenta", imagen: "iconounlock"),
+        DatosPerfil(posicion: 5, titulo: "Horarios", imagen: "reloj"),
+        DatosPerfil(posicion: 6, titulo: "Premios", imagen: "medalla"),
+        DatosPerfil(posicion: 7, titulo: "Cerrar Sesión", imagen: "iconounlock"),
     ]
     
     
@@ -75,18 +76,24 @@ class PerfilController: UIViewController, UITableViewDelegate, UITableViewDataSo
             // actualizar correo
             pasarVistaPerfil()
         }
-      
+        
         else if(datos == 4){
+            // BORRAR CLIENTE
+        
+            pasarVistaEliminarCliente()
+        }
+      
+        else if(datos == 5){
             // HORARIOS
             pasarVistaHorario()
         }
         
-        else if(datos == 5){
+        else if(datos == 6){
             // PREMIOS
             pasarVistaPremios()
         }
         
-        else if(datos == 6){
+        else if(datos == 7){
             // CERRAR SESION
             pasarCerrarSesion()
         }
@@ -127,9 +134,18 @@ class PerfilController: UIViewController, UITableViewDelegate, UITableViewDataSo
         
         self.present(vistaSiguiente, animated: true, completion: nil)
     }
+     
     
     func pasarVistaContrasena(){
         let vistaSiguiente : PasswordPerfilController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PasswordPerfilController") as! PasswordPerfilController
+        
+        self.present(vistaSiguiente, animated: true, completion: nil)
+    }
+    
+    
+    func pasarVistaEliminarCliente(){
+        
+        let vistaSiguiente : EliminacionClienteController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "EliminacionClienteController") as! EliminacionClienteController
         
         self.present(vistaSiguiente, animated: true, completion: nil)
     }

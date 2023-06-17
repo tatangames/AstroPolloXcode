@@ -26,6 +26,10 @@ class LoginController: UIViewController, UITextFieldDelegate {
     var idfirebase = ""
     
     
+    @IBOutlet weak var btnAccesoLibre: UIButton!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
                 
@@ -57,8 +61,26 @@ class LoginController: UIViewController, UITextFieldDelegate {
             
             idfirebase = userId ?? ""
          }
+        
+       
+        
+        let normalTitle = "Registrarse"
+        let normalAttributedTitle = NSAttributedString(string: normalTitle, attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 21)])
+        
+        btnRegistrarse.setAttributedTitle(normalAttributedTitle, for: .normal)
+        
+        
+        // establecer el estilo bold para el estado resaltado
+        
+        let highlighedTitle = "Registrarse"
+        let highlightedAttributedTitle = NSAttributedString(string: highlighedTitle, attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 21)])
+        
+        btnRegistrarse.setAttributedTitle(highlightedAttributedTitle, for: .highlighted)
     }
 
+
+    
+    
     
     @IBAction func btnVistaLibre(_ sender: Any) {
         
@@ -177,7 +199,7 @@ class LoginController: UIViewController, UITextFieldDelegate {
             edtPassword.becomeFirstResponder()
         }
         else if textField == edtPassword {
-            //textField.resignFirstResponder()
+          
             self.view.endEditing(true)
         }
         

@@ -154,10 +154,7 @@ class ProductosLibreAccesoController: UIViewController,  UITableViewDataSource, 
        
      // numero de cada seccion
      func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-           
-           if section == 0 {
-               return 1
-           }
+        
           // return mobileBrand[section].modelName?.count ?? 0
            let contador = platoArray[section].tipoPlato?.count ?? 0
                  
@@ -231,23 +228,20 @@ class ProductosLibreAccesoController: UIViewController,  UITableViewDataSource, 
      
          return cell.contentView
      }
-  
-
-   // elegir producto
-   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-           
-     /*let idproducto = platoArray[indexPath.section].tipoPlato?[indexPath.row].idProducto ?? 0
-     
-       let vista : ElegirCantidadController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ElegirCantidadController") as! ElegirCantidadController
-         
-        vista.delegate = self
-        vista.idproducto = String(idproducto)
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            
+      let idproducto = platoArray[indexPath.section].tipoPlato?[indexPath.row].idProducto ?? 0
       
-      self.present(vista, animated: true, completion: nil)*/
-   }
-    
-    
-    
+        let vista : ProIndividualLibreAccesoController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ProIndividualLibreAccesoController") as! ProIndividualLibreAccesoController
+          
+         vista.idproducto = idproducto
+       
+       self.present(vista, animated: true, completion: nil)
+    }
+     
+  
     
    @IBAction func btnAtras(_ sender: Any) {
        dismiss(animated: true, completion: nil)

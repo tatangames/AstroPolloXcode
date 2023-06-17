@@ -55,9 +55,8 @@ class PerfilCorreoController: UIViewController , UITextFieldDelegate{
     
     func peticionBuscarPerfil(){
                 
-        //let idClienteusuario = UserDefaults.standard.getValueIdUsuario() ?? ""
+        let idCliente = UserDefaults.standard.getValueIdUsuario() ?? ""
           
-        let idCliente = "3"
         
         MBProgressHUD.showAdded(to: self.view, animated: true)
         
@@ -142,9 +141,8 @@ class PerfilCorreoController: UIViewController , UITextFieldDelegate{
     func peticionActualizarCorreo(){
         
         
-        //let idClienteusuario = UserDefaults.standard.getValueIdUsuario() ?? ""
+        let idCliente = UserDefaults.standard.getValueIdUsuario() ?? ""
           
-        let idCliente = "3"
         
         MBProgressHUD.showAdded(to: self.view, animated: true)
         

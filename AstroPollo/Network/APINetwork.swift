@@ -10,7 +10,7 @@ import Foundation
 
 
 // utilizado al registrarse
-let apiVersionApp = "ios 1.0.6"
+let apiVersionApp = "ios 1.0.7"
 
 
 
@@ -109,3 +109,12 @@ let apiSeleccionarPremio = baseUrl+"cliente/premios/seleccionar"
 
 
 let apiEliminarCuentaCliente = baseUrl+"cliente/eliminacion/total"
+
+
+
+
+
+
+let apiBuscarHistorial = baseUrl+"cliente/historial/listado/ordenes"
+
+

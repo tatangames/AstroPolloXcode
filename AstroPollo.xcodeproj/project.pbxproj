@@ -22,7 +22,6 @@
 		8F26430F2A206894003CB6EA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F26430E2A206894003CB6EA /* SceneDelegate.swift */; };
 		8F2643142A206894003CB6EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F2643122A206894003CB6EA /* Main.storyboard */; };
 		8F2643162A206895003CB6EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F2643152A206895003CB6EA /* Assets.xcassets */; };
-		8F2643192A206895003CB6EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F2643172A206895003CB6EA /* LaunchScreen.storyboard */; };
 		8F2643242A206895003CB6EA /* AstroPolloTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2643232A206895003CB6EA /* AstroPolloTests.swift */; };
 		8F26432E2A206895003CB6EA /* AstroPolloUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F26432D2A206895003CB6EA /* AstroPolloUITests.swift */; };
 		8F2643302A206895003CB6EA /* AstroPolloUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F26432F2A206895003CB6EA /* AstroPolloUITestsLaunchTests.swift */; };
@@ -54,9 +53,12 @@
 		8F6C1BBB2A27A3350053CE42 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6C1BBA2A27A3350053CE42 /* CustomTextField.swift */; };
 		8F6C1BBE2A27D5060053CE42 /* ModeloBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6C1BBD2A27D5060053CE42 /* ModeloBanner.swift */; };
 		8F6C1BC32A27F9ED0053CE42 /* PrincipalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6C1BC22A27F9ED0053CE42 /* PrincipalController.swift */; };
+		8F6EB2262A3E5468006BCC1F /* Main2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F6EB2252A3E5468006BCC1F /* Main2.storyboard */; };
+		8F6EB2292A3E5F10006BCC1F /* HistorialBotonFechaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6EB2282A3E5F10006BCC1F /* HistorialBotonFechaController.swift */; };
 		8F7CC7F62A2AA8D400DFBD00 /* ModeloProductoPopular.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7CC7F52A2AA8D400DFBD00 /* ModeloProductoPopular.swift */; };
 		8F7CC7F92A2AB1E300DFBD00 /* ProductoPoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7CC7F72A2AB1E300DFBD00 /* ProductoPoCollectionViewCell.swift */; };
 		8F7CC7FA2A2AB1E300DFBD00 /* ProductoPoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F7CC7F82A2AB1E300DFBD00 /* ProductoPoCollectionViewCell.xib */; };
+		8F8771682A3E8DE6006C5E64 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F8771672A3E8DE6006C5E64 /* Launch Screen.storyboard */; };
 		8F8B9BE52A229FA500070D34 /* EstiloTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8B9BE42A229FA500070D34 /* EstiloTextField.swift */; };
 		8F8B9BE72A22A1B000070D34 /* TextFieldImagen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8B9BE62A22A1B000070D34 /* TextFieldImagen.swift */; };
 		8F8B9BEC2A22AB2B00070D34 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8B9BEB2A22AB2B00070D34 /* LoginController.swift */; };
@@ -93,6 +95,8 @@
 		8FDC4A472A26A46C00C5052E /* ListaProductosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDC4A462A26A46C00C5052E /* ListaProductosTableViewCell.swift */; };
 		8FDC4A492A26A77000C5052E /* TitularProductoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDC4A482A26A77000C5052E /* TitularProductoTableViewCell.swift */; };
 		8FDC4A4B2A26B9B100C5052E /* ElegirCantidadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDC4A4A2A26B9B100C5052E /* ElegirCantidadController.swift */; };
+		8FE13FA02A3F5845005FCD1F /* HistorialBusquedaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE13F9F2A3F5845005FCD1F /* HistorialBusquedaController.swift */; };
+		8FE13FA22A3F5A8F005FCD1F /* HistorialBusquedaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE13FA12A3F5A8F005FCD1F /* HistorialBusquedaTableViewCell.swift */; };
 		8FF4077A2A35737B003FED77 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF407792A35737B003FED77 /* NotificationService.swift */; };
 		8FF4077E2A35737B003FED77 /* OneSignalNotificationServiceExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 8FF407772A35737B003FED77 /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		8FF407852A3574FB003FED77 /* OneSignal in Frameworks */ = {isa = PBXBuildFile; productRef = 8FF407842A3574FB003FED77 /* OneSignal */; };
@@ -157,7 +161,6 @@
 		8F26430E2A206894003CB6EA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8F2643132A206894003CB6EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8F2643152A206895003CB6EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8F2643182A206895003CB6EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8F26431A2A206895003CB6EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F26431F2A206895003CB6EA /* AstroPolloTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AstroPolloTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F2643232A206895003CB6EA /* AstroPolloTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstroPolloTests.swift; sourceTree = "<group>"; };
@@ -192,9 +195,12 @@
 		8F6C1BBA2A27A3350053CE42 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		8F6C1BBD2A27D5060053CE42 /* ModeloBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeloBanner.swift; sourceTree = "<group>"; };
 		8F6C1BC22A27F9ED0053CE42 /* PrincipalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrincipalController.swift; sourceTree = "<group>"; };
+		8F6EB2252A3E5468006BCC1F /* Main2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main2.storyboard; sourceTree = "<group>"; };
+		8F6EB2282A3E5F10006BCC1F /* HistorialBotonFechaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistorialBotonFechaController.swift; sourceTree = "<group>"; };
 		8F7CC7F52A2AA8D400DFBD00 /* ModeloProductoPopular.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeloProductoPopular.swift; sourceTree = "<group>"; };
 		8F7CC7F72A2AB1E300DFBD00 /* ProductoPoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductoPoCollectionViewCell.swift; sourceTree = "<group>"; };
 		8F7CC7F82A2AB1E300DFBD00 /* ProductoPoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductoPoCollectionViewCell.xib; sourceTree = "<group>"; };
+		8F8771672A3E8DE6006C5E64 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		8F8B9BE42A229FA500070D34 /* EstiloTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstiloTextField.swift; sourceTree = "<group>"; };
 		8F8B9BE62A22A1B000070D34 /* TextFieldImagen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldImagen.swift; sourceTree = "<group>"; };
 		8F8B9BEB2A22AB2B00070D34 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
@@ -231,6 +237,8 @@
 		8FDC4A462A26A46C00C5052E /* ListaProductosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaProductosTableViewCell.swift; sourceTree = "<group>"; };
 		8FDC4A482A26A77000C5052E /* TitularProductoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitularProductoTableViewCell.swift; sourceTree = "<group>"; };
 		8FDC4A4A2A26B9B100C5052E /* ElegirCantidadController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElegirCantidadController.swift; sourceTree = "<group>"; };
+		8FE13F9F2A3F5845005FCD1F /* HistorialBusquedaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistorialBusquedaController.swift; sourceTree = "<group>"; };
+		8FE13FA12A3F5A8F005FCD1F /* HistorialBusquedaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistorialBusquedaTableViewCell.swift; sourceTree = "<group>"; };
 		8FF407772A35737B003FED77 /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FF407792A35737B003FED77 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		8FF4077B2A35737B003FED77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -391,8 +399,9 @@
 				8F26430E2A206894003CB6EA /* SceneDelegate.swift */,
 				8F2643122A206894003CB6EA /* Main.storyboard */,
 				8F2643152A206895003CB6EA /* Assets.xcassets */,
-				8F2643172A206895003CB6EA /* LaunchScreen.storyboard */,
+				8F8771672A3E8DE6006C5E64 /* Launch Screen.storyboard */,
 				8F26431A2A206895003CB6EA /* Info.plist */,
+				8F6EB2252A3E5468006BCC1F /* Main2.storyboard */,
 			);
 			path = AstroPollo;
 			sourceTree = "<group>";
@@ -537,6 +546,16 @@
 			path = Banner;
 			sourceTree = "<group>";
 		};
+		8F6EB2272A3E5EF3006BCC1F /* Historial */ = {
+			isa = PBXGroup;
+			children = (
+				8F6EB2282A3E5F10006BCC1F /* HistorialBotonFechaController.swift */,
+				8FE13F9F2A3F5845005FCD1F /* HistorialBusquedaController.swift */,
+				8FE13FA12A3F5A8F005FCD1F /* HistorialBusquedaTableViewCell.swift */,
+			);
+			path = Historial;
+			sourceTree = "<group>";
+		};
 		8F8B9BE12A229F2100070D34 /* Extra */ = {
 			isa = PBXGroup;
 			children = (
@@ -609,6 +628,7 @@
 		8FD912012A21796D00624541 /* Controladores */ = {
 			isa = PBXGroup;
 			children = (
+				8F6EB2272A3E5EF3006BCC1F /* Historial */,
 				8F0887202A3414FE00AA8388 /* Premios */,
 				8F0887172A33F4CB00AA8388 /* AccesoLibre */,
 				8F0B21B82A2BA5CB002436FE /* Carrito */,
@@ -853,13 +873,14 @@
 				8F8B9BF02A22D91D00070D34 /* jsonhotdog.json in Resources */,
 				8FC504E42A3523D6005BC197 /* berlin.ttf in Resources */,
 				8FD912072A217E3600624541 /* jsonhambu.json in Resources */,
-				8F2643192A206895003CB6EA /* LaunchScreen.storyboard in Resources */,
 				8F0B21BE2A2BC39D002436FE /* jsongps.json in Resources */,
 				8F4810A62A23D1D30024FBC3 /* jsonunlockpassword.json in Resources */,
 				8F2643162A206895003CB6EA /* Assets.xcassets in Resources */,
+				8F8771682A3E8DE6006C5E64 /* Launch Screen.storyboard in Resources */,
 				8F4810A52A23D1D30024FBC3 /* jsonpassword.json in Resources */,
 				8FBDAF3E2A28FECB00B9A090 /* CategoryCollectionViewCell.xib in Resources */,
 				8F7CC7FA2A2AB1E300DFBD00 /* ProductoPoCollectionViewCell.xib in Resources */,
+				8F6EB2262A3E5468006BCC1F /* Main2.storyboard in Resources */,
 				8F2643142A206894003CB6EA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1068,6 +1089,7 @@
 				8F91CDA92A2FACA700C6F904 /* ModeloProductoOrden.swift in Sources */,
 				8F4810A82A23F2CD0024FBC3 /* Validator.swift in Sources */,
 				8F3EC7FE2A2548ED006BC0AD /* PerfilViewCell.swift in Sources */,
+				8FE13FA22A3F5A8F005FCD1F /* HistorialBusquedaTableViewCell.swift in Sources */,
 				8FBDAF3A2A28FE4500B9A090 /* UIView+Extension.swift in Sources */,
 				8FDC4A472A26A46C00C5052E /* ListaProductosTableViewCell.swift in Sources */,
 				8F3EC80A2A256FF8006BC0AD /* PasswordPerfilController.swift in Sources */,
@@ -1088,9 +1110,11 @@
 				8F4810962A23B3710024FBC3 /* Toast.swift in Sources */,
 				8F3EC80D2A257965006BC0AD /* PerfilCorreoController.swift in Sources */,
 				8F0887222A34166600AA8388 /* ListaPremiosController.swift in Sources */,
+				8FE13FA02A3F5845005FCD1F /* HistorialBusquedaController.swift in Sources */,
 				8F5E846D2A2C2D80001F3C87 /* CarritoCollectionViewCell.swift in Sources */,
 				8F26430D2A206894003CB6EA /* AppDelegate.swift in Sources */,
 				8F3EC8142A259836006BC0AD /* ListaDireccionesViewCell.swift in Sources */,
+				8F6EB2292A3E5F10006BCC1F /* HistorialBotonFechaController.swift in Sources */,
 				8F916CEA2A2D1A5A00B70407 /* EditarProductoController.swift in Sources */,
 				8F26430F2A206894003CB6EA /* SceneDelegate.swift in Sources */,
 				8F6C1BC32A27F9ED0053CE42 /* PrincipalController.swift in Sources */,
@@ -1153,14 +1177,6 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		8F2643172A206895003CB6EA /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8F2643182A206895003CB6EA /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -1214,7 +1230,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1268,7 +1284,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1287,7 +1303,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = AstroPollo/AstroPollo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = 42VSDQG6FV;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AstroPollo/Info.plist;
@@ -1303,12 +1319,12 @@
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.6;
+				MARKETING_VERSION = 1.0.7;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tatanstudios.astropollo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -1329,7 +1345,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = AstroPollo/AstroPollo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = 42VSDQG6FV;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AstroPollo/Info.plist;
@@ -1345,12 +1361,12 @@
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.6;
+				MARKETING_VERSION = 1.0.7;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tatanstudios.astropollo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -1372,7 +1388,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 42VSDQG6FV;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tatanstudios.AstroPolloTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1396,7 +1412,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 42VSDQG6FV;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tatanstudios.AstroPolloTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1419,7 +1435,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 42VSDQG6FV;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tatanstudios.AstroPolloUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1442,7 +1458,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 42VSDQG6FV;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tatanstudios.AstroPolloUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1466,7 +1482,7 @@
 				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = OneSignalNotificationServiceExtension;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1492,7 +1508,7 @@
 				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = OneSignalNotificationServiceExtension;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

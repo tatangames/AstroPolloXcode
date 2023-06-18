@@ -26,8 +26,9 @@ class PerfilController: UIViewController, UITableViewDelegate, UITableViewDataSo
         DatosPerfil(posicion: 3, titulo: "Perfil", imagen: "iconomensaje"),
         DatosPerfil(posicion: 4, titulo: "Eliminar Cuenta", imagen: "iconounlock"),
         DatosPerfil(posicion: 5, titulo: "Horarios", imagen: "reloj"),
-        DatosPerfil(posicion: 6, titulo: "Premios", imagen: "medalla"),
-        DatosPerfil(posicion: 7, titulo: "Cerrar Sesión", imagen: "iconounlock"),
+        DatosPerfil(posicion: 6, titulo: "Historial", imagen: "calendario"),
+        DatosPerfil(posicion: 7, titulo: "Premios", imagen: "medalla"),
+        DatosPerfil(posicion: 8, titulo: "Cerrar Sesión", imagen: "iconounlock"),
     ]
     
     
@@ -89,11 +90,15 @@ class PerfilController: UIViewController, UITableViewDelegate, UITableViewDataSo
         }
         
         else if(datos == 6){
+            // HISTORIAL
+            pasarVistaHistorial()
+        }
+        else if(datos == 7){
             // PREMIOS
             pasarVistaPremios()
         }
         
-        else if(datos == 7){
+        else{
             // CERRAR SESION
             pasarCerrarSesion()
         }
@@ -107,6 +112,12 @@ class PerfilController: UIViewController, UITableViewDelegate, UITableViewDataSo
         self.present(vistaSiguiente, animated: true, completion: nil)
     }
     
+    
+    func pasarVistaHistorial(){
+        let vistaSiguiente : HistorialBotonFechaController = UIStoryboard(name: "Main2", bundle: nil).instantiateViewController(withIdentifier: "HistorialBotonFechaController") as! HistorialBotonFechaController
+        
+        self.present(vistaSiguiente, animated: true, completion: nil)
+    }
     
     
     func pasarVistaDirecciones(){

@@ -1,54 +1,43 @@
 //
-//  OrdenesViewController.swift
+//  HistorialBusquedaController.swift
 //  AstroPollo
 //
-//  Created by Jonathan  Moran on 28/5/23.
+//  Created by Jonathan  Moran on 18/6/23.
 //
-
-import Foundation
-
 
 import UIKit
 import MBProgressHUD
 import SwiftyJSON
 import Alamofire
 
-protocol protocoloEstadoOrden {
-  func pasarEstadoOrden(data: Bool)
-}
 
-class OrdenesViewController: UIViewController, UITableViewDelegate,
-                             UITableViewDataSource, protocoloEstadoOrden,
-    TableViewBotonEstado{
+class HistorialBusquedaController: UIViewController, UITableViewDelegate,
+                                   UITableViewDataSource,
+          TableViewBotonEstadoHistorial {
     
+  
     
-    func pasarEstadoOrden(data: Bool) {
-       
-        if(data){
-            peticionBuscarOrdenes()
-        }
-    }
-    
+    var fechaDesde = ""
+    var fechaHasta = ""
+   
+    var styleAzul = ToastStilo()
+    var arrOrdenes = [ModeloOrdenes]()
     
     func onClickCellEstado(index: Int) {
         let datoFila = arrOrdenes[index]
        
      
-        let vista : EstadoOrdenController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "EstadoOrdenController") as! EstadoOrdenController
+        let vista : ProductosOrdenController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ProductosOrdenController") as! ProductosOrdenController
      
         vista.idorden = datoFila.getIdOrden()
-        vista.delegateEstadoOrden = self
         
         self.present(vista, animated: true, completion: nil)
     }
     
     
     @IBOutlet weak var tableView: UITableView!
-        
-    var styleAzul = ToastStilo()
-    var arrOrdenes = [ModeloOrdenes]()
-    private let refreshControl = UIRefreshControl()
     
+     
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,32 +45,14 @@ class OrdenesViewController: UIViewController, UITableViewDelegate,
         styleAzul.backgroundColor = UIColor(named: "ColorAzulToast")!
         styleAzul.titleColor = .white
         
-        tableView.refreshControl = refreshControl
-        refreshControl.addTarget(self, action: #selector(refreshWeatherData(_:)), for: .valueChanged)
-        refreshControl.tintColor = UIColor(named: "ColorAzulToast")
-        
+      
         tableView.tableFooterView = UIView()
         
-        peticionBuscarOrdenes()
+        peticionBuscar()
     }
     
     
-    var booleanTouchBoton = false
-    
-    func recargarTouchBoton(){
-        
-        if(booleanTouchBoton){
-            peticionBuscarOrdenes()
-        }
-    }
-    
-    @objc private func refreshWeatherData(_ sender: Any) {
-        peticionBuscarOrdenes()
-    }
-    
-    
-    func peticionBuscarOrdenes(){
-        
+    func peticionBuscar(){
         
         arrOrdenes.removeAll()
         tableView.reloadData()
@@ -91,10 +62,12 @@ class OrdenesViewController: UIViewController, UITableViewDelegate,
         MBProgressHUD.showAdded(to: self.view, animated: true)
         
         let params = [
-            "clienteid": idCliente
+            "id": idCliente,
+            "fecha1": fechaDesde,
+            "fecha2": fechaHasta
         ]
         
-        let encodeURL = apiVerListadoOrdenes
+        let encodeURL = apiBuscarHistorial
         
         AF.request(encodeURL, method: .post, parameters: params).responseJSON{ (response) in
             
@@ -108,12 +81,16 @@ class OrdenesViewController: UIViewController, UITableViewDelegate,
                 let codigo = json["success"]
                 
                 
-                self.booleanTouchBoton = true
-                self.refreshControl.endRefreshing()
                 
                 if(codigo == 1){
                     
                    // LISTADO
+                    
+                    let conteo = json["hayordenes"].intValue
+                    
+                    if(conteo == 0){
+                        self.mensajeToastAzul(mensaje: "No hay Ordenes")
+                    }
                                         
                     
                     json["ordenes"].array?.forEach({ (dataArray) in
@@ -129,7 +106,7 @@ class OrdenesViewController: UIViewController, UITableViewDelegate,
                         
                         let estadoCancelada = dataArray["estado_cancelada"].intValue
                         let hayCupon = dataArray["haycupon"].intValue
-
+                        
                         let hayPremio = dataArray["haypremio"].intValue
                         let textoPremio = dataArray["textopremio"].stringValue
                         
@@ -153,15 +130,18 @@ class OrdenesViewController: UIViewController, UITableViewDelegate,
                 
             case .failure( _):
                 MBProgressHUD.hide(for: self.view, animated: true)
-                self.retryPeticionBuscarOrdenes()
+                self.retryPeticionBuscar()
             }
         }
+        
     }
     
     
-    func retryPeticionBuscarOrdenes(){
+    
+    
+    func retryPeticionBuscar(){
         MBProgressHUD.hide(for: self.view, animated: true)
-        peticionBuscarOrdenes()
+        peticionBuscar()
     }
     
     func mensajeSinConexion(){
@@ -169,11 +149,21 @@ class OrdenesViewController: UIViewController, UITableViewDelegate,
         mensajeToastAzul(mensaje: "Sin conexion")
     }
     
+    
+    
+    
     func mensajeToastAzul(mensaje: String){
         self.view.makeToast(mensaje, duration: 3.0, position: .bottom, style: styleAzul)
     }
     
-                
+    
+    @IBAction func btnAtras(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
+    
+    
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -182,7 +172,7 @@ class OrdenesViewController: UIViewController, UITableViewDelegate,
       
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
       
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! OrdenesTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! HistorialBusquedaTableViewCell
        
         let datos = arrOrdenes[indexPath.row]
                           
@@ -243,9 +233,7 @@ class OrdenesViewController: UIViewController, UITableViewDelegate,
         cell.index = indexPath
         cell.cellDelegateEstado = self
                                 
-        
-        
-        
+              
         // PREMIOS
         if(datos.getHayPremio() == 1){
             
@@ -261,16 +249,26 @@ class OrdenesViewController: UIViewController, UITableViewDelegate,
             cell.txtPremio.isHidden = true
         }
         
-       
-       cell.selectionStyle = .none
+        
+        
+        let normalTitle = "PRODUCTOS"
+        let normalAttributedTitle = NSAttributedString(string: normalTitle, attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 20)])
+        
+        cell.btnEstado.setAttributedTitle(normalAttributedTitle, for: .normal)
+        
+        
+        // establecer el estilo bold para el estado resaltado
+        
+        let highlighedTitle = "PRODUCTOS"
+        let highlightedAttributedTitle = NSAttributedString(string: highlighedTitle, attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 20)])
+        
+        cell.btnEstado.setAttributedTitle(highlightedAttributedTitle, for: .highlighted)
+        
+        
+        cell.selectionStyle = .none
           
-       return cell
+        return cell
    }
-      
-    
-    
-    
-    
     
     
     

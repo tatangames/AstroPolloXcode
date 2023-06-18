@@ -21,8 +21,10 @@ class ModeloOrdenes{
     var estado: String
     var estadoCancelada: Int
     var hayCupon: Int
+    var hayPremio: Int
+    var textoPremio: String
     
-    init(idOrden: Int, notaOrden: String, totalFormat: String, fechaOrden: String, notaCancelada: String, mensajeCupon: String, direccion: String, estado: String, estadoCancelada: Int, hayCupon: Int) {
+    init(idOrden: Int, notaOrden: String, totalFormat: String, fechaOrden: String, notaCancelada: String, mensajeCupon: String, direccion: String, estado: String, estadoCancelada: Int, hayCupon: Int, hayPremio: Int, textoPremio: String) {
         self.idOrden = idOrden
         self.notaOrden = notaOrden
         self.totalFormat = totalFormat
@@ -33,6 +35,8 @@ class ModeloOrdenes{
         self.estado = estado
         self.estadoCancelada = estadoCancelada
         self.hayCupon = hayCupon
+        self.hayPremio = hayPremio
+        self.textoPremio = textoPremio
     }
     
     func getHayCupon() -> Int {
@@ -75,6 +79,12 @@ class ModeloOrdenes{
         return estado
     }
     
+    func getHayPremio() -> Int {
+        return hayPremio
+    }
     
+    func getTextoPremio() -> String {
+        return textoPremio
+    }
     
 }

@@ -28,7 +28,8 @@ class PerfilController: UIViewController, UITableViewDelegate, UITableViewDataSo
         DatosPerfil(posicion: 5, titulo: "Horarios", imagen: "reloj"),
         DatosPerfil(posicion: 6, titulo: "Historial", imagen: "calendario"),
         DatosPerfil(posicion: 7, titulo: "Premios", imagen: "medalla"),
-        DatosPerfil(posicion: 8, titulo: "Cerrar Sesión", imagen: "iconounlock"),
+        DatosPerfil(posicion: 8, titulo: "Soporte", imagen: "soporte"),
+        DatosPerfil(posicion: 9, titulo: "Cerrar Sesión", imagen: "iconounlock"),
     ]
     
     
@@ -98,6 +99,11 @@ class PerfilController: UIViewController, UITableViewDelegate, UITableViewDataSo
             pasarVistaPremios()
         }
         
+        else if(datos == 8){
+            // SOPORTE
+            pasarVistaSoporte()
+        }
+        
         else{
             // CERRAR SESION
             pasarCerrarSesion()
@@ -151,6 +157,14 @@ class PerfilController: UIViewController, UITableViewDelegate, UITableViewDataSo
         let vistaSiguiente : PasswordPerfilController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PasswordPerfilController") as! PasswordPerfilController
         
         self.present(vistaSiguiente, animated: true, completion: nil)
+    }
+    
+    func pasarVistaSoporte(){
+        
+        let vistaSiguiente : SoporteViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SoporteViewController") as! SoporteViewController
+        
+        self.present(vistaSiguiente, animated: true, completion: nil)
+        
     }
     
     

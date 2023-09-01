@@ -21,8 +21,6 @@ class PrincipalController: UIViewController, UICollectionViewDelegate, UICollect
     var cambiarVistaOrdenesController = false
     
     
-    
-        
     func mostrarToast(seActualizo: Bool) {
     
        if(seActualizo){
@@ -49,7 +47,25 @@ class PrincipalController: UIViewController, UICollectionViewDelegate, UICollect
     @IBOutlet weak var productoCollectionView: UICollectionView!
     
     
-    @IBOutlet weak var btnMasCategorias: UIButton!
+    
+    @IBOutlet weak var btnVerMas: UIButton!
+    
+    
+    
+    
+    @IBAction func btnVerMas(_ sender: Any) {
+        
+        let vista : CategoriasTodasController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CategoriasTodasController") as! CategoriasTodasController
+                 
+       self.present(vista, animated: true, completion: nil)
+        
+    }
+    
+    
+    
+    @IBOutlet weak var verticalCategorias: NSLayoutConstraint!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,22 +74,20 @@ class PrincipalController: UIViewController, UICollectionViewDelegate, UICollect
         styleAzul.titleColor = .white
         
         
-        
-        let normalTitle = "Ver Más"
-        let normalAttributedTitle = NSAttributedString(string: normalTitle, attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 21)])
-        
-        btnMasCategorias.setAttributedTitle(normalAttributedTitle, for: .normal)
-        
-        
+  
         // establecer el estilo bold para el estado resaltado
         
         let highlighedTitle = "Ver Más"
         let highlightedAttributedTitle = NSAttributedString(string: highlighedTitle, attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 21)])
         
-        btnMasCategorias.setAttributedTitle(highlightedAttributedTitle, for: .highlighted)
+        btnVerMas.setAttributedTitle(highlightedAttributedTitle, for: .highlighted)
         
         
         registrarCeldas()
+        
+        
+        
+        
         peticionMenu()
     }
         
@@ -151,6 +165,37 @@ class PrincipalController: UIViewController, UICollectionViewDelegate, UICollect
                                                                                         
                       self.arrBanner.append(ModeloBanner(idProducto: idProducto, imagen: imagen, redireccionamiento: redireccionamiento))
                   })
+                    
+                    
+                    
+                    // PARA MOSTRAR EL BOTON PARA MODO TESTEO DEL CLIENTE
+                    
+                    
+                  /*  let btnTesteoCliente = json["btntesteocliente"].intValue
+                    let btnTesteoServicio = json["btntesteoservicio"].intValue
+                    
+                    if(btnTesteoServicio == 1){
+                        
+                        if(btnTesteoCliente == 1){
+                            
+                            self.botonModoTesteo.isHidden = false
+                          
+                            self.verticalCategorias.constant = 70
+                            self.verticalVerMas.constant = 70
+                         
+                        }else{
+                            self.botonModoTesteo.isHidden = true
+                            self.verticalCategorias.constant = 25
+                            self.verticalVerMas.constant = 25
+                        }
+                        
+                    }else{
+                        self.botonModoTesteo.isHidden = true
+                        self.verticalCategorias.constant = 25
+                        self.verticalVerMas.constant = 25
+                    }
+                    */
+                    
                       
                       // LISTADO DE CATEGORIAS
                       
@@ -405,15 +450,7 @@ class PrincipalController: UIViewController, UICollectionViewDelegate, UICollect
     }
     
     
-    @IBAction func btnVerMas(_ sender: Any) {
-        
-        let vista : CategoriasTodasController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CategoriasTodasController") as! CategoriasTodasController
-                 
-       self.present(vista, animated: true, completion: nil)
-        
-    }
-    
-    
+
  
     
 }

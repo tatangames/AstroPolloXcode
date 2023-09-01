@@ -54,6 +54,9 @@ import SwiftyJSON
             google_map.isMyLocationEnabled = true
             google_map.settings.myLocationButton = true
         
+        google_map.settings.rotateGestures = false
+        google_map.settings.tiltGestures = false
+        
             centerViewOnUserLocation()
         
          indicator!.start()
@@ -153,15 +156,29 @@ import SwiftyJSON
         if(!segurocarga){
             mensajeToast(mensaje: "Cargando Cobertura")
         }else{
-            let pos = google_map.camera.target
+           // let pos = google_map.camera.target
              var valor = true
+            
+            
+            let visibleRegion = google_map.projection.visibleRegion()
+                       let northWest = visibleRegion.farLeft
+                       let northEast = visibleRegion.farRight
+                       let southWest = visibleRegion.nearLeft
+                       let southEast = visibleRegion.nearRight
+
+                       let cameraTargetLatitude = (northWest.latitude + southEast.latitude) / 2.0
+                       let cameraTargetLongitude = (northWest.longitude + southEast.longitude) / 2.0
+                       let cameraTargetPoint = CLLocationCoordinate2D(latitude: cameraTargetLatitude, longitude: cameraTargetLongitude)
+
+            var direccion = String(cameraTargetLatitude) + " / " + String(cameraTargetLongitude)
              
              for pol in polygonList{
-                 if (GMSGeometryContainsLocation(pos, pol.path!, true)) {
+                 if (GMSGeometryContainsLocation(cameraTargetPoint, pol.path!, true)) {
                       let idzona = pol.title ?? ""
-                      let latitud = pos.latitude
-                      let longitud = pos.longitude
+                     let latitud = cameraTargetLatitude
+                      let longitud = cameraTargetLongitude
                       vistaFormulario(id: idzona, latitud: String(latitud), longitud: String(longitud))
+                     
                       valor = false
                       break;
                   }
@@ -169,7 +186,7 @@ import SwiftyJSON
                  
              // mostrar mensaje que no damos servicio aqui
              if(valor){
-                 fueraUbicacion()
+                fueraUbicacion()
              }
         }
      

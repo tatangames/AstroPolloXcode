@@ -105,6 +105,11 @@ class ListaPremiosController: UIViewController, UITableViewDelegate, UITableView
                           self.arrPremios.append(ModelosPremio(id: id, nombre: nombre, puntos: puntos, activo: activo, seleccionado: seleccionado))
                       })
                         
+                      
+                      if(conteo == 0){
+                          self.sinPremios()
+                      }
+                      
                         
                         self.stackVista.isHidden = false
                         self.tableView.reloadData()
@@ -122,6 +127,9 @@ class ListaPremiosController: UIViewController, UITableViewDelegate, UITableView
         }
     }
     
+    func sinPremios(){
+        self.view.makeToast("No hay Premios", duration: 3.0, position: .bottom, style: styleAzul)
+    }
     
     func mensajeSinConexion(){
         MBProgressHUD.hide(for: self.view, animated: true)

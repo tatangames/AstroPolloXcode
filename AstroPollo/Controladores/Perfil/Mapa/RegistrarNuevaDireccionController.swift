@@ -108,12 +108,26 @@ class RegistrarNuevaDireccionController: UIViewController, UITextFieldDelegate {
             return
         }
         
+        
+        // VALIDAR TELEFONO 8 DIGITOS
+        if(Validator().validar8Caracteres(texto: edtTelefono.text ?? "") == 1){
+            mensajeToastAzul(mensaje: "Teléfono requiere 8 dígitos")
+            return
+        }
+        
+        
         if(Validator().validarEntradaRequerida(texto: edtDireccion.text ?? "") == 1){
             mensajeToastAzul(mensaje: "Dirección es requerido")
             return
         }
         
-        // REFERENCIA ES OPCIONAL
+        // REFERENCIA ES REQUERIDA
+        
+        if(Validator().validarEntradaRequerida(texto: edtReferencia.text ?? "") == 1){
+            mensajeToastAzul(mensaje: "Referencia es requerido")
+            return
+        }
+        
         
         preguntaRegistrar()
     }

@@ -10,7 +10,7 @@ import Foundation
 
 
 // utilizado al registrarse
-let apiVersionApp = "ios 1.0.8"
+let apiVersionApp = "ios 1.0.9"
 
 
 

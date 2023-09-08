@@ -32,7 +32,15 @@ class Validator {
         return 2
     }
     
-    
+    // VALIDAR 8 CARACTERES
+    func validar8Caracteres(texto: String) -> Int {
+             
+        if(texto.count < 8){
+            return 1
+        }
+
+        return 2
+    }
     
     
     // VALIDACION DE 100 CARACTERES
